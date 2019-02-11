@@ -1,0 +1,13 @@
+.cards{
+    width: 300px;
+    display: inline-block;
+}
+
+.icon{
+    font-size: 25px;
+}
+
+.small_image{
+    width: 300px;
+    height: 300px;
+}
