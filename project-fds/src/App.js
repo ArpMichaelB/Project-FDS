@@ -1,28 +1,44 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import { Route, Switch, withRouter, Redirect } from "react-router-dom";
+import Sec from "../src/hoc/sec/Sec";
+import Layout from "../src/hoc/Layout/Layout";
+import Home from "../src/pages/Home/Home";
+import Contact from "../src/pages/Contact/Contact";
+import Properties from "../src/pages/Properties/Properties";
+import Property from "../src/pages/Property/Property";
+import AvailableProperties from "./pages/AvailableProperties/AvailableProperties";
+import Gallery from "../src/pages/Gallery/Gallery";
+import TMaintenance from "../src/pages/TenantMaintenance/TenantMaintenance";
+import EMaintenance from "../src/pages/EmployeeMaintenance/EmployeeMaintenance";
+
+import "../src/styles/global.css";
 
 class App extends Component {
 	render() {
+		let routes = (
+			<Switch>
+				<Route path="/home" component={Home} />
+				<Route path="/contact" component={Contact} />
+				<Route path="/properties" component={Properties} />
+				<Route path="/property" component={Property} />
+				<Route path="available-properties" component={AvailableProperties} />
+				<Route path="/gallery" component={Gallery} />
+				<Route path="/tenant-maintenance" component={TMaintenance} />
+				<Route path="/employee-maintenance" component={EMaintenance} />
+				<Route path="/" exact component={Home} />
+				<Redirect to="/" />
+			</Switch>
+		);
+
 		return (
-			<div className="App">
-				<header className="App-header">
-					<img src={logo} className="App-logo" alt="logo" />
-					<p>
-            Edit <code>src/App.js</code> and save to reload.
-					</p>
-					<a
-						className="App-link"
-						href="https://reactjs.org"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-            Learn React
-					</a>
-				</header>
-			</div>
+			<Sec>
+				<Layout>
+					{routes}
+				</Layout>
+			</Sec>
 		);
 	}
 }
 
-export default App;
+export default withRouter((App));
+
