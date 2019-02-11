@@ -8,7 +8,6 @@ const Contact = () => {
 	const formInputLargeLayout = {labelCol: {span:2},wrapperCol:{span:23}};
 	const formInputButtonLayout = {labelCol: {},wrapperCol:{}};
 	return (
-
 		<main className="Contact">
 			<h1 className = "contact_info_title">Contact Us</h1>
 			<div className="contact_info_information">
@@ -16,7 +15,7 @@ const Contact = () => {
 					Email: joeerenberger@gmail.com
 				</div>
 				<div>
-					Phone: 3092922777
+					Phone: (309)-292-2777
 				</div>
 				<div>
 					Address:
@@ -32,21 +31,37 @@ const Contact = () => {
 			<div className="contact_info_form_wrapper">
 				<Form>
 					{/* The form needs an onsubmit that sends an email to a specific place
-					 	but we'll cross that bridge when we get there */}
+						 but we'll cross that bridge when we get there */}
 					<Form.Item label="First Name" {...formInputSmallLayout}>
-						<Input className="contact_info_form_input" placeholder="First Name"/>
+						<Input className="contact_info_form_input" 
+							placeholder="First Name" 
+							required="true"/>
 					</Form.Item>
 					<Form.Item label="Last Name" {...formInputSmallLayout}>
-						<Input className="contact_info_form_input" placeholder="Last Name"/>
+						<Input className="contact_info_form_input" 
+							placeholder="Last Name" 
+							required="true"/>
 					</Form.Item>
-					<Form.Item label="E-Mail" {...formInputSmallLayout}>
-						<Input className="contact_info_form_input" placeholder="E-Mail"/>
+					<Form.Item label="E-Mail" {...formInputSmallLayout}
+						help="Needs to contain an @">
+						<Input className="contact_info_form_input" 
+							placeholder="E-Mail" 
+							required="true" 
+							type="email"/>
 					</Form.Item>
-					<Form.Item label="Phone" {...formInputSmallLayout}>
-						<Input className="contact_info_form_input" placeholder="Phone Number"/>
+					<Form.Item label="Phone" {...formInputSmallLayout}
+						help="Format (123)-123-1234, please.">
+						<Input className="contact_info_form_input" 
+							placeholder="Phone Number" 
+							required="true" 
+							pattern="^\(?([0-9]{3})?\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$"
+							message="Read the message under the box, please."/>
 					</Form.Item>
 					<Form.Item label="Your Message" {...formInputLargeLayout}>
-						<Input.TextArea className="contact_info_form_input_large" rows={4} placeholder="Please give us a description of the type of property you are seeking. Area,size,etc.."/>
+						<Input.TextArea className="contact_info_form_input_large" 
+							rows={4} 
+							placeholder="Please give us a description of the type of property you are seeking. Area,size,etc.." 
+							required="true"/>
 					</Form.Item>
 					<Form.Item {...formInputButtonLayout}>
 						<Button
