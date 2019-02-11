@@ -9,8 +9,8 @@ class Gallery extends Component {
 
 		this.state={visible:false, image:"", width:"", index:0};
 
-		this.pictures = ["gallery_placeholder_300.png", "gallery_placeholder_640.png", "gallery_placeholder_300.png", 
-			"gallery_placeholder_640.png"];
+		this.pictures = ["gallery-image-1.png", "gallery-image-2.png", "gallery-image-1.png", 
+			"gallery-image-2.png"];
 
 		this.cancel=this.cancel.bind(this);
 		this.showModal=this.showModal.bind(this);
@@ -22,6 +22,7 @@ class Gallery extends Component {
 	render(){
 		return (
 			<main className="Gallery">
+				<h1>Gallery</h1>
 				{this.pictures.map((image, index) => {
 
 					return(
