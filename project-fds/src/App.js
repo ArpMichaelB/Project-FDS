@@ -11,6 +11,8 @@ import Gallery from "../src/pages/Gallery/Gallery";
 import TMaintenance from "../src/pages/TenantMaintenance/TenantMaintenance";
 import EMaintenance from "../src/pages/EmployeeMaintenance/EmployeeMaintenance";
 
+import "../node_modules/antd/dist/antd.css";
+
 import "../src/styles/global.css";
 
 class App extends Component {
