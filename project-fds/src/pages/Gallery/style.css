@@ -5,9 +5,19 @@
 
 .icon{
     font-size: 25px;
+    position: absolute;
+    top: 50%;
 }
 
 .small_image{
     width: 300px;
     height: 300px;
+}
+
+#left-icon{
+    left:0;
+}
+
+#right-icon{
+    right:0;
 }

@@ -9,7 +9,8 @@ class Gallery extends Component {
 
 		this.state={visible:false, image:"", width:"", index:0};
 
-		this.pictures = ["gallery_placeholder_300.png", "gallery_placeholder_640.png", "gallery_placeholder_300.png", "gallery_placeholder_640.png"];
+		this.pictures = ["gallery_placeholder_300.png", "gallery_placeholder_640.png", "gallery_placeholder_300.png", 
+			"gallery_placeholder_640.png"];
 
 		this.cancel=this.cancel.bind(this);
 		this.showModal=this.showModal.bind(this);
@@ -35,11 +36,12 @@ class Gallery extends Component {
 						</Card>
 					);
 				})}
-				<Modal visible={this.state.visible} onCancel={this.cancel} width={this.state.width + 110} footer={null}>
+				<Modal visible={this.state.visible} onCancel={this.cancel} width={this.state.width-10} bodyStyle={{padding:"0"}} 
+					footer={null}>
 					<div onLoad={this.changeWidth}>
-						<Icon type="caret-left" theme="filled" className="icon" onClick={this.goLeft} />
+						<Icon type="caret-left" theme="filled" className="icon" id="left-icon" onClick={this.goLeft} />
 						<img alt="example" src={this.state.image} />
-						<Icon type="caret-right" theme="filled" className="icon" onClick={this.goRight} />
+						<Icon type="caret-right" theme="filled" className="icon" id="right-icon" onClick={this.goRight} />
 					</div>
 				</Modal>
 			</main>
