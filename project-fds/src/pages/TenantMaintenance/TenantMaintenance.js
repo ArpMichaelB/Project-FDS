@@ -1,51 +1,47 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import {
-	Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button,
+	Form, Input, DatePicker, Cascader, Button,
 } from 'antd';
 
 import "./style.css";
 
-const {Option} = Select;
+const call = [{
+	value: true,
+	label: 'Yes',
+}, {
+	value: false,
+	label: 'No',
+}]
 
 class TenantMaintenance extends Component {
 
-	// constructor(props){
-		// super(props);
+	state = {
+		first_name: '',
+		last_name: '',
+		address: '',
+		maintenance_need: '',
+		date: '',
+		email: '',
+		call_ahead: true,
+		phone_number: '',
+	}
 
-		state = {
-			first_name: '',
-			last_name: '',
-			address: '',
-			maintenance_need: '',
-			date: '',
-			email: '',
-			call_ahead: true,
-			phone_number: '',
-		} 
+	// handleSubmit(event) {
+	// 	event.preventDefault();
+	// 	this.props.form.validateFieldsAndScroll((err, values) => {
+	// 		if (!err) {
+	// 			console.log("Submit maintenance to backend here");
+	// 		}
+	// 	});
 	// }
 
-	handle_change(event){
-		const target = event.target;
-		const value = target.value;
-		const name = target.name;
-
-		this.setState({
-			[name]: value
-		});
-	}
-
-	handleSubmit(event){
-		event.preventDefault();
+	handleSubmit = (e) => {
+		e.preventDefault();
 		this.props.form.validateFieldsAndScroll((err, values) => {
-			if (!err){
-				console.log("Submit maintenance to backend here");
-			}
+		  if (!err) {
+			console.log('Received values of form: ', values);
+		  }
 		});
-	}
-
-	handleConfirmBlur = (e) => {
-		const value = e.target.value;
-		this.setState({ confirmDirty: this.state.confirmDirty || !!value });
 	  }
 
 	render() {
@@ -53,152 +49,142 @@ class TenantMaintenance extends Component {
 
 		const formItemLayout = {
 			labelCol: {
-			  xs: { span: 24 },
-			  sm: { span: 8 },
+				xs: { span: 1 },
+				sm: { span: 5 },
 			},
 			wrapperCol: {
-			  xs: { span: 24 },
-			  sm: { span: 16 },
+				xs: { span: 24 },
+				sm: { span: 16 },
 			},
-		  };
+		};
 
-		  const tailFormItemLayout = {
+		const tailFormItemLayout = {
 			wrapperCol: {
-			  xs: {
-				span: 24,
-				offset: 0,
-			  },
-			  sm: {
-				span: 16,
-				offset: 8,
-			  },
+				xs: {
+					span: 24,
+					offset: 0,
+				},
+				sm: {
+					span: 8,
+					offset: 8,
+				},
 			},
-		  };
+		};
 
-		  const prefixSelector = getFieldDecorator('prefix', {
-			initialValue: '1',
-		  })(
-			<Select style={{ width: 70 }}>
-			  <option value="1">+1</option>
-			  {/* <Option value="87">+87</Option> */}
-			</Select>
-		  );
+		const config = {
+			rules: [{ type: 'object', required: true, message: 'Please select time!' }],
+		};
 
 		return (
 			<main className="TenantMaintenance">
-				<h1>TenantMaintenance Page</h1>
+				<h1>Maintenance Request</h1>
 				<form onSubmit={this.handleSubmit}>
-				<Form.Item
-          {...formItemLayout}
-          label="E-mail"
-        >
-          {getFieldDecorator('email', {
-            rules: [{
-              type: 'email', message: 'The input is not valid E-mail!',
-            }, {
-              required: true, message: 'Please input your E-mail!',
-            }],
-          })(
-            <Input />
-          )}
-        </Form.Item>
-        <Form.Item
-          {...formItemLayout}
-          label="Password"
-        >
-          {getFieldDecorator('password', {
-            rules: [{
-              required: true, message: 'Please input your password!',
-            }, {
-              validator: this.validateToNextPassword,
-            }],
-          })(
-            <Input type="password" />
-          )}
-        </Form.Item>
-        <Form.Item
-          {...formItemLayout}
-          label="Confirm Password"
-        >
-          {getFieldDecorator('confirm', {
-            rules: [{
-              required: true, message: 'Please confirm your password!',
-            }, {
-              validator: this.compareToFirstPassword,
-            }],
-          })(
-            <Input type="password" onBlur={this.handleConfirmBlur} />
-          )}
-        </Form.Item>
-        <Form.Item
-          {...formItemLayout}
-          label={(
-            <span>
-              Nickname&nbsp;
-              <Tooltip title="What do you want others to call you?">
-                <Icon type="question-circle-o" />
-              </Tooltip>
-            </span>
-          )}
-        >
-          {getFieldDecorator('nickname', {
-            rules: [{ required: true, message: 'Please input your nickname!', whitespace: true }],
-          })(
-            <Input />
-          )}
-        </Form.Item>
-        <Form.Item
-          {...formItemLayout}
-          label="Phone Number"
-        >
-          {getFieldDecorator('phone', {
-            rules: [{ required: true, message: 'Please input your phone number!' }],
-          })(
-            <Input addonBefore={prefixSelector} style={{ width: '100%' }} />
-          )}
-        </Form.Item>
-        <Form.Item {...tailFormItemLayout}>
-          {getFieldDecorator('agreement', {
-            valuePropName: 'checked',
-          })(
-            <Checkbox>I have read the <a href="">agreement</a></Checkbox>
-          )}
-        </Form.Item>
-        <Form.Item {...tailFormItemLayout}>
-          <Button type="primary" htmlType="submit">Register</Button>
-        </Form.Item>
-					{/* <label>
-						First Name: 
-						<input name="first_name" type="text" value={this.state.first_name} onChange={this.handle_change}/>
-					</label>
-					<label>
-						Last Name: 
-						<input name="last_name" type="text" value={this.state.last_name} onChange={this.handle_change}/>
-					</label>
-					<label>
-						address: 
-						<input name="address" type="text" value={this.state.address} onChange={this.handle_change}/>
-					</label>
-					<label>
-						What maintenance needs to be done: 
-						<textarea name="maintenance" value={this.state.maintenance_need} onChange={this.handle_change}/>
-					</label>
-					<label>
-						Best date to perform the maintenance: 
-						<input name="date" type="text" value={this.state.date} onChange={this.handle_change}/>
-					</label>
-					<label>
-						Email: 
-						<input name="email" type="text" value={this.state.email} onChange={this.handle_change}/>
-					</label>
-					<label>
-						Would you like us to call ahead: 
-						<select name="call_ahead" value={this.state.call_ahead}>
-							<option value="yes">Yes</option>
-							<option value="no">No</option>
-						</select>
-					</label>
-					<input type="submit" value="Submit"/> */}
+
+					<Form.Item
+						{...formItemLayout}
+						label="First Name"
+					>
+						{getFieldDecorator('field_first_name', {
+							rules: [{
+								required: true,
+								message: 'Please input your first name.'
+							}],
+						})(
+							<Input placeholder="First Name"/>
+						)}	
+					</Form.Item>
+
+					<Form.Item
+						{...formItemLayout}
+						label="Last Name"
+					>
+						{getFieldDecorator('field_last_name', {
+							rules: [{
+								required: true,
+								message: 'Please input your last name.'
+							}],
+						})(
+							<Input placeholder="Last Name"/>
+						)}	
+					</Form.Item>
+
+					<Form.Item
+						{...formItemLayout}
+						label="Address"
+					>
+						{getFieldDecorator('field_address', {
+							rules: [{
+								required: true,
+								message: 'Please input the address that needs maintenance'
+							}],
+						})(
+							<Input placeholder="Address"/>
+						)}	
+					</Form.Item>
+
+					<Form.Item
+						{...formItemLayout}
+						label="Maintenance"
+					>
+						{getFieldDecorator('field_maintenance', {
+							rules: [{
+								required: true,
+								message: 'Please input the maintenance that is needed.'
+							}],
+						})(
+							<Input.TextArea rows={4} placeholder="What maintenance needs to be done." spellcheck='default'/>
+						)}	
+					</Form.Item>
+					
+					<Form.Item
+						{...formItemLayout}
+						label="Best Date For Maintenance"
+					>
+						{getFieldDecorator('date-picker', config)(
+							<DatePicker />
+						)}
+					</Form.Item>
+
+
+					<Form.Item
+						{...formItemLayout}
+						label="E-mail"
+					>
+						{getFieldDecorator('email', {
+							rules: [{
+								type: 'email', message: 'The input is not valid E-mail!',
+							}, {
+								required: true, message: 'Please input your E-mail!',
+							}],
+						})(
+							<Input placeholder="E-mail"/>
+						)}
+					</Form.Item>
+
+
+					<Form.Item
+						{...formItemLayout}
+						label="Would you like us to call ahead"
+					>
+						{getFieldDecorator('call_ahead', {
+							initialValue: [true],
+						})(
+							<Cascader options={call} />
+						)}
+					</Form.Item>
+					<Form.Item
+						{...formItemLayout}
+						label="Phone Number"
+					>
+						{getFieldDecorator('phone', {
+							rules: [{ required: true, message: 'Please input your phone number!' }],
+						})(
+							<Input placeholder="Phone Number" style={{ width: '100%' }} />
+						)}
+					</Form.Item>
+					<Form.Item {...tailFormItemLayout}>
+						<Button type="primary" htmlType="submit">Submit</Button>
+					</Form.Item>
 				</form>
 			</main>
 		);
