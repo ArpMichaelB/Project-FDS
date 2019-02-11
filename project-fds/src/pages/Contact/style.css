@@ -1,8 +1,29 @@
 .contact_info_form_wrapper
 {
     padding:3rem;
+    clear:left;
 }
 .contact_info_information
 {
+    clear:left;
+    float:right;
+    width:100%;
+}
+.contact_info_information *
+{
+    float:right;
+    padding-right:2rem;
+    padding-left:2rem;
+}
+.contact_info_title
+{
     float:left;
+}
+.contact_info_form_button
+{
+    float:right;
+}
+.contact_info_company_title
+{
+    font-weight: bold;
 }

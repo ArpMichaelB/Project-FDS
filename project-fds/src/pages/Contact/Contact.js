@@ -10,25 +10,29 @@ const Contact = () => {
 	return (
 
 		<main className="Contact">
-			<h1 className = "contact_info_title">Contact Page</h1>
+			<h1 className = "contact_info_title">Contact Us</h1>
 			<div className="contact_info_information">
-				<p>
-					Insight Management and rentals
-				</p>
-				<p>
+				<div>
+					Email: joeerenberger@gmail.com
+				</div>
+				<div>
+					Phone: 3092922777
+				</div>
+				<div>
 					Address:
 					230 West 3rd St., Suite 216
 					Davenport, IA, 52801
-				</p>
-				<p>
-					Phone: 3092922777
-				</p>
-				<p>
-					Email: joeerenberger@gmail.com
-				</p>
+				</div>
+				<div className="contact_info_company_title">
+					Insight Management and Rentals
+				</div>
+				{/* these divs are in here backward because I want the text to align right
+					but floating right makes it order backwards so this has to happen */}
 			</div>
 			<div className="contact_info_form_wrapper">
 				<Form>
+					{/* The form needs an onsubmit that sends an email to a specific place
+					 	but we'll cross that bridge when we get there */}
 					<Form.Item label="First Name" {...formInputSmallLayout}>
 						<Input className="contact_info_form_input" placeholder="First Name"/>
 					</Form.Item>
