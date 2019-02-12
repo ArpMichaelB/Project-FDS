@@ -9,8 +9,7 @@ class Gallery extends Component {
 
 		this.state={visible:false, image:"", width:"", index:0};
 
-		this.pictures = ["gallery-image-1.png", "gallery-image-2.png", "gallery-image-1.png", 
-			"gallery-image-2.png"];
+		this.image_num = 2;
 
 		this.cancel=this.cancel.bind(this);
 		this.showModal=this.showModal.bind(this);
@@ -20,23 +19,23 @@ class Gallery extends Component {
 	}
 
 	render(){
+		let cards = [];
+		for(let i = 0;i < this.image_num;i++){
+			cards.push(
+				<Card
+					hoverable
+					key={i}
+					bodyStyle={{padding: "0"}}
+					className="cards"
+					onClick={() => this.showModal("/gallery/gallery-image-" + i + ".png", i)}
+					cover={<img alt="example" className="small_image" src={"/gallery/gallery-image-" + i + ".png"} />}
+				/>
+			);
+		}
 		return (
 			<main className="Gallery">
 				<h1>Gallery</h1>
-				{this.pictures.map((image, index) => {
-
-					return(
-						<Card
-							hoverable
-							key={index}
-							bodyStyle={{padding: "0"}}
-							className="cards"
-							onClick={() => this.showModal(image, index)}
-							cover={<img alt="example" className="small_image" src={image} />}
-						>
-						</Card>
-					);
-				})}
+				{cards.map(card => card)}
 				<Modal visible={this.state.visible} onCancel={this.cancel} width={this.state.width-10} bodyStyle={{padding:"0"}} 
 					footer={null}>
 					<div onLoad={this.changeWidth}>
@@ -51,13 +50,13 @@ class Gallery extends Component {
 
 	goLeft(){
 		if(this.state.index > 0){
-			this.setState({image:this.pictures[this.state.index-1], index:this.state.index-1});
+			this.setState({image:"/gallery/gallery-image-" + (this.state.index-1) + ".png", index:this.state.index-1});
 		}
 	}
 
 	goRight(){
-		if(this.state.index < this.pictures.length-1){
-			this.setState({image:this.pictures[this.state.index+1], index:this.state.index+1});
+		if(this.state.index < this.image_num-1){
+			this.setState({image:"/gallery/gallery-image-" + (this.state.index+1) + ".png", index:this.state.index+1});
 		}
 	}
 
