@@ -15,26 +15,6 @@ const call = [{
 
 class TenantMaintenance extends Component {
 
-	state = {
-		first_name: '',
-		last_name: '',
-		address: '',
-		maintenance_need: '',
-		date: '',
-		email: '',
-		call_ahead: true,
-		phone_number: '',
-	}
-
-	// handleSubmit(event) {
-	// 	event.preventDefault();
-	// 	this.props.form.validateFieldsAndScroll((err, values) => {
-	// 		if (!err) {
-	// 			console.log("Submit maintenance to backend here");
-	// 		}
-	// 	});
-	// }
-
 	handleSubmit = (e) => {
 		e.preventDefault();
 		this.props.form.validateFieldsAndScroll((err, values) => {
@@ -50,7 +30,7 @@ class TenantMaintenance extends Component {
 		const formItemLayout = {
 			labelCol: {
 				xs: { span: 1 },
-				sm: { span: 5 },
+				sm: { span: 6 },
 			},
 			wrapperCol: {
 				xs: { span: 24 },
@@ -132,7 +112,7 @@ class TenantMaintenance extends Component {
 								message: 'Please input the maintenance that is needed.'
 							}],
 						})(
-							<Input.TextArea rows={4} placeholder="What maintenance needs to be done." spellcheck='default'/>
+							<Input.TextArea rows={4} placeholder="What maintenance needs to be done." spellCheck='default'/>
 						)}	
 					</Form.Item>
 					
@@ -164,7 +144,7 @@ class TenantMaintenance extends Component {
 
 					<Form.Item
 						{...formItemLayout}
-						label="Would you like us to call ahead"
+						label="Should we call ahead"
 					>
 						{getFieldDecorator('call_ahead', {
 							initialValue: [true],
