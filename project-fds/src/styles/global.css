@@ -51,6 +51,14 @@ main {
     border-color: #ED2939;
  }
 
+@media only screen and (max-width: 1000px) {
+  .wrapper {
+    padding-bottom: 75px;
+  }
+}
 
-
-
+@media only screen and (max-width: 500px) {
+  .wrapper {
+    padding-bottom: 100px;
+  }
+}
