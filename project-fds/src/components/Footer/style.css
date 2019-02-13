@@ -5,3 +5,15 @@
     bottom: 0;
     width: 100%;
 }
+
+@media only screen and (max-width: 1000px) {
+    #footer{
+        height: 75px;
+    }
+  }
+
+@media only screen and (max-width: 500px) {
+    #footer{
+        height: 100px;
+    }
+}
