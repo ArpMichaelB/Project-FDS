@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import { Route, Switch, withRouter, Redirect } from "react-router-dom";
+
+import "../node_modules/antd/dist/antd.css";
+
 import Sec from "../src/hoc/sec/Sec";
 import Layout from "../src/hoc/Layout/Layout";
 import Home from "../src/pages/Home/Home";
@@ -10,8 +13,6 @@ import AvailableProperties from "../src/pages/AvailableProperties/AvailablePrope
 import Gallery from "../src/pages/Gallery/Gallery";
 import TMaintenance from "../src/pages/TenantMaintenance/TenantMaintenance";
 import EMaintenance from "../src/pages/EmployeeMaintenance/EmployeeMaintenance";
-
-import "../node_modules/antd/dist/antd.css";
 
 import "../src/styles/global.css";
 

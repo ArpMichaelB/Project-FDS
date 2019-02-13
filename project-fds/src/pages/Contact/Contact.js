@@ -1,13 +1,79 @@
 import React from "react";
+import {Form, Input, Button} from "antd";
 
 import "./style.css";
 
 const Contact = () => {
-
+	const formInputSmallLayout = {labelCol: {span:2},wrapperCol:{span:8}};
+	const formInputLargeLayout = {labelCol: {span:2},wrapperCol:{span:23}};
+	const formInputButtonLayout = {labelCol: {},wrapperCol:{}};
 	return (
-
 		<main className="Contact">
-			<h1>Contact Page</h1>
+			<h1 className = "contact_info_title">Contact Us</h1>
+			<div className="contact_info_information">
+				<div>
+					Email: joeerenberger@gmail.com
+				</div>
+				<div>
+					Phone: (309)-292-2777
+				</div>
+				<div>
+					Address:
+					230 West 3rd St., Suite 216
+					Davenport, IA, 52801
+				</div>
+				<div className="contact_info_company_title">
+					Insight Management and Rentals
+				</div>
+				{/* these divs are in here backward because I want the text to align right
+					but floating right makes it order backwards so this has to happen */}
+			</div>
+			<div className="contact_info_form_wrapper">
+				<Form>
+					{/* The form needs an onsubmit that sends an email to a specific place
+						 but we'll cross that bridge when we get there */}
+					<Form.Item label="First Name" {...formInputSmallLayout}>
+						<Input className="contact_info_form_input" 
+							placeholder="First Name" 
+							required="true"/>
+					</Form.Item>
+					<Form.Item label="Last Name" {...formInputSmallLayout}>
+						<Input className="contact_info_form_input" 
+							placeholder="Last Name" 
+							required="true"/>
+					</Form.Item>
+					<Form.Item label="E-Mail" {...formInputSmallLayout}
+						help="Needs to contain an @">
+						<Input className="contact_info_form_input" 
+							placeholder="E-Mail" 
+							required="true" 
+							type="email"/>
+					</Form.Item>
+					<Form.Item label="Phone" {...formInputSmallLayout}
+						help="Format (123)-123-1234, please.">
+						<Input className="contact_info_form_input" 
+							placeholder="Phone Number" 
+							required="true" 
+							pattern="^\(?([0-9]{3})?\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$"
+							message="Read the message under the box, please."/>
+					</Form.Item>
+					<Form.Item label="Your Message" {...formInputLargeLayout}>
+						<Input.TextArea className="contact_info_form_input_large" 
+							rows={4} 
+							placeholder="Please give us a description of the type of property you are seeking. Area,size,etc.." 
+							required="true"/>
+					</Form.Item>
+					<Form.Item {...formInputButtonLayout}>
+						<Button
+							type="primary"
+							htmlType="submit"
+							className="submit contact_info_form_button"
+						>
+							Send Message
+						</Button>
+					</Form.Item>
+				</Form>
+			</div>
 		</main>
 	);
 };
