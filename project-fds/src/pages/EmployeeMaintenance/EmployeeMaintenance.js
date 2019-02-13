@@ -23,7 +23,8 @@ class EmployeeMaintenance extends Component {
 		const formItemLayout = {
 			labelCol: {
 				xs: { span: 1 },
-				sm: { span: 7 },
+				sm: { span: 11},
+				md: { span: 8},
 			},
 			wrapperCol: {
 				xs: { span: 24 },
