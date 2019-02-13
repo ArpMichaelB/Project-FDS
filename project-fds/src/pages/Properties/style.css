@@ -1,5 +1,17 @@
-.allprop_container{
+/* .Properties{
     display: flex;
   flex-direction: column;
-  
+  align-self: auto;
+} */
+
+.property {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px){
+  .property{
+    width: 50%;
+  }
 }
