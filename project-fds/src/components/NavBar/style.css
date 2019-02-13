@@ -9,7 +9,7 @@
     z-index: 1;
     width: 25%;
     line-height: 6.2rem;
-    margin-left:50%;
+    margin-left:65%;
 }
 
 
@@ -18,7 +18,7 @@
     justify-content: flex-start;
     position:fixed;
     line-height: 6.2rem;
-    width: 60%;
+    width: 65%;
     z-index: 1;
     display:inline-flex;
     float: left;

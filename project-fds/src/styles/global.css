@@ -34,13 +34,20 @@ h1 {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  width: 75%;
+  width: 90%;
   margin: 0 auto;
   min-height: 100vh;
   overflow: hidden;
   position: relative;
   padding-bottom: 50px;
   padding-top: 6.2rem;
+  border-radius: inherit;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #FFF;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 main {
@@ -61,4 +68,11 @@ main {
   .wrapper {
     padding-bottom: 100px;
   }
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        width:75%;
+      }
+
 }
