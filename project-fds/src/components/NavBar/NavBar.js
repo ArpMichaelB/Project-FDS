@@ -30,7 +30,7 @@ class NavBar extends Component {
 		return (
 			<Sec>
 				<div className="nav_items">
-			<div className="logo"><img src={logo} alt="logo"  width="150rem" height="100rem"/></div>
+				<div className="logo"><img src={logo} alt="logo"  width="150rem" height="100rem"/></div>
 			<nav className="main_nav">
 				<Menu
 					onClick={this.handleClick}
@@ -44,7 +44,7 @@ class NavBar extends Component {
 					<Menu.Item key="Gallery">
 					<Link to="/gallery">Gallery</Link>
 					</Menu.Item>
-					<SubMenu  className="ant-menu-submenu-title" title={<span className="submenu-title-wrapper">Properties</span>}>
+					<SubMenu title={<span className="submenu-title-wrapper">Properties</span>}>
 						<MenuItemGroup>
 						<Menu.Item key="setting:1"><Link to="/available-properties">Available Properties</Link></Menu.Item>
 							<Menu.Item key="setting:2"><Link to="/properties">All Properties</Link></Menu.Item>
