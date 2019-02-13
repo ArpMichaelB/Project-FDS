@@ -28,6 +28,9 @@
 
 .nav_items {
     display:inline-flex;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 .menu_item.ant-menu-horizontal > .ant-menu-item-selected {
