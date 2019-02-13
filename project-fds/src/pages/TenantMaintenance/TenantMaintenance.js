@@ -30,7 +30,8 @@ class TenantMaintenance extends Component {
 		const formItemLayout = {
 			labelCol: {
 				xs: { span: 1 },
-				sm: { span: 6 },
+				sm: { span: 11},
+				md: { span: 8},
 			},
 			wrapperCol: {
 				xs: { span: 24 },
