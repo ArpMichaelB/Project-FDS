@@ -4,9 +4,47 @@ import {Form, Input, Button} from "antd";
 import "./style.css";
 
 const Contact = () => {
-	const formInputSmallLayout = {labelCol: {span:2},wrapperCol:{span:8}};
-	const formInputLargeLayout = {labelCol: {span:2},wrapperCol:{span:23}};
-	const formInputButtonLayout = {labelCol: {},wrapperCol:{}};
+	const formInputSmallLayout = 
+	{
+		labelCol: 
+		{
+			sm: {span: 6},
+			md: {span: 4},
+			lg: {span: 3},
+			xl: {span: 3},
+			xxl: {span:2}
+		},
+		wrapperCol:
+		{
+			sm: {span:8},
+		}
+	};
+	const formInputLargeLayout =
+	{
+		labelCol: 
+		{
+			sm: {span: 7},
+			md: {span: 5},
+			lg: {span: 4},
+			xl: {span: 3},
+			xxl: {span: 2}
+		},
+		wrapperCol:
+		{
+			sm: {span:23},
+		}
+	};
+	const formInputButtonLayout =
+	{
+		labelCol: 
+		{
+			sm: {},
+		},
+		wrapperCol:
+		{
+			sm: {},
+		}
+	};
 	return (
 		<main className="Contact">
 			<h1 className = "contact_info_title">Contact Us</h1>
@@ -67,7 +105,7 @@ const Contact = () => {
 						<Button
 							type="primary"
 							htmlType="submit"
-							className="submit contact_info_form_button"
+							className="contact_info_form_button"
 						>
 							Send Message
 						</Button>
