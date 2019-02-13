@@ -2,14 +2,14 @@
 /* DO NOT EDIT!!! */
 
 @font-face {
-    font-family: '';
+    font-family: 'Rubik';
     font-style: normal;
     font-weight: 100;
-      src: url('') format('truetype');
+      src: url('../libs/fonts/Rubik-Regular.ttf') format('truetype');
   }
 
-  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
-	font-family: '', sans-serif;
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul, a {
+	font-family: 'Rubik', sans-serif;
   font-weight: 300;
   margin: 0;
 }
@@ -46,6 +46,10 @@ h1 {
 main {
     margin-top: 3em; 
 }
+
+.submit.ant-btn-primary{
+    border-color: #ED2939;
+ }
 
 @media only screen and (max-width: 1000px) {
   .wrapper {
