@@ -21,7 +21,9 @@ class Layout extends Component {
 			<div className="container">
 				<div className="wrapper">
 					<NavBar />
-					{this.props.children}
+					<div className="main_spaceing">
+						{this.props.children}
+					</div>
 					<Footer />
 				</div>
 			</div>
