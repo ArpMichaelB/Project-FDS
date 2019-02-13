@@ -163,7 +163,7 @@ class TenantMaintenance extends Component {
 						)}
 					</Form.Item>
 					<Form.Item {...tailFormItemLayout}>
-						<Button type="primary" htmlType="submit">Submit</Button>
+						<Button type="primary" htmlType="submit" className="submit">Submit</Button>
 					</Form.Item>
 				</form>
 			</main>
