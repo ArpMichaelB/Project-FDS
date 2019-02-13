@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import Nav from "../../components/Nav/Nav";
+import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Footer/Footer";
 
 import "../../styles/global.css";
@@ -8,22 +8,20 @@ import "../../styles/global.css";
 
 
 class Layout extends Component {
-	
-	static get propTypes() { 
-		return { 
+
+	static get propTypes() {
+		return {
 			children: PropTypes.any
-		}; 
+		};
 	}
-	
+
 	render() {
 
 		return (
 			<div className="container">
 				<div className="wrapper">
-					<Nav />
-					<main>
-						{this.props.children}
-					</main>
+					<NavBar />
+					{this.props.children}
 					<Footer />
 				</div>
 			</div>

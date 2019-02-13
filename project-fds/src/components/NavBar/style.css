@@ -1,0 +1,115 @@
+:root {
+    --main-color: #ed2939;
+}
+
+.nav_bar.ant-menu {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    z-index: 1;
+    width: 30%;
+    line-height: 6.2rem;
+}
+
+
+.logo {
+    line-height: 6.2rem;
+    width: 60%;
+    display:inline-flex;
+    float: left;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.nav_items {
+    display:inline-flex;
+}
+
+.menu_item.ant-menu-horizontal > .ant-menu-item-selected {
+    color: var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+}
+
+.menu_item.ant-menu-horizontal > .ant-menu-item:hover {
+    border-bottom: 2px solid var(--main-color);
+}
+
+.menu_item.ant-menu-horizontal > .ant-menu-item a:hover {
+    color: var(--main-color);
+}
+
+.menu_item.ant-menu-horizontal > .ant-menu-item-selected > a {
+    color: var(--main-color);
+}
+
+.sub_menu_item:hover{
+    color: var(--main-color);
+}
+
+.menu_item.ant-menu-horizontal > .ant-menu-submenu .ant-menu-submenu-title:hover{
+    color: var(--main-color);
+}
+
+.menu_item.ant-menu-horizontal > .ant-menu-submenu:hover {
+    border-bottom: 2px solid var(--main-color);
+}
+
+.menu_item.ant-menu-horizontal > .ant-menu-submenu a:hover {
+    border-bottom: 2px solid var(--main-color);
+}
+
+.menu_item.ant-menu-horizontal > .ant-menu-submenu-active:hover {
+    border-bottom: 2px solid var(--main-color);
+    color: var(--main-color);
+}
+
+.menu_item.menu_item.ant-menu-horizontal > .ant-menu-submenu-open:hover {
+    border-bottom: 2px solid var(--main-color);
+}
+
+.ant-menu-vertical.ant-menu-sub .ant-menu-item > a:hover {
+    color: var(--main-color);
+}
+
+.ant-menu-vertical.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background-color: #dedede;
+    color: var(--main-color);
+}
+
+.ant-menu-vertical.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected > a {
+    color: var(--main-color);
+}
+
+
+.ant-menu-item-selected > a{
+    color: var(--main-color);
+}
+
+.menu_item.ant-menu-horizontal > .ant-menu-submenu-selected {
+    color: var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+}
+
+
+.menu_item.ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open, .ant-menu-submenu-active, .ant-menu-submenu-title:hover {
+    color: var(--main-color);
+}
+
+.menu_item.ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open, .ant-menu-submenu-active > .ant-menu-item:hover {
+    border-bottom: 2px solid var(--main-color);
+}
+
+
+
+
+
+@media (min-width: 768px) {
+    .logo {
+        width: 30%
+    }
+    .nav_bar.ant-menu {
+        width: 52%;
+    }
+
+}
+
+
