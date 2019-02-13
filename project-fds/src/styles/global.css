@@ -52,6 +52,8 @@ h1 {
 
 main {
     margin-top: 3em; 
+    margin-left:5%;
+    margin-right:5%;
 }
 
 .submit.ant-btn-primary{
