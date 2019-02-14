@@ -1,15 +1,10 @@
- .show_mojo_div{
-    height: 100%;
-} 
-
- .AvailableProperties{
+.AvailableProperties{
     margin-bottom: 10vh;
-    height: 70vh;
-    
-
-} 
-.show_mojo_listings{
     height: 100%;
+} 
+ 
+.show_mojo_listings{
+    height: 70vh;
     border: 0;
     width:100%;
 }
