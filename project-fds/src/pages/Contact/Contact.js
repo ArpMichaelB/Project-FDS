@@ -104,7 +104,7 @@ const Contact = () => {
 						<Button
 							type="primary"
 							htmlType="submit"
-							className="contact_info_form_button"
+							className="submit contact_info_form_button"
 						>
 							Send Message
 						</Button>
