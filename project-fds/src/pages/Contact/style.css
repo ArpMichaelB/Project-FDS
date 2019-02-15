@@ -8,8 +8,17 @@
 }
 .contact_info_form_wrapper
 {
-    padding:3rem;
-    clear:left;
+    padding-top:3rem;
+    padding-bottom:3rem;
+    margin-right:-5rem;
+}
+.contact_info_form .ant-form-item-control-wrapper
+{
+    width:80%;
+}
+.contact_info_form
+{
+    margin-left:20%;
 }
 .contact_info_information
 {

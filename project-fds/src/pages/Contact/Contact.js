@@ -74,7 +74,7 @@ const Contact = () => {
 				</span>
 			</div>
 			<div className="contact_info_form_wrapper">
-				<Form>
+				<Form className="contact_info_form">
 					{/* The form needs an onsubmit that sends an email to a specific place
 						 but we'll cross that bridge when we get there */}
 					<Form.Item label="First Name" {...formInputSmallLayout}>
