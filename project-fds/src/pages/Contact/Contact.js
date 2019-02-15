@@ -59,10 +59,10 @@ const Contact = () => {
 					Davenport, IA, 52801
 				</span>
 				<span>
-					Email: joeerenberger@gmail.com
+					Email: <a href="mailto:joeerenberger@gmail.com" className="convenience_link">joeerenberger@gmail.com</a>
 				</span>
 				<span>
-					Phone: <a href="tel:1-309-292-2777" className="phone_link">(309)-292-2777</a>
+					Phone: <a href="tel:1-309-292-2777" className="convenience_link">(309)-292-2777</a>
 				</span>
 			</div>
 			<div className="contact_info_form_wrapper">

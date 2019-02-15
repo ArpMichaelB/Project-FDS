@@ -1,3 +1,18 @@
+*
+{
+    --primary-color: #dedede;
+    --secondary-color: #ed2939;
+    --tertiary-color: #eeebd9;
+}
+.convenience_link
+{
+    color: var(--secondary-color);
+}
+.convenience_link:hover
+{
+    color: var(--tertiary-color);
+}
+
 #footer{
     margin-top: 20px;
     height: 50px;

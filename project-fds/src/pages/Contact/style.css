@@ -4,11 +4,11 @@
     --secondary-color: #ed2939;
     --tertiary-color: #eeebd9;
 }
-.phone_link
+.convenience_link
 {
     color: var(--secondary-color);
 }
-.phone_link:hover
+.convenience_link:hover
 {
     color: var(--tertiary-color);
 }
