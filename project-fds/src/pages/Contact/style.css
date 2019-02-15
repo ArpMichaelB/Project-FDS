@@ -6,14 +6,12 @@
 .contact_info_information
 {
     clear:left;
-    float:right;
     width:100%;
 }
-.contact_info_information *
+.contact_info_information span
 {
-    float:right;
-    padding-right:2rem;
-    padding-left:2rem;
+    padding-right:1rem;
+    display: inline-flex;
 }
 .contact_info_title
 {

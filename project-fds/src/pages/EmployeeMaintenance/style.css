@@ -1,3 +1,85 @@
+*{
+    --primary-color: #DEDEDE;
+    --secondary-color: #ed2939;
+    --tertiary-color: #eeebd9;
+}
+
 .submit.ant-btn-primary{
-    border-color: #ED2939;
+    border-color: var(--secondary-color);
+}
+
+.ant-input:hover {
+    border-color: var(--secondary-color);
+}
+
+.ant-input:focus {
+    box-shadow: 0 0 0 2px var(--primary-color);
+    border-color: var(--secondary-color);
+}
+
+.ant-radio-inner:after {
+    background-color: var(--secondary-color);
+}
+
+.ant-radio-checked .ant-radio-inner {
+    border-color: var(--secondary-color);
+}
+
+.ant-radio:hover .ant-radio-inner {
+    border-color: var(--secondary-color);
+}
+
+.ant-radio:focus .ant-radio-inner {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+.ant-radio-input:focus + .ant-radio-inner {
+    box-shadow: 0 0 0 2px var(--tertiary-color);
+    border-color: var(--secondary-color);
+}
+
+.ant-calendar-picker:hover .ant-calendar-picker-input:not(.ant-input-disabled) {
+    border-color: var(--secondary-color);
+}
+
+.ant-calendar-today .ant-calendar-date {
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.ant-calendar-selected-date .ant-calendar-date {
+    background-color: var(--secondary-color);
+}
+
+.ant-calendar-header a:hover{
+    color: var(--secondary-color);
+}
+
+.ant-calendar-month-panel-selected-cell .ant-calendar-month-panel-month{
+    background: var(--secondary-color);
+}
+
+.ant-calendar-month-panel-selected-cell .ant-calendar-month-panel-month:hover{
+    background: var(--secondary-color);
+}
+
+.ant-calendar-year-panel-selected-cell .ant-calendar-year-panel-year{
+    background: var(--secondary-color);
+}
+
+.ant-calendar-year-panel-selected-cell .ant-calendar-year-panel-year:hover{
+    background: var(--secondary-color);
+}
+
+.ant-calendar-decade-panel-selected-cell .ant-calendar-decade-panel-decade{
+    background: var(--secondary-color);
+}
+
+.ant-calendar-decade-panel-selected-cell .ant-calendar-decade-panel-decade:hover{
+    background: var(--secondary-color);
+}
+
+.ant-calendar .ant-calendar-today-btn:only-child {
+    color:var(--secondary-color);
 }

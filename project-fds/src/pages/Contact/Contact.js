@@ -49,22 +49,21 @@ const Contact = () => {
 		<main className="Contact">
 			<h1 className = "contact_info_title">Contact Us</h1>
 			<div className="contact_info_information">
-				<div>
-					Email: joeerenberger@gmail.com
-				</div>
-				<div>
-					Phone: (309)-292-2777
-				</div>
-				<div>
+				
+				<span className="contact_info_company_title">
+					Insight Management and Rentals
+				</span>
+				<span>
 					Address:
 					230 West 3rd St., Suite 216
 					Davenport, IA, 52801
-				</div>
-				<div className="contact_info_company_title">
-					Insight Management and Rentals
-				</div>
-				{/* these divs are in here backward because I want the text to align right
-					but floating right makes it order backwards so this has to happen */}
+				</span>
+				<span>
+					Email: joeerenberger@gmail.com
+				</span>
+				<span>
+					Phone: (309)-292-2777
+				</span>
 			</div>
 			<div className="contact_info_form_wrapper">
 				<Form>
@@ -105,7 +104,7 @@ const Contact = () => {
 						<Button
 							type="primary"
 							htmlType="submit"
-							className="contact_info_form_button"
+							className="submit contact_info_form_button"
 						>
 							Send Message
 						</Button>
