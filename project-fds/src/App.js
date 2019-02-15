@@ -17,6 +17,7 @@ import EMaintenance from "../src/pages/EmployeeMaintenance/EmployeeMaintenance";
 import "../src/styles/global.css";
 
 class App extends Component {
+	
 	render() {
 		let routes = (
 			<Switch>

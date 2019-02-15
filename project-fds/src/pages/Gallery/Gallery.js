@@ -13,7 +13,6 @@ class Gallery extends Component {
 
 		this.cancel=this.cancel.bind(this);
 		this.showModal=this.showModal.bind(this);
-		this.changeWidth=this.changeWidth.bind(this);
 		this.goLeft=this.goLeft.bind(this);
 		this.goRight=this.goRight.bind(this);
 	}
@@ -32,15 +31,16 @@ class Gallery extends Component {
 				/>
 			);
 		}
+		
 		return (
 			<main className="Gallery">
-				<h1>Gallery</h1>
+				<div className="title"><h1>Gallery</h1></div>
 				{cards.map(card => card)}
-				<Modal visible={this.state.visible} onCancel={this.cancel} width={this.state.width-10} bodyStyle={{padding:"0"}} 
+				<Modal visible={this.state.visible} id="modal" onCancel={this.cancel} bodyStyle={{padding:"0"}} 
 					footer={null}>
-					<div onLoad={this.changeWidth}>
+					<div>
 						<Icon type="caret-left" theme="filled" className="icon" id="left-icon" onClick={this.goLeft} />
-						<img alt="example" src={this.state.image} />
+						<img alt="example" id="modal-img" src={this.state.image} />
 						<Icon type="caret-right" theme="filled" className="icon" id="right-icon" onClick={this.goRight} />
 					</div>
 				</Modal>
@@ -58,10 +58,6 @@ class Gallery extends Component {
 		if(this.state.index < this.image_num-1){
 			this.setState({image:"/gallery/gallery-image-" + (this.state.index+1) + ".png", index:this.state.index+1});
 		}
-	}
-
-	changeWidth({target:div}){
-		this.setState({width:div.width + 10});
 	}
 
 	cancel(){

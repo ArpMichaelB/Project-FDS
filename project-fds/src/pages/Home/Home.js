@@ -7,7 +7,8 @@ const Home = () => {
 
 	return (
 
-		<main className="Home">
+		<div className="Home">
+
 			<div className="carousel">
 				<Carousel className="height" autoplay>
 					<div className="height"><h3>1</h3></div>
@@ -17,7 +18,7 @@ const Home = () => {
 				</Carousel>
 			</div>
 			<h1>Home Page</h1>
-		</main>
+		</div>
 	);
 };
 

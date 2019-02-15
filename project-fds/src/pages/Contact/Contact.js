@@ -47,7 +47,7 @@ const Contact = () => {
 	};
 	return (
 		<main className="Contact">
-			<h1 className = "contact_info_title">Contact Us</h1>
+			<div className="title"><h1>Contact Us</h1></div>
 			<div className="contact_info_information">
 				
 				<span className="contact_info_company_title">
@@ -55,18 +55,26 @@ const Contact = () => {
 				</span>
 				<span>
 					Address:
-					230 West 3rd St., Suite 216
-					Davenport, IA, 52801
+					<a href="https://goo.gl/maps/2VoJjZrcHqG2" className="convenience_link">
+						230 West 3rd St., Suite 216
+						Davenport, IA, 52801
+					</a>
 				</span>
-				<span>
+				<span className="has_link">
+					Email: <a href="mailto:joeerenberger@gmail.com" className="convenience_link">joeerenberger@gmail.com</a>
+				</span>
+				<span className="has_link">
+					Phone: <a href="tel:1-309-292-2777" className="convenience_link">(309)-292-2777</a>
+				</span>
+				<span className="no_link">
 					Email: joeerenberger@gmail.com
 				</span>
-				<span>
+				<span className="no_link">
 					Phone: (309)-292-2777
 				</span>
 			</div>
 			<div className="contact_info_form_wrapper">
-				<Form>
+				<Form className="contact_info_form">
 					{/* The form needs an onsubmit that sends an email to a specific place
 						 but we'll cross that bridge when we get there */}
 					<Form.Item label="First Name" {...formInputSmallLayout}>

@@ -1,3 +1,12 @@
+.convenience_link
+{
+    color: var(--secondary-color);
+}
+.convenience_link:hover
+{
+    color: var(--tertiary-color);
+}
+
 #footer{
     margin-top: 20px;
     height: 50px;
@@ -16,4 +25,29 @@
     #footer{
         height: 100px;
     }
+}
+.no_link
+{
+    display:none;
+}
+.has_link
+{
+    display:inline-flex;
+}
+@media (min-width:1025px)
+{
+    .no_link
+    {
+        display: inline-flex;
+    }
+    .has_link
+    {
+        display: none;
+    }
+    /* 
+    I'm not sure why this is backaway from what I'd expect it to be
+    Personally I'd expect you to display the links when the min-width is low enough
+    and hide them when the min width exceeds it
+    media queries confuse my brain
+    */
 }

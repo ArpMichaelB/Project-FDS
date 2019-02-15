@@ -58,7 +58,7 @@ class TenantMaintenance extends Component {
 
 		return (
 			<main className="TenantMaintenance">
-				<h1>Maintenance Request</h1>
+				<div className="title"><h1>Maintenance Request</h1></div>
 				<form onSubmit={this.handleSubmit}>
 
 					<Form.Item

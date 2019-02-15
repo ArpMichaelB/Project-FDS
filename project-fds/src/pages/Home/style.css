@@ -1,5 +1,9 @@
 .Home {
     min-height: 100vh;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 2%;
+    position: relative
 }
 
 .ant-carousel .slick-slide {
@@ -12,13 +16,6 @@
   
   .ant-carousel .slick-slide h3 {
     color: #fff;
-  }
-
-  main {
-      margin-left: 0;
-      margin-right: 0;
-      margin-top: 2%;
-      position: relative
   }
 
   .height {
