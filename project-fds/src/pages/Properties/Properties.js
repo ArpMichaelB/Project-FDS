@@ -9,7 +9,7 @@ const Properties = () => {
 	return (
 
 		<main className="Properties">
-			<h1>Properties Page</h1>
+			<h1>Properties</h1>
 			{images.map((image) => {
 				return (
 					<div key={image.alt} className="property">
