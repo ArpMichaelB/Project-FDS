@@ -12,7 +12,7 @@ const Property = () => {
 		<main className="Property">
 
 			<div className="specific_prop_container">
-				<h2>Property Title</h2>
+				<div className="title"><h1>Property Title</h1></div>
 				<Slideshow />
 
 				<Collapse accordion>

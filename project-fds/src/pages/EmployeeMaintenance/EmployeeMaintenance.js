@@ -52,7 +52,7 @@ class EmployeeMaintenance extends Component {
 		return (
 
 			<main className="EmployeeMaintenance">
-				<h1>Employee Maintenance</h1>
+				<div className="title"><h1>Employee Maintenance</h1></div>
 				<form onSubmit={this.handleSubmit}>
 
 					<Form.Item
