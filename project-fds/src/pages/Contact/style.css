@@ -1,3 +1,17 @@
+*
+{
+    --primary-color: #dedede;
+    --secondary-color: #ed2939;
+    --tertiary-color: #eeebd9;
+}
+.phone_link
+{
+    color: var(--secondary-color);
+}
+.phone_link:hover
+{
+    color: var(--tertiary-color);
+}
 .contact_info_form_wrapper
 {
     padding:3rem;

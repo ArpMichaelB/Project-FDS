@@ -62,7 +62,7 @@ const Contact = () => {
 					Email: joeerenberger@gmail.com
 				</span>
 				<span>
-					Phone: (309)-292-2777
+					Phone: <a href="tel:1-309-292-2777" className="phone_link">(309)-292-2777</a>
 				</span>
 			</div>
 			<div className="contact_info_form_wrapper">
