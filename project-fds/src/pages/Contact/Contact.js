@@ -55,13 +55,21 @@ const Contact = () => {
 				</span>
 				<span>
 					Address:
-					230 West 3rd St., Suite 216
-					Davenport, IA, 52801
+					<a href="https://goo.gl/maps/2VoJjZrcHqG2" className="convenience_link">
+						230 West 3rd St., Suite 216
+						Davenport, IA, 52801
+					</a>
 				</span>
-				<span>
+				<span className="has_link">
+					Email: <a href="mailto:joeerenberger@gmail.com" className="convenience_link">joeerenberger@gmail.com</a>
+				</span>
+				<span className="has_link">
+					Phone: <a href="tel:1-309-292-2777" className="convenience_link">(309)-292-2777</a>
+				</span>
+				<span className="no_link">
 					Email: joeerenberger@gmail.com
 				</span>
-				<span>
+				<span className="no_link">
 					Phone: (309)-292-2777
 				</span>
 			</div>
