@@ -4,6 +4,7 @@
     --secondary-color: #ed2939;
     --tertiary-color: #eeebd9;
 }
+
 .convenience_link
 {
     color: var(--secondary-color);
@@ -25,7 +26,6 @@
 .contact_info_information span
 {
     padding-right:1rem;
-    display: inline-flex;
 }
 .contact_info_title
 {
@@ -38,4 +38,29 @@
 .contact_info_company_title
 {
     font-weight: bold;
+}
+.no_link
+{
+    display:none;
+}
+.has_link
+{
+    display:inline-flex;
+}
+@media (min-width:1025px)
+{
+    .no_link
+    {
+        display: inline-flex;
+    }
+    .has_link
+    {
+        display: none;
+    }
+    /* 
+    I'm not sure why this is backaway from what I'd expect it to be
+    Personally I'd expect you to display the links when the min-width is low enough
+    and hide them when the min width exceeds it
+    media queries confuse my brain
+    */
 }
