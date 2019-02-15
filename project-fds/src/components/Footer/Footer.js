@@ -8,11 +8,6 @@ import "./style.css";
 
 class Footer extends Component {
 
-	test = () =>{
-		
-	}
-
-
 	render() {
 
 		return (
