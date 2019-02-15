@@ -34,7 +34,7 @@ class Gallery extends Component {
 		
 		return (
 			<main className="Gallery">
-				<h1>Gallery</h1>
+				<div className="title"><h1>Gallery</h1></div>
 				{cards.map(card => card)}
 				<Modal visible={this.state.visible} id="modal" onCancel={this.cancel} bodyStyle={{padding:"0"}} 
 					footer={null}>

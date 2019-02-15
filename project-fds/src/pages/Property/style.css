@@ -15,7 +15,7 @@
   }
 
   .ant-carousel .slick-dots li.slick-active button{
-      background-color: #ff2400
+      background-color: var(--secondary-color);
   }
 
   .ant-carousel .slick-dots li button {
