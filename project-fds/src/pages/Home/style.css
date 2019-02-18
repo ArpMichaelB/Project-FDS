@@ -40,7 +40,8 @@
 
   .group {
       display:inline-flex;
-      float: left 
+      flex-flow: wrap;
+      float: left; 
   }
 
   .avail_button, .ant-btn-primary:hover, .ant-btn-primary:focus {
