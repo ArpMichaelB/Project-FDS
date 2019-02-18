@@ -1,5 +1,7 @@
 import React from "react";
 import { Carousel } from "antd";
+import { Card } from "antd";
+import image from "../../assets/images/250.jpg";
 
 import "./style.css";
 
@@ -17,7 +19,45 @@ const Home = () => {
 					<div className="height"><h3>4</h3></div>
 				</Carousel>
 			</div>
-			<h1>Home Page</h1>
+			<div className="title"><h1>Top Properties</h1></div>
+			<div className="home_cards">
+				<Card
+					title="Property Name"
+					extra={<a href="/">More</a>}
+					style={{ width: 250}}
+					className="home_card"
+				>
+					<img src={image} alt="test" />
+				</Card>
+
+				<Card
+					title="Property Name"
+					extra={<a href="/">More</a>}
+					style={{ width: 250}}
+					className="home_card"
+				>
+					<img src={image} alt="test" />
+				</Card>
+
+				<Card
+					title="Property Name"
+					extra={<a href="/">More</a>}
+					style={{ width: 250 }}
+					className="home_card"
+				>
+					<img src={image} alt="test" />
+					
+				</Card>
+
+				<Card
+					title="Property Name"
+					extra={<a href="/">More</a>}
+					style={{ width: 250 }}
+					className="home_card"
+				>
+					<img src={image} alt="test" />
+				</Card>
+			</div>
 		</div>
 	);
 };

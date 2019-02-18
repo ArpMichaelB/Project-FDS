@@ -26,3 +26,14 @@
       display: block;
       height: 400px;
   }
+
+  .home_cards {
+      display: flex;
+      justify-content: space-evenly;
+      flex-flow: wrap;
+      width: 100%;
+  }
+
+  .home_card .ant-card-body {
+      padding: 0px;
+  }

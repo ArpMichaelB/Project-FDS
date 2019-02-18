@@ -1,8 +1,8 @@
-.convenience_link
+.footer_convenience_link
 {
     color: var(--secondary-color);
 }
-.convenience_link:hover
+.footer_convenience_link:hover
 {
     color: var(--tertiary-color);
 }
@@ -26,28 +26,29 @@
         height: 100px;
     }
 }
-.no_link
+@media only screen and (max-width: 300px) {
+    #footer{
+        font-size: .75rem;
+        height: 150px;
+    }
+}
+
+.footer_no_link
 {
     display:none;
 }
-.has_link
+.footer_has_link
 {
-    display:inline-flex;
+    display:block;
 }
 @media (min-width:1025px)
 {
-    .no_link
+    .footer_no_link
     {
-        display: inline-flex;
+        display: block;
     }
-    .has_link
+    .footer_has_link
     {
         display: none;
     }
-    /* 
-    I'm not sure why this is backaway from what I'd expect it to be
-    Personally I'd expect you to display the links when the min-width is low enough
-    and hide them when the min width exceeds it
-    media queries confuse my brain
-    */
 }
