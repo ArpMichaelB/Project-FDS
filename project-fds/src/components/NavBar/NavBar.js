@@ -9,12 +9,22 @@ import "./style.css";
 
 class NavBar extends Component {
 
-	static propTypes = {
-		history:PropTypes.object
+	constructor(props){
+		super(props);
+
+		let location = this.props.location.pathname;
+		if(location.slice(-1) === "/"){
+			location = location.slice(0, location.length - 1);
+		}
+
+		this.state = {
+			current: location
+		};
 	}
 
-	state = {
-		current: "home",
+	static propTypes = {
+		history: PropTypes.object,
+		location: PropTypes.object
 	}
 	
 	handleClick = (e) => {
@@ -52,37 +62,34 @@ class NavBar extends Component {
 							mode="horizontal"
 							className="nav_bar menu_item"
 						>
-							<Menu.Item key="home">
+							<Menu.Item key="/home">
 								<Link to="/home">Home</Link>
 							</Menu.Item>
-							<Menu.Item key="Gallery">
+							<Menu.Item key="/gallery">
 								<Link to="/gallery">Gallery</Link>
 							</Menu.Item>
-							<SubMenu onTitleClick={() => this.goToLink("/available-properties", "setting:1")} title={<span className="submenu-title-wrapper">Properties</span>}>
+							<SubMenu onTitleClick={() => this.goToLink("/available-properties", "/available-properties")} title={<span className="submenu-title-wrapper">Properties</span>}>
 								<MenuItemGroup>
-									<Menu.Item key="setting:1"><Link to="/available-properties">Available Properties</Link></Menu.Item>
-									<Menu.Item key="setting:2"><Link to="/properties">All Properties</Link></Menu.Item>
+									<Menu.Item key="/available-properties"><Link to="/available-properties">Available Properties</Link></Menu.Item>
+									<Menu.Item key="/properties"><Link to="/properties">All Properties</Link></Menu.Item>
 								</MenuItemGroup>
 							</SubMenu>
-							<SubMenu onTitleClick={() => this.goToLink("/tenant-maintenance", "setting:3")} title={<span className="submenu-title-wrapper">Maintenance</span>}>
+							<SubMenu onTitleClick={() => this.goToLink("/tenant-maintenance", "/tenant-maintenance")} title={<span className="submenu-title-wrapper">Maintenance</span>}>
 								<MenuItemGroup>
-									<Menu.Item key="setting:3"><Link to="/tenant-maintenance">Tenant</Link></Menu.Item>
-									<Menu.Item key="setting:4"><Link to="/employee-maintenance">Employee</Link></Menu.Item>
+									<Menu.Item key="/tenant-maintenance"><Link to="/tenant-maintenance">Tenant</Link></Menu.Item>
+									<Menu.Item key="/employee-maintenance"><Link to="/employee-maintenance">Employee</Link></Menu.Item>
 								</MenuItemGroup>
 							</SubMenu>
-							<Menu.Item key="Contact">
+							<Menu.Item key="/contact">
 								<Link to="/contact">Contact</Link>
 							</Menu.Item>
 						</Menu>
 					</nav>
 				</div>
 			</Sec>
-
-
 		);
 	}
 
 }
-
 
 export default withRouter(NavBar);
