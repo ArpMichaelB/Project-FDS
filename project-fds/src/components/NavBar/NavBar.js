@@ -17,7 +17,8 @@ class NavBar extends Component {
 			location = location.slice(0, location.length - 1);
 		}
 
-		if(location === ""){
+		let locations = ["/home", "/gallery", "/available-properties", "/properties", "/tenant-maintenance", "/employee-maintenance", "/contact"];
+		if(!locations.includes(location)){
 			location="/home";
 		}
 
@@ -55,7 +56,7 @@ class NavBar extends Component {
 			<Sec>
 				<div className="nav_items">
 					<div className="logo">
-						<Link to="/home" onClick={() => this.changeSelected("home")}>
+						<Link to="/home" onClick={() => this.changeSelected("/home")}>
 							<img src={logo} alt="logo"  width="150rem" height="100rem"/>
 						</Link>
 					</div>
