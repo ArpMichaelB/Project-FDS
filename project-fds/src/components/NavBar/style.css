@@ -90,7 +90,7 @@
 }
 
 .menu_item.ant-menu-horizontal > .ant-menu-submenu-selected {
-    color: var(--main-color);
+    color: var(--secondary-color);
     border-bottom: 2px solid var(--secondary-color);
 }
 
