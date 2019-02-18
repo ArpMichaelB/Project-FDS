@@ -1,6 +1,6 @@
 import React from "react";
-import { Carousel } from "antd";
-import { Card } from "antd";
+import { Carousel, Card, Button } from "antd";
+import { Link } from "react-router-dom";
 import image from "../../assets/images/250.jpg";
 
 import "./style.css";
@@ -19,7 +19,12 @@ const Home = () => {
 					<div className="height"><h3>4</h3></div>
 				</Carousel>
 			</div>
-			<div className="title"><h1>Top Properties</h1></div>
+			<div className="group">
+				<div className="title"><h1>Hot Properties</h1></div>
+				<Link to="/available-properties">
+					<Button type="primary" className="avail-button" style={{ "marginTop": "3.3rem", "marginBottom": "3.3rem", "marginLeft": "-2rem" }}>Available Properties</Button>
+				</Link>
+			</div>
 			<div className="home_cards">
 				<Card
 					title="Property Name"
@@ -32,7 +37,7 @@ const Home = () => {
 
 				<Card
 					title="Property Name"
-					extra={<a href="/">More</a>}
+					extra={<a className="more_a" href="/">More</a>}
 					style={{ width: 250}}
 					className="home_card"
 				>
