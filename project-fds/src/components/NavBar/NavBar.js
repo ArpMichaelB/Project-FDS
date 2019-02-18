@@ -17,6 +17,10 @@ class NavBar extends Component {
 			location = location.slice(0, location.length - 1);
 		}
 
+		if(location === ""){
+			location="/home";
+		}
+
 		this.state = {
 			current: location
 		};
