@@ -37,3 +37,28 @@
   .home_card .ant-card-body {
       padding: 0px;
   }
+
+  .group {
+      display:inline-flex;
+      float: left 
+  }
+
+  .avail_button, .ant-btn-primary:hover, .ant-btn-primary:focus {
+    color: #fff;
+    background-color: var(--secondary-color);
+    border-color:var(--secondary-color);
+  }
+
+  .avail_button, .ant-btn-primary {
+    color: #fff;
+    background-color: var(--secondary-color);
+    border-color:var(--secondary-color);
+  }
+
+  .more_a, a {
+      color: var(--secondary-color);
+  }
+
+  .more_a, a:hover{
+    color: var(--secondary-color);
+}
