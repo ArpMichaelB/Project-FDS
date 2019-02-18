@@ -24,7 +24,7 @@ class App extends Component {
 				<Route path="/home" component={Home} />
 				<Route path="/contact" component={Contact} />
 				<Route path="/properties" component={Properties} />
-				<Route path="/property" component={Property} />
+				<Route path="/property/:name" component={Property} />
 				<Route path="/available-properties" component={AvailableProperties} />
 				<Route path="/gallery" component={Gallery} />
 				<Route path="/tenant-maintenance" component={TMaintenance} />
