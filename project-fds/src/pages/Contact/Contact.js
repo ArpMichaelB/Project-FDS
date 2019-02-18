@@ -80,25 +80,25 @@ const Contact = () => {
 					<Form.Item label="First Name" {...formInputSmallLayout}>
 						<Input className="contact_info_form_input" 
 							placeholder="First Name" 
-							required="true"/>
+							required={true}/>
 					</Form.Item>
 					<Form.Item label="Last Name" {...formInputSmallLayout}>
 						<Input className="contact_info_form_input" 
 							placeholder="Last Name" 
-							required="true"/>
+							required={true}/>
 					</Form.Item>
 					<Form.Item label="E-Mail" {...formInputSmallLayout}
 						help="Needs to contain an @">
 						<Input className="contact_info_form_input" 
 							placeholder="E-Mail" 
-							required="true" 
+							required={true} 
 							type="email"/>
 					</Form.Item>
 					<Form.Item label="Phone" {...formInputSmallLayout}
 						help="Format (123)-123-1234, please.">
 						<Input className="contact_info_form_input" 
 							placeholder="Phone Number" 
-							required="true" 
+							required={true} 
 							pattern="^\(?([0-9]{3})?\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$"
 							message="Read the message under the box, please."/>
 					</Form.Item>
@@ -106,7 +106,7 @@ const Contact = () => {
 						<Input.TextArea className="contact_info_form_input_large" 
 							rows={4} 
 							placeholder="Please give us a description of the type of property you are seeking. Area,size,etc.." 
-							required="true"/>
+							required={true}/>
 					</Form.Item>
 					<Form.Item {...formInputButtonLayout}>
 						<Button
