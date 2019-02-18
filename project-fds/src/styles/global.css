@@ -85,6 +85,12 @@ main {
   }
 }
 
+@media only screen and (max-width: 300px) {
+  .wrapper {
+    padding-bottom: 150px;
+  }
+}
+
 @media (min-width: 768px) {
     .wrapper {
         width:75%;
