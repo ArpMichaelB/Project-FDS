@@ -28,6 +28,10 @@ class NavBar extends Component {
 		this.setState({current:key});
 	}
 
+	changeSelected = (key) => {
+		this.setState({current:key});
+	}
+
 	render() {
 
 		const SubMenu = Menu.SubMenu;
@@ -36,7 +40,11 @@ class NavBar extends Component {
 		return (
 			<Sec>
 				<div className="nav_items">
-					<div className="logo"><Link to="/home"><img src={logo} alt="logo"  width="150rem" height="100rem"/></Link></div>
+					<div className="logo">
+						<Link to="/home" onClick={() => this.changeSelected("home")}>
+							<img src={logo} alt="logo"  width="150rem" height="100rem"/>
+						</Link>
+					</div>
 					<nav className="main_nav">
 						<Menu
 							onClick={this.handleClick}
