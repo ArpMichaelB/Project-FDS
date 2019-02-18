@@ -23,39 +23,39 @@ const Home = () => {
 			<div className="home_cards">
 				<Card
 					title="Property Name"
-					extra={<a href="#">More</a>}
+					extra={<a href="/">More</a>}
 					style={{ width: 250}}
 					className="home_card"
 				>
-					<img src={image} alt="image" />
+					<img src={image} alt="test" />
 				</Card>
 
 				<Card
 					title="Property Name"
-					extra={<a href="#">More</a>}
+					extra={<a href="/">More</a>}
 					style={{ width: 250}}
 					className="home_card"
 				>
-					<img src={image} alt="image" />
+					<img src={image} alt="test" />
 				</Card>
 
 				<Card
 					title="Property Name"
-					extra={<a href="#">More</a>}
+					extra={<a href="/">More</a>}
 					style={{ width: 250 }}
 					className="home_card"
 				>
-					<img src={image} alt="image" />
+					<img src={image} alt="test" />
 					
 				</Card>
 
 				<Card
 					title="Property Name"
-					extra={<a href="#">More</a>}
+					extra={<a href="/">More</a>}
 					style={{ width: 250 }}
 					className="home_card"
 				>
-					<img src={image} alt="image" />
+					<img src={image} alt="test" />
 				</Card>
 			</div>
 		</div>
