@@ -45,6 +45,13 @@
 {
     display:inline-flex;
 }
+@media (max-width:1199px)
+{
+    .contact_info_form .ant-form-item-control-wrapper
+    {
+        width:60%;
+    }
+}
 @media (min-width:1025px)
 {
     .no_link
