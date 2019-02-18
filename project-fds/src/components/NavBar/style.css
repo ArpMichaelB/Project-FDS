@@ -113,10 +113,12 @@
 
 .ant-menu-submenu-title:active {
     background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .ant-menu-item:active, .ant-menu-submenu-title:active {
     background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .ant-menu-submenu-vertical > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow:after,
@@ -130,8 +132,6 @@
   background: -webkit-linear-gradient(left, var(--secondary-color), var(--secondary-color));
   background: linear-gradient(to right, var(--secondary-color), var(--secondary-color));
 }
-
-
 
 
 @media (min-width: 768px) {
