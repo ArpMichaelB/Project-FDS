@@ -6,10 +6,6 @@ import {
 
 import "./style.css";
 
-EmployeeMaintenance.propTypes = {
-	form: PropTypes.any,
-};
-
 class EmployeeMaintenance extends Component {
 
 	handleSubmit = (e) => {
@@ -220,5 +216,9 @@ class EmployeeMaintenance extends Component {
 	}
 
 }
+
+EmployeeMaintenance.propTypes = {
+	form: PropTypes.any,
+};
 
 export default Form.create()(EmployeeMaintenance);

@@ -6,10 +6,6 @@ import {
 
 import "./style.css";
 
-TenantMaintenance.propTypes = {
-	form: PropTypes.any,
-};
-
 const call = [{
 	value: true,
 	label: "Yes",
@@ -176,6 +172,10 @@ class TenantMaintenance extends Component {
 		);
 	}
 }
+
+TenantMaintenance.propTypes = {
+	form: PropTypes.any,
+};
 
 
 export default Form.create()(TenantMaintenance);
