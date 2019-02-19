@@ -54,6 +54,10 @@
     color: #fff;
     background-color: var(--secondary-color);
     border-color:var(--secondary-color);
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    top: -2rem;
+    margin-left: 4rem;
   }
 
   .more_a, a {
@@ -62,4 +66,23 @@
 
   .more_a, a:hover{
     color: var(--secondary-color);
+}
+
+
+@media (min-width: 480px) {
+    .avail_button, .ant-btn-primary:hover, .ant-btn-primary:focus {
+        color: #fff;
+        background-color: var(--secondary-color);
+        border-color:var(--secondary-color);
+      }
+    
+      .avail_button, .ant-btn-primary {
+        color: #fff;
+        background-color: var(--secondary-color);
+        border-color:var(--secondary-color);
+        margin-top: 3.3rem;
+        margin-bottom: 3.3rem;
+        margin-left: -2rem;
+        top: 0;
+      }
 }

@@ -22,7 +22,7 @@ const Home = () => {
 			<div className="group">
 				<div className="title"><h1>Hot Properties</h1></div>
 				<Link to="/available-properties">
-					<Button type="primary" className="avail-button" style={{ "marginTop": "3.3rem", "marginBottom": "3.3rem", "marginLeft": "-2rem" }}>Available Properties</Button>
+					<Button type="primary" className="avail-button">Available Properties</Button>
 				</Link>
 			</div>
 			<div className="home_cards">
