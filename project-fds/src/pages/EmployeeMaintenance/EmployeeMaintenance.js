@@ -1,7 +1,8 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import {
 	Form, Input, DatePicker, Button, Radio,
-} from 'antd';
+} from "antd";
 
 import "./style.css";
 
@@ -9,12 +10,12 @@ class EmployeeMaintenance extends Component {
 
 	handleSubmit = (e) => {
 		e.preventDefault();
-		this.props.form.validateFieldsAndScroll((err, values) => {
-		  if (!err) {
-			console.log('Received values of form: ', values);
-		  }
+		this.props.form.validateFieldsAndScroll((err) => {
+			if (!err) {
+				// console.log("Received values of form: ", values);
+			}
 		});
-	  }
+	}
 
 	render() {
 
@@ -23,8 +24,8 @@ class EmployeeMaintenance extends Component {
 		const formItemLayout = {
 			labelCol: {
 				xs: { span: 1 },
-				sm: { span: 11},
-				md: { span: 8},
+				sm: { span: 11 },
+				md: { span: 8 },
 			},
 			wrapperCol: {
 				xs: { span: 24 },
@@ -46,7 +47,7 @@ class EmployeeMaintenance extends Component {
 		};
 
 		const config = {
-			rules: [{ type: 'object', required: true, message: 'Please select time!' }],
+			rules: [{ type: "object", required: true, message: "Please select time!" }],
 		};
 
 		return (
@@ -59,42 +60,42 @@ class EmployeeMaintenance extends Component {
 						{...formItemLayout}
 						label="Name"
 					>
-						{getFieldDecorator('field_name', {
+						{getFieldDecorator("field_name", {
 							rules: [{
 								required: true,
-								message: 'Please input your name.'
+								message: "Please input your name."
 							}],
 						})(
-							<Input placeholder="Name"/>
-						)}	
+							<Input placeholder="Name" />
+						)}
 					</Form.Item>
 
 					<Form.Item
 						{...formItemLayout}
 						label="Address Of Job"
 					>
-						{getFieldDecorator('field_address', {
+						{getFieldDecorator("field_address", {
 							rules: [{
 								required: true,
-								message: 'Please input the address that work was performed at'
+								message: "Please input the address that work was performed at"
 							}],
 						})(
-							<Input placeholder="Address"/>
-						)}	
+							<Input placeholder="Address" />
+						)}
 					</Form.Item>
 
 					<Form.Item
 						{...formItemLayout}
 						label="E-mail"
 					>
-						{getFieldDecorator('email', {
+						{getFieldDecorator("email", {
 							rules: [{
-								type: 'email', message: 'The input is not valid E-mail!',
+								type: "email", message: "The input is not valid E-mail!",
 							}, {
 								required: false,
 							}],
 						})(
-							<Input placeholder="E-mail"/>
+							<Input placeholder="E-mail" />
 						)}
 					</Form.Item>
 
@@ -102,44 +103,44 @@ class EmployeeMaintenance extends Component {
 						{...formItemLayout}
 						label="Job Status"
 					>
-					{getFieldDecorator('radio-group', {
-						rules: [{
-							required: true, message: "Please input the job status."
-						}]
-					})(
-						<Radio.Group>
-							<Radio value="finished">FINISHED</Radio>
-							<Radio value="notstarted">NOT STARTED</Radio>
-							<Radio value="unfinished">UN-FINISHED</Radio>
-							<Radio value="ordered">ORDERED</Radio>
-						</Radio.Group>
-					)}
+						{getFieldDecorator("radio-group", {
+							rules: [{
+								required: true, message: "Please input the job status."
+							}]
+						})(
+							<Radio.Group>
+								<Radio value="finished">FINISHED</Radio>
+								<Radio value="notstarted">NOT STARTED</Radio>
+								<Radio value="unfinished">UN-FINISHED</Radio>
+								<Radio value="ordered">ORDERED</Radio>
+							</Radio.Group>
+						)}
 					</Form.Item>
 
 					<Form.Item
 						{...formItemLayout}
 						label="Customer Satisfaction"
 					>
-					{getFieldDecorator('radio-group2', {
-						rules: [{
-							required: true, message: "Please input the Customer Satisfaction."
-						}]
-					})(
-						<Radio.Group>
-							<Radio value="very_satisfied">Very Satisfied</Radio>
-							<Radio value="satisfied">Satisfied</Radio>
-							<Radio value="unknown">Unknown</Radio>
-							<Radio value="unsatisfied">Unsatisfied</Radio>
-							<Radio value="very_unsatisfied">Very Unsatisfied</Radio>
-						</Radio.Group>
-					)}
+						{getFieldDecorator("radio-group2", {
+							rules: [{
+								required: true, message: "Please input the Customer Satisfaction."
+							}]
+						})(
+							<Radio.Group>
+								<Radio value="very_satisfied">Very Satisfied</Radio>
+								<Radio value="satisfied">Satisfied</Radio>
+								<Radio value="unknown">Unknown</Radio>
+								<Radio value="unsatisfied">Unsatisfied</Radio>
+								<Radio value="very_unsatisfied">Very Unsatisfied</Radio>
+							</Radio.Group>
+						)}
 					</Form.Item>
 
 					<Form.Item
 						{...formItemLayout}
 						label="Date Job Started"
 					>
-						{getFieldDecorator('date-start', config)(
+						{getFieldDecorator("date-start", config)(
 							<DatePicker />
 						)}
 					</Form.Item>
@@ -148,21 +149,21 @@ class EmployeeMaintenance extends Component {
 						{...formItemLayout}
 						label="Comments"
 					>
-						{getFieldDecorator('Comments', {
+						{getFieldDecorator("Comments", {
 							rules: [{
 								required: true,
-								message: 'Please input comments on the job.'
+								message: "Please input comments on the job."
 							}],
 						})(
-							<Input.TextArea rows={4} placeholder="Comments." spellCheck='default'/>
-						)}	
+							<Input.TextArea rows={4} placeholder="Comments." spellCheck='default' />
+						)}
 					</Form.Item>
 
 					<Form.Item
 						{...formItemLayout}
 						label="Date Job Completed"
 					>
-						{getFieldDecorator('date-end', config)(
+						{getFieldDecorator("date-end", config)(
 							<DatePicker />
 						)}
 					</Form.Item>
@@ -171,39 +172,39 @@ class EmployeeMaintenance extends Component {
 						{...formItemLayout}
 						label="Job Expenses"
 					>
-						{getFieldDecorator('expenses', {
+						{getFieldDecorator("expenses", {
 							rules: [{
 								required: false,
 							}],
 						})(
-							<Input placeholder="Expenses"/>
-						)}	
+							<Input placeholder="Expenses" />
+						)}
 					</Form.Item>
 
 					<Form.Item
 						{...formItemLayout}
 						label="Outside Contractor Price"
 					>
-						{getFieldDecorator('outside_contractor', {
+						{getFieldDecorator("outside_contractor", {
 							rules: [{
 								required: false,
 							}],
 						})(
-							<Input placeholder="Outside Contractor Expenses"/>
-						)}	
+							<Input placeholder="Outside Contractor Expenses" />
+						)}
 					</Form.Item>
 
 					<Form.Item
 						{...formItemLayout}
 						label="Other Info"
 					>
-						{getFieldDecorator('other_info', {
+						{getFieldDecorator("other_info", {
 							rules: [{
 								required: false,
 							}],
 						})(
-							<Input placeholder="Other Info"/>
-						)}	
+							<Input placeholder="Other Info" />
+						)}
 					</Form.Item>
 
 					<Form.Item {...tailFormItemLayout}>
@@ -216,4 +217,8 @@ class EmployeeMaintenance extends Component {
 
 }
 
-export default Form.create() (EmployeeMaintenance);
+EmployeeMaintenance.propTypes = {
+	form: PropTypes.any,
+};
+
+export default Form.create()(EmployeeMaintenance);
