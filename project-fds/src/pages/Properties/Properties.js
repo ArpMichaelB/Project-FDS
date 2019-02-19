@@ -59,34 +59,4 @@ const images = [
 	},
 ];
 
-
-// export default class AllProp extends Component {
-
-//   // margin-left: auto;
-//   // margin-right: auto;
-//     render() {
-//         return (
-//             <div className="allprop_container">
-//                 <h1>All Properties</h1>
-//               {images.map((image) => {
-//                 return(
-//                   <a href="http://www.google.com">
-//                   <div key={image.alt}> 
-//                     <Card hoverable style={{ width: "70%", marginRight: "auto", marginLeft: "auto", marginBottom: "2rem"}} cover={<img alt={image.alt} src={image.src} />}>
-//                 <Meta
-//                   title={image.title}
-//                   description={image.desc} />
-//               </Card>
-//                   </div>
-//                   </a>
-//                 )
-
-//               })}
-
-
-//             </div>
-//         )
-//     }
-// }
-
 export default Properties;
