@@ -1,28 +1,33 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import {
 	Form, Input, DatePicker, Cascader, Button,
-} from 'antd';
+} from "antd";
 
 import "./style.css";
 
+TenantMaintenance.propTypes = {
+	form: PropTypes.any,
+};
+
 const call = [{
 	value: true,
-	label: 'Yes',
+	label: "Yes",
 }, {
 	value: false,
-	label: 'No',
-}]
+	label: "No",
+}];
 
 class TenantMaintenance extends Component {
 
 	handleSubmit = (e) => {
 		e.preventDefault();
-		this.props.form.validateFieldsAndScroll((err, values) => {
-		  if (!err) {
-			console.log('Received values of form: ', values);
-		  }
+		this.props.form.validateFieldsAndScroll((err) => {
+			if (!err) {
+				// console.log('Received values of form: ', values);
+			}
 		});
-	  }
+	}
 
 	render() {
 		const { getFieldDecorator } = this.props.form;
@@ -30,8 +35,8 @@ class TenantMaintenance extends Component {
 		const formItemLayout = {
 			labelCol: {
 				xs: { span: 1 },
-				sm: { span: 11},
-				md: { span: 8},
+				sm: { span: 11 },
+				md: { span: 8 },
 			},
 			wrapperCol: {
 				xs: { span: 24 },
@@ -53,7 +58,7 @@ class TenantMaintenance extends Component {
 		};
 
 		const config = {
-			rules: [{ type: 'object', required: true, message: 'Please select time!' }],
+			rules: [{ type: "object", required: true, message: "Please select time!" }],
 		};
 
 		return (
@@ -65,63 +70,63 @@ class TenantMaintenance extends Component {
 						{...formItemLayout}
 						label="First Name"
 					>
-						{getFieldDecorator('field_first_name', {
+						{getFieldDecorator("field_first_name", {
 							rules: [{
 								required: true,
-								message: 'Please input your first name.'
+								message: "Please input your first name."
 							}],
 						})(
-							<Input placeholder="First Name"/>
-						)}	
+							<Input placeholder="First Name" />
+						)}
 					</Form.Item>
 
 					<Form.Item
 						{...formItemLayout}
 						label="Last Name"
 					>
-						{getFieldDecorator('field_last_name', {
+						{getFieldDecorator("field_last_name", {
 							rules: [{
 								required: true,
-								message: 'Please input your last name.'
+								message: "Please input your last name."
 							}],
 						})(
-							<Input placeholder="Last Name"/>
-						)}	
+							<Input placeholder="Last Name" />
+						)}
 					</Form.Item>
 
 					<Form.Item
 						{...formItemLayout}
 						label="Address"
 					>
-						{getFieldDecorator('field_address', {
+						{getFieldDecorator("field_address", {
 							rules: [{
 								required: true,
-								message: 'Please input the address that needs maintenance'
+								message: "Please input the address that needs maintenance."
 							}],
 						})(
-							<Input placeholder="Address"/>
-						)}	
+							<Input placeholder="Address" />
+						)}
 					</Form.Item>
 
 					<Form.Item
 						{...formItemLayout}
 						label="Maintenance"
 					>
-						{getFieldDecorator('field_maintenance', {
+						{getFieldDecorator("field_maintenance", {
 							rules: [{
 								required: true,
-								message: 'Please input the maintenance that is needed.'
+								message: "Please input the maintenance that is needed."
 							}],
 						})(
-							<Input.TextArea rows={4} placeholder="What maintenance needs to be done." spellCheck='default'/>
-						)}	
+							<Input.TextArea rows={4} placeholder="What maintenance needs to be done." spellCheck='default' />
+						)}
 					</Form.Item>
-					
+
 					<Form.Item
 						{...formItemLayout}
 						label="Best Date For Maintenance"
 					>
-						{getFieldDecorator('date-picker', config)(
+						{getFieldDecorator("date-picker", config)(
 							<DatePicker />
 						)}
 					</Form.Item>
@@ -131,14 +136,14 @@ class TenantMaintenance extends Component {
 						{...formItemLayout}
 						label="E-mail"
 					>
-						{getFieldDecorator('email', {
+						{getFieldDecorator("email", {
 							rules: [{
-								type: 'email', message: 'The input is not valid E-mail!',
+								type: "email", message: "The input is not valid E-mail!",
 							}, {
-								required: true, message: 'Please input your E-mail!',
+								required: true, message: "Please input your E-mail!",
 							}],
 						})(
-							<Input placeholder="E-mail"/>
+							<Input placeholder="E-mail" />
 						)}
 					</Form.Item>
 
@@ -147,7 +152,7 @@ class TenantMaintenance extends Component {
 						{...formItemLayout}
 						label="Should we call ahead"
 					>
-						{getFieldDecorator('call_ahead', {
+						{getFieldDecorator("call_ahead", {
 							initialValue: [true],
 						})(
 							<Cascader options={call} />
@@ -157,10 +162,10 @@ class TenantMaintenance extends Component {
 						{...formItemLayout}
 						label="Phone Number"
 					>
-						{getFieldDecorator('phone', {
-							rules: [{ required: true, message: 'Please input your phone number!' }],
+						{getFieldDecorator("phone", {
+							rules: [{ required: true, message: "Please input your phone number!" }],
 						})(
-							<Input placeholder="Phone Number" style={{ width: '100%' }} />
+							<Input placeholder="Phone Number" style={{ width: "100%" }} />
 						)}
 					</Form.Item>
 					<Form.Item {...tailFormItemLayout}>
@@ -169,7 +174,7 @@ class TenantMaintenance extends Component {
 				</form>
 			</main>
 		);
-	};
+	}
 }
 
 
