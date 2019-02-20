@@ -1,5 +1,5 @@
 import React from "react";
-import {Form, Input, Button} from "antd";
+import {Form, Input, Button, message} from "antd";
 
 import "./style.css";
 
@@ -113,6 +113,7 @@ const Contact = () => {
 							type="primary"
 							htmlType="submit"
 							className="submit contact_info_form_button"
+							onClick={()=>message.success("Thank you for your input.")}
 						>
 							Send Message
 						</Button>
