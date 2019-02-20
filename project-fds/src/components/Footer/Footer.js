@@ -30,7 +30,7 @@ class Footer extends Component {
 						Davenport, IA, 52801
 					</a>
 				</p>
-				<span>Copyright <Icon type="copyright" /> Insight Manegment 2019-{(new Date().getFullYear())}</span>
+				<span>Copyright <Icon type="copyright" /> Insight Management 2019-{(new Date().getFullYear())}</span>
 			</div>
 
 		);

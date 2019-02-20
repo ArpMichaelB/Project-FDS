@@ -18,7 +18,7 @@ const Properties = () => {
 
 							<Card hoverable style={{ width: "100%", marginRight: "auto", marginLeft: "auto", marginBottom: "2rem" }} cover={<img alt={image.alt} src={image.src} />}>
 								<Meta
-									title={image.title}
+									title={image.name}
 									description={image.desc} />
 							</Card>
 
@@ -38,22 +38,25 @@ const images = [
 		alt: "Building",
 		src: BuildingPic,
 		title: "HalliganLofts",
+		name: "Halligan Lofts",
 		desc: "This is my Building",
 
 	},
 
 	{
-		alt: "Building",
+		alt: "Building 1",
 		src: BuildingPic,
-		title: "Title Prop",
+		title: "Title  1",
+		name: "Name 1",
 		desc: "This is my Building",
 
 	},
 
 	{
-		alt: "Building",
+		alt: "Building 2",
 		src: BuildingPic,
-		title: "Title Prop",
+		title: "Title 2",
+		name: "Name 2",
 		desc: "This is my Building",
 
 	},
