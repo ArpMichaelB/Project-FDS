@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import {
-	Form, Input, DatePicker, Button, Radio,
+	Form, Input, DatePicker, Button, Radio, message,
 } from "antd";
 
 import "./style.css";
@@ -12,7 +12,8 @@ class EmployeeMaintenance extends Component {
 		e.preventDefault();
 		this.props.form.validateFieldsAndScroll((err) => {
 			if (!err) {
-				// console.log("Received values of form: ", values);
+				message.success("Your form has been submitted successfully");
+				this.props.form.resetFields();
 			}
 		});
 	}

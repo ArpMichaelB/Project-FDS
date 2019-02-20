@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import {
-	Form, Input, DatePicker, Cascader, Button,
+	Form, Input, DatePicker, Cascader, Button,message,
 } from "antd";
 
 import "./style.css";
@@ -20,7 +20,8 @@ class TenantMaintenance extends Component {
 		e.preventDefault();
 		this.props.form.validateFieldsAndScroll((err) => {
 			if (!err) {
-				// console.log('Received values of form: ', values);
+				message.success("Your form has been submitted successfully");
+				this.props.form.resetFields();
 			}
 		});
 	}
