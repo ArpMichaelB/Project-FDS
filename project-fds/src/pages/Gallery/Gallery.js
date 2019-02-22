@@ -1,15 +1,17 @@
 import React, { Component } from "react";
-import { Card, Modal, Icon  } from "antd";
+import { Card, Modal  } from "antd";
 import InfiniteScroll from "react-infinite-scroll-component";
 import LazyLoad from "react-lazyload";
+import ImageModalGallery from "./ImageModalGallery";
 
+import "react-image-gallery/styles/css/image-gallery.css";
 import "./style.css";
 
 class Gallery extends Component {
 	constructor(props){
 		super(props);
 
-		this.state={visible:false, image:"", width:"", index:0, scoll_index:10, hasMore:true};
+		this.state={visible:false, width:"", index:0, scoll_index:10, hasMore:true};
 
 		var rawFile = new XMLHttpRequest();
 		rawFile.open("GET", "/gallery/YandJ/images_info.txt", false);
@@ -34,9 +36,9 @@ class Gallery extends Component {
 					key={i}
 					bodyStyle={{padding: "0"}}
 					className="cards"
-					onClick={() => this.showModal("/gallery/YandJ/" + this.images[i], i)}
+					onClick={() => this.showModal(i)}
 					cover={
-						<LazyLoad placeholder={<img alt="placeholder" className="small_image" src="https://via.placeholder.com/250" unmountIfInvisible />}>
+						<LazyLoad placeholder={<img alt="placeholder" className="small_image" src="https://via.placeholder.com/250" />}>
 							<img alt="example" className="small_image" src={"/gallery/YandJ/" + this.images[i]} />
 						</LazyLoad>
 					}
@@ -44,16 +46,19 @@ class Gallery extends Component {
 			);
 		}
 
+		this.gallery_images = [];
+
+		this.images.forEach(image => {
+			this.gallery_images.push({original:"/gallery/YandJ/" + image, originalClass:"gallery_image"});
+		});
+
 		this.state.cards = cards;
 
 		this.cancel=this.cancel.bind(this);
 		this.showModal=this.showModal.bind(this);
-		this.goLeft=this.goLeft.bind(this);
-		this.goRight=this.goRight.bind(this);
 	}
 
 	render(){
-		
 		return (
 			<main className="Gallery">
 				<div className="title"><h1>Gallery</h1></div>
@@ -67,11 +72,7 @@ class Gallery extends Component {
 				</InfiniteScroll>
 				<Modal visible={this.state.visible} id="modal" onCancel={this.cancel} bodyStyle={{padding:"0"}} 
 					footer={null}>
-					<div>
-						<Icon type="caret-left" theme="filled" className="icon" id="left-icon" onClick={this.goLeft} />
-						<img alt="example" id="modal-img" src={this.state.image} />
-						<Icon type="caret-right" theme="filled" className="icon" id="right-icon" onClick={this.goRight} />
-					</div>
+					<ImageModalGallery index={this.state.index} gallery_images={this.gallery_images} />
 				</Modal>
 			</main>
 		);
@@ -97,9 +98,9 @@ class Gallery extends Component {
 					key={i}
 					bodyStyle={{padding: "0"}}
 					className="cards"
-					onClick={() => this.showModal("/gallery/YandJ/" + this.images[i], i)}
+					onClick={() => this.showModal(i)}
 					cover={
-						<LazyLoad placeholder={<img alt="placeholder" className="small_image" src="https://via.placeholder.com/250" unmountIfInvisible />}>
+						<LazyLoad width="100%" height="100%" placeholder={<img alt="placeholder" className="small_image" src="https://via.placeholder.com/250" />}>
 							<img alt="example" className="small_image" src={"/gallery/YandJ/" + this.images[i]} />
 						</LazyLoad>
 					}
@@ -109,24 +110,14 @@ class Gallery extends Component {
 		this.setState((prevState) => {return {scoll_index:scoll_index, cards:prevState.cards.concat(cards)};});
 	}
 
-	goLeft(){
-		if(this.state.index > 0){
-			this.setState({image:"/gallery/YandJ/" + this.images[this.state.index-1], index:this.state.index-1});
-		}
-	}
-
-	goRight(){
-		if(this.state.index < this.images.length-1){
-			this.setState({image:"/gallery/YandJ/" + this.images[this.state.index+1], index:this.state.index+1});
-		}
-	}
-
 	cancel(){
 		this.setState({visible:false});
 	}
 
-	showModal(image, index){
-		this.setState({visible:true, image:image, index:index});
+	showModal(index){
+		this.setState({
+			visible:true, index:index
+		});
 	}
 }
 
