@@ -7,23 +7,9 @@
     margin:5px
 }
 
-.icon{
-    font-size: 25px;
-    position: absolute;
-    top: 50%;
-}
-
 .small_image{
     width: 200px;
     height: 200px;
-}
-
-#left-icon{
-    left:0;
-}
-
-#right-icon{
-    right:0;
 }
 
 #modal-img{
@@ -32,4 +18,13 @@
 
 #modal{
     margin: 20px;
+}
+
+.gallery_image img{
+    width: 100%;
+    height: 100%;
+}
+
+.anticon svg{
+    color: white;
 }
