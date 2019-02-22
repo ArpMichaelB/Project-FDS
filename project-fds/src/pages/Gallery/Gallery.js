@@ -13,7 +13,7 @@ class Gallery extends Component {
 
 		this.initialLoad = true;
 
-		this.state={visible:false, width:"", index:0, scoll_index:10, hasMore:true};
+		this.state={visible:false, width:"", index:0, scoll_index:10, hasMore:true, h3_display:"inline"};
 
 		var rawFile = new XMLHttpRequest();
 		rawFile.open("GET", "/gallery/YandJ/images_info.txt", false);
@@ -78,7 +78,7 @@ class Gallery extends Component {
 					footer={null}>
 					<ImageModalGallery index={this.state.index} gallery_images={this.gallery_images} />
 				</Modal>
-				<h3 ref={i => this.bottom_text = i}>End of Gallery</h3>
+				<h3 style={{display:this.state.h3_display}} ref={i => this.bottom_text = i}>End of Gallery</h3>
 			</main>
 		);
 	}
@@ -96,6 +96,7 @@ class Gallery extends Component {
 			}
 			else{
 				this.initialLoad = false;
+				this.setState({h3_display:"none"});
 			}
 		}
 	}
@@ -113,6 +114,7 @@ class Gallery extends Component {
 			}
 			else{
 				this.initialLoad = false;
+				this.setState({h3_display:"none"});
 			}
 		}
 	}
