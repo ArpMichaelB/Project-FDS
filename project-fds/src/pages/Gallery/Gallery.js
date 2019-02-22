@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Card, Modal, Icon  } from "antd";
 import InfiniteScroll from "react-infinite-scroll-component";
+import LazyLoad from "react-lazyload";
 
 import "./style.css";
 
@@ -34,7 +35,11 @@ class Gallery extends Component {
 					bodyStyle={{padding: "0"}}
 					className="cards"
 					onClick={() => this.showModal("/gallery/YandJ/" + this.images[i], i)}
-					cover={<img alt="example" className="small_image" src={"/gallery/YandJ/" + this.images[i]} />}
+					cover={
+						<LazyLoad placeholder={<img alt="placeholder" className="small_image" src="https://via.placeholder.com/250" unmountIfInvisible />}>
+							<img alt="example" className="small_image" src={"/gallery/YandJ/" + this.images[i]} />
+						</LazyLoad>
+					}
 				/>
 			);
 		}
@@ -93,7 +98,11 @@ class Gallery extends Component {
 					bodyStyle={{padding: "0"}}
 					className="cards"
 					onClick={() => this.showModal("/gallery/YandJ/" + this.images[i], i)}
-					cover={<img alt="example" className="small_image" src={"/gallery/YandJ/" + this.images[i]} />}
+					cover={
+						<LazyLoad placeholder={<img alt="placeholder" className="small_image" src="https://via.placeholder.com/250" unmountIfInvisible />}>
+							<img alt="example" className="small_image" src={"/gallery/YandJ/" + this.images[i]} />
+						</LazyLoad>
+					}
 				/>
 			);
 		}
