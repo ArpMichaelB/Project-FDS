@@ -38,7 +38,7 @@ class Gallery extends Component {
 					className="cards"
 					onClick={() => this.showModal(i)}
 					cover={
-						<LazyLoad placeholder={<img alt="placeholder" className="small_image" src="https://via.placeholder.com/250" />}>
+						<LazyLoad placeholder={<img alt="placeholder" className="small_image" src="/gallery/loading_image.gif" />}>
 							<img alt="example" className="small_image" src={"/gallery/YandJ/" + this.images[i]} />
 						</LazyLoad>
 					}
@@ -100,7 +100,7 @@ class Gallery extends Component {
 					className="cards"
 					onClick={() => this.showModal(i)}
 					cover={
-						<LazyLoad width="100%" height="100%" placeholder={<img alt="placeholder" className="small_image" src="https://via.placeholder.com/250" />}>
+						<LazyLoad placeholder={<img alt="placeholder" className="small_image" src="/gallery/loading_image.gif" />}>
 							<img alt="example" className="small_image" src={"/gallery/YandJ/" + this.images[i]} />
 						</LazyLoad>
 					}
