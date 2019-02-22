@@ -15,7 +15,7 @@ const Home = () => {
 					<div className="height"><img src="gallery/YandJ/GordonVan-Tine/gordon_interior16.jpg" width="100%" alt="gordonvan-tine"/></div>
 					<div className="height"><img src="gallery/YandJ/GordonVan-Tine/gordon_interior2.jpg" width="100%" alt="gordonvan-tine"/></div>
 					<div className="height"><img src="gallery/YandJ/GordonVan-Tine/gordon_interior20.jpg" width="100%" alt="gordonvan-tine"/></div>
-					<div className="height"><img src="gallery/YandJ/Peterson/peterson_interior14.jpg" width="100%" alt="peterson"/></div>
+					<div className="height"><img src="gallery/YandJ/Peterson/peterson_interior16.jpg" width="100%" alt="peterson"/></div>
 				</Carousel>
 			</div>
 			<div className="group">
