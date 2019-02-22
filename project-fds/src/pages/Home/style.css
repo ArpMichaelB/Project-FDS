@@ -8,7 +8,7 @@
 
 .ant-carousel .slick-slide {
     text-align: center;
-    height: 300px;
+    height: 110px;
     line-height: 160px;
     background: #364d79;
     overflow: hidden;
@@ -19,12 +19,12 @@
   }
 
   .height {
-      height:400px;
+      height:110px;
   }
 
   .ant-carousel .slick-initialized .slick-slide {
       display: block;
-      height: 400px;
+      height: 185px;
   }
 
   .home_cards {
@@ -32,6 +32,7 @@
       justify-content: space-evenly;
       flex-flow: wrap;
       width: 100%;
+      margin-bottom: 5em;
   }
 
   .home_card .ant-card-body {
@@ -41,7 +42,8 @@
   .group {
       display:inline-flex;
       flex-flow: wrap;
-      float: left; 
+      float: left;
+      margin-top: 5em;
   }
 
   .avail_button, .ant-btn-primary:hover, .ant-btn-primary:focus {
@@ -68,8 +70,11 @@
     color: var(--secondary-color);
 }
 
+.ant-carousel .slick-dots {
+    top:12em;
+}
 
-@media (min-width: 480px) {
+@media (min-width: 768px) {
     .avail_button, .ant-btn-primary:hover, .ant-btn-primary:focus {
         color: #fff;
         background-color: var(--secondary-color);
@@ -85,4 +90,53 @@
         margin-left: -2rem;
         top: 0;
       }
+      .height {
+          height: 300px;
+      }
+
+      .ant-carousel .slick-initialized .slick-slide {
+        height: 375px;
+    }
+
+    .ant-carousel .slick-slide {
+        height: 300px
+      }
+
+      .ant-carousel .slick-dots {
+        top:25em;
+    }
+}
+
+@media (min-width: 1025px) {
+    .avail_button, .ant-btn-primary:hover, .ant-btn-primary:focus {
+        color: #fff;
+        background-color: var(--secondary-color);
+        border-color:var(--secondary-color);
+      }
+    
+      .avail_button, .ant-btn-primary {
+        color: #fff;
+        background-color: var(--secondary-color);
+        border-color:var(--secondary-color);
+        margin-top: 3.3rem;
+        margin-bottom: 3.3rem;
+        margin-left: -2rem;
+        top: 0;
+      }
+
+      .height {
+          height: 476px;
+      }
+
+      .ant-carousel .slick-initialized .slick-slide {
+        height: 550px;
+    }
+
+    .ant-carousel .slick-slide {
+        height: 300px
+      }
+
+      .ant-carousel .slick-dots {
+        top:38em;
+    }
 }
