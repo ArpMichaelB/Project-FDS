@@ -11,7 +11,9 @@ class Gallery extends Component {
 	constructor(props){
 		super(props);
 
-		this.state={visible:false, width:"", index:0, scoll_index:10, hasMore:true};
+		this.initialLoad = true;
+
+		this.state={visible:false, width:"", index:0, scoll_index:10, hasMore:true, h3_display:"inline"};
 
 		var rawFile = new XMLHttpRequest();
 		rawFile.open("GET", "/gallery/YandJ/images_info.txt", false);
@@ -27,6 +29,8 @@ class Gallery extends Component {
 			}
 		};
 		rawFile.send(null);
+
+		
 
 		let cards = [];
 		for(let i = this.state.scoll_index-10;i < this.state.scoll_index;i++){
@@ -74,8 +78,45 @@ class Gallery extends Component {
 					footer={null}>
 					<ImageModalGallery index={this.state.index} gallery_images={this.gallery_images} />
 				</Modal>
+				<h3 style={{display:this.state.h3_display}} ref={i => this.bottom_text = i}>End of Gallery</h3>
 			</main>
 		);
+	}
+
+	componentDidMount(){
+		if(this.initialLoad){
+			let rect = this.bottom_text.getBoundingClientRect();
+			let elemTop = rect.top;
+			let elemBottom = rect.bottom;
+		
+			let isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+
+			if(isVisible){
+				this.loadFunc();
+			}
+			else{
+				this.initialLoad = false;
+				this.setState({h3_display:"none"});
+			}
+		}
+	}
+
+	componentDidUpdate(){
+		if(this.initialLoad){
+			let rect = this.bottom_text.getBoundingClientRect();
+			let elemTop = rect.top;
+			let elemBottom = rect.bottom;
+		
+			let isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+
+			if(isVisible){
+				this.loadFunc();
+			}
+			else{
+				this.initialLoad = false;
+				this.setState({h3_display:"none"});
+			}
+		}
 	}
 
 	loadFunc = () => {
