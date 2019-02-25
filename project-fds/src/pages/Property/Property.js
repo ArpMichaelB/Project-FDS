@@ -73,7 +73,7 @@ const properties = [
 
 	{
 		name: "Gordon",
-		fileStart: "GordonVan-Tine",
+		fileStart: "gordon",
 		title: "Gordon Van-Tine Lofts",
 		desc: "Halligan Lofts, Newly Renovated, 2 Bedroom, River Views! w/d - Bike Room-Fitness Center- All Units Market Rate!",
 		rentinc: "Pets negotiable Tenant pays all electric One year lease No smoking building Parking included Trash removal included Water included",
