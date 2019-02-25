@@ -25,3 +25,22 @@
   .ant-carousel .slick-slide h3 {
     color: #fff;
   }
+
+  .picture_display {
+      display: flex;
+      justify-content: center;
+  }
+  .ant-card-bordered-geo {
+    border: none;
+  }
+  
+  .ant-pagination {
+    margin-bottom: 2rem;
+  }
+  
+  @media only screen and (max-width: 768px){
+    .picture_display{
+      flex-direction: column;
+      align-items: center;
+    }
+  }

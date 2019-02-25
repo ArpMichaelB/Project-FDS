@@ -5,6 +5,7 @@ import Card from "antd/lib/card";
 import BuildingPic from "../../assets/BuildingPic.jpg";
 import {Link} from "react-router-dom";
 const { Meta } = Card;
+
 const Properties = () => {
 
 	return (
@@ -14,11 +15,11 @@ const Properties = () => {
 			{images.map((image) => {
 				return (
 					<div key={image.alt} className="property">
-						<Link to={"property/" + image.title}>
+						<Link to={"property/" + image.name}>
 
 							<Card hoverable style={{ width: "100%", marginRight: "auto", marginLeft: "auto", marginBottom: "2rem" }} cover={<img alt={image.alt} src={image.src} />}>
 								<Meta
-									title={image.name}
+									title={image.title}
 									description={image.desc} />
 							</Card>
 
@@ -37,8 +38,8 @@ const images = [
 	{
 		alt: "Building",
 		src: BuildingPic,
-		title: "HalliganLofts",
-		name: "Halligan Lofts",
+		title: "Halligan Lofts",
+		name: "HalliganLofts",
 		desc: "This is my Building",
 
 	},
@@ -54,7 +55,7 @@ const images = [
 
 	{
 		alt: "Building 2",
-		src: BuildingPic,
+		src: "/gallery/YandJ/Andresen/andresen_exterior1.JPG",
 		title: "Title 2",
 		name: "Name 2",
 		desc: "This is my Building",
