@@ -10,7 +10,7 @@ const ShowProperty = (props) => {
 		<div>
 			<div className="title"><h1>{props.property.title}</h1></div>
 
-			<Slideshow />
+			<Slideshow fileStart={props.property.fileStart}/>
 
 			<Collapse accordion>
 				<Panel header="Description" key="1">
@@ -36,7 +36,8 @@ ShowProperty.propTypes = {
 	name: PropTypes.any,
 	desc: PropTypes.any,
 	rentinc: PropTypes.any,
-	amenities: PropTypes.any
+	amenities: PropTypes.any,
+	fileStart: PropTypes.any,
 };
 
 export default ShowProperty;
