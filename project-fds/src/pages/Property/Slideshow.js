@@ -87,7 +87,7 @@ export default class Slideshow extends Component {
 							<Card
 								className="ant-card-bordered-geo"
 								style={{ width: "70%" }}
-								key={val.title}
+								key={val.value}
 								cover={<img alt={val.value} src={val.value} />}
 							>
 							</Card>

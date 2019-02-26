@@ -34,9 +34,7 @@ const Property = (props) => {
 						}
 
 						else{
-							return(
-								<div></div>
-							);
+							return(null);
 						}
 					})
 				}
