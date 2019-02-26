@@ -1,4 +1,5 @@
 import React from "react";
+import DocumentTitle from "react-document-title";
 
 import "./style.css";
 import Card from "antd/lib/card";
@@ -17,6 +18,7 @@ const Properties = () => {
 	return (
 
 		<main className="Properties">
+			<DocumentTitle title="All Properties" />
 			<div className="title"><h1>All Properties</h1></div>
 			{properties.map((property) => {
 				return (

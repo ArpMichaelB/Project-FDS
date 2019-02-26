@@ -3,6 +3,7 @@ import { Card, Modal  } from "antd";
 import InfiniteScroll from "react-infinite-scroll-component";
 import LazyLoad from "react-lazyload";
 import ImageModalGallery from "./ImageModalGallery";
+import DocumentTitle from "react-document-title";
 
 import "react-image-gallery/styles/css/image-gallery.css";
 import "./style.css";
@@ -65,6 +66,7 @@ class Gallery extends Component {
 	render(){
 		return (
 			<main className="Gallery">
+				<DocumentTitle title="Gallery" />
 				<div className="title"><h1>Gallery</h1></div>
 				<InfiniteScroll
 					dataLength={this.state.cards.length}

@@ -1,9 +1,11 @@
 import React from "react";
 import {Form, Input, Button, message} from "antd";
+import DocumentTitle from "react-document-title";
 
 import "./style.css";
 
 const Contact = () => {
+
 	const formInputSmallLayout = 
 	{
 		labelCol: 
@@ -47,6 +49,7 @@ const Contact = () => {
 	};
 	return (
 		<main className="Contact">
+			<DocumentTitle title="Contact Us" />
 			<div className="title"><h1>Contact Us</h1></div>
 			<div className="contact_info_information">
 				
