@@ -1,6 +1,7 @@
 import React from "react";
 import { Carousel, Card, Button } from "antd";
 import { Link } from "react-router-dom";
+import DocumentTitle from "react-document-title";
 
 import "./style.css";
 
@@ -9,7 +10,7 @@ const Home = () => {
 	return (
 
 		<div className="Home">
-
+			<DocumentTitle title="Y&G Development Group" />
 			<div className="carousel">
 				<Carousel className="height" autoplay>
 					<div className="height"><img src="gallery/YandJ/GordonVan-Tine/gordon_interior16.jpg" width="100%" alt="gordonvan-tine"/></div>
@@ -27,7 +28,7 @@ const Home = () => {
 			<div className="home_cards">
 				<Card
 					title="GordonVan-Tine"
-					extra={<a href="/property/GordonVan-Tine">More</a>}
+					extra={<a href="/property/Gordon">More</a>}
 					style={{ width: 303}}
 					className="home_card"
 				>
@@ -36,7 +37,7 @@ const Home = () => {
 
 				<Card
 					title="Halligan"
-					extra={<a className="more_a" href="/property/Halligan">More</a>}
+					extra={<a className="more_a" href="/property/HalliganLofts">More</a>}
 					style={{ width: 303}}
 					className="home_card"
 				>

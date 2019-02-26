@@ -4,6 +4,8 @@ import "./style.css";
 import { PropTypes } from "prop-types";
 import ShowProperty from "./ShowProperty";
 import ShowPNF from "./ShowPNF";
+import DocumentTitle from "react-document-title";
+import Sec from "../../hoc/sec/Sec";
 
 
 // var propertyIndex;
@@ -24,7 +26,10 @@ const Property = (props) => {
 						if (property.name === pageParameter) {
 							pageShown = true;
 							return (
-								<ShowProperty property={property} key={property.name} />
+								<Sec>
+									<ShowProperty property={property} key={property.name} />
+									<DocumentTitle title={property.title} />
+								</Sec>
 							);
 
 						}

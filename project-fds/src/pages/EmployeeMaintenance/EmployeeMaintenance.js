@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import DocumentTitle from "react-document-title";
 import {
 	Form, Input, DatePicker, Button, Radio, message,
 } from "antd";
@@ -54,6 +55,7 @@ class EmployeeMaintenance extends Component {
 		return (
 
 			<main className="EmployeeMaintenance">
+				<DocumentTitle title="Employee Maintenance" />
 				<div className="title"><h1>Employee Maintenance</h1></div>
 				<form onSubmit={this.handleSubmit}>
 

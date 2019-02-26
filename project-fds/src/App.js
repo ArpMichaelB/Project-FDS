@@ -21,7 +21,7 @@ class App extends Component {
 	render() {
 		let routes = (
 			<Switch>
-				<Route path="/home" component={Home} />
+				<Route path="/home" component={Home} title="hello" />
 				<Route path="/contact" component={Contact} />
 				<Route path="/properties" component={Properties} />
 				<Route path="/property/:name" component={Property} />
