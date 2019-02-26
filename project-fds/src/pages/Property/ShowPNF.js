@@ -1,12 +1,24 @@
 import React from "react";
 import "./style.css";
+import { PropTypes } from "prop-types";
 
-const ShowPNF = () => {
+const ShowPNF = (props) => {
+	var pageShown = props.pageShown;
 	return (
 		<div>
-			<div className="title"><h1>Page not Found</h1></div>
+			{(() => {
+				switch (pageShown) {
+				case false: return <h1 className="title">Property not found</h1>;
+				default: return <h1 className="title">Property not found</h1>;
+				}
+			})()}
+
 		</div>
 	);
+};
+
+ShowPNF.propTypes = {
+	pageShown: PropTypes.any,
 };
 
 export default ShowPNF;

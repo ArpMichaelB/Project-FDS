@@ -6,30 +6,43 @@ import ShowProperty from "./ShowProperty";
 import ShowPNF from "./ShowPNF";
 
 
-
+// var propertyIndex;
+var pageShown = false;
 const Property = (props) => {
 	let pageParameter = props.match.params.name;
+	var countdown = properties.length;
 	return (
 		<main className="Property">
 
 			<div className="specific_prop_container">
 				{
-					
+
 					properties.map((property) => {
+						
+						--countdown;
+						
 						if (property.name === pageParameter) {
+							pageShown = true;
 							return (
-								<ShowProperty property={property} key={property.name} />	
+								<ShowProperty property={property} key={property.name} />
 							);
-							
+
 						}
-						else {
-							return <ShowPNF key={property.name} />;
+						else if( countdown < 0 ) {
+							pageShown = false;
+							return <ShowPNF key={property.name} pageShown={pageShown} />;
 						}
 
-						
-						
+						else{
+							return(
+								<div></div>
+							);
+						}
 					})
 				}
+				
+
+				<ShowPNF pageShown={pageShown}/>
 
 			</div>
 		</main>
