@@ -34,6 +34,10 @@ class NavBar extends Component {
 			location = location.slice(0, location.length - 1);
 		}
 
+		if(location.search("/property") === 0){
+			location = "/properties";
+		}
+
 		let locations = ["/home", "/gallery", "/available-properties", "/properties", "/tenant-maintenance", "/employee-maintenance", "/contact"];
 		if(!locations.includes(location)){
 			location="/home";
