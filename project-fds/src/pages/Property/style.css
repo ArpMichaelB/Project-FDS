@@ -37,8 +37,15 @@
   .ant-pagination {
     margin-bottom: 2rem;
   }
+
+  .card_images{
+    display: inline;
+    width: 15rem;
+    height: 15rem;
+    
+  }
   
-  @media only screen and (max-width: 768px){
+  @media only screen and (max-width: 984px){
     .picture_display{
       flex-direction: column;
       align-items: center;

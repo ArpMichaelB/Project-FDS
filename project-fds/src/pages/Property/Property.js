@@ -26,7 +26,7 @@ const Property = (props) => {
 						if (property.name === pageParameter) {
 							pageShown = true;
 							return (
-								<Sec>
+								<Sec key={property.name}>
 									<ShowProperty property={property} key={property.name} />
 									<DocumentTitle title={property.title} />
 								</Sec>
