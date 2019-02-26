@@ -19,14 +19,14 @@ const Property = (props) => {
 			<div className="specific_prop_container">
 				{
 
-					properties.map((property) => {
+					properties.map((property, index) => {
 						
 						--countdown;
 						
 						if (property.name === pageParameter) {
 							pageShown = true;
 							return (
-								<Sec>
+								<Sec key={index}>
 									<ShowProperty property={property} key={property.name} />
 									<DocumentTitle title={property.title} />
 								</Sec>
