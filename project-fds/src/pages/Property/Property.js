@@ -32,6 +32,12 @@ const Property = (props) => {
 							pageShown = false;
 							return <ShowPNF key={property.name} pageShown={pageShown} />;
 						}
+
+						else{
+							return(
+								<div></div>
+							);
+						}
 					})
 				}
 				
