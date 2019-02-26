@@ -2,8 +2,14 @@ import React from "react";
 
 import "./style.css";
 import Card from "antd/lib/card";
-import BuildingPic from "../../assets/BuildingPic.jpg";
 import {Link} from "react-router-dom";
+import AndresenPic from "../../assets/images/andresen_exterior1.JPG";
+import BucktownPic from "../../assets/images/bucktown_exterior1.JPG";
+import GordonPic from "../../assets/images/gordon_exterior1.JPG";
+import HalliganPic from "../../assets/images/halligan_exterior1.PNG";
+import LiveryPic from "../../assets/images/livery_exterior1.JPG";
+import PetersonPic from "../../assets/images/peterson_exterior1.JPG";
+
 const { Meta } = Card;
 
 const Properties = () => {
@@ -12,15 +18,15 @@ const Properties = () => {
 
 		<main className="Properties">
 			<div className="title"><h1>All Properties</h1></div>
-			{images.map((image) => {
+			{properties.map((property) => {
 				return (
-					<div key={image.alt} className="property">
-						<Link to={"property/" + image.name}>
+					<div key={property.name} className="property">
+						<Link to={"property/" + property.name}>
 
-							<Card hoverable style={{ width: "100%", marginRight: "auto", marginLeft: "auto", marginBottom: "2rem" }} cover={<img alt={image.alt} src={image.src} />}>
+							<Card hoverable style={{ width: "100%", marginRight: "auto", marginLeft: "auto", marginBottom: "2rem" }} cover={<img alt={property.title} src={property.src} />}>
 								<Meta
-									title={image.title}
-									description={image.desc} />
+									title={property.title}
+									description={property.desc} />
 							</Card>
 
 							
@@ -34,32 +40,65 @@ const Properties = () => {
 	);
 };
 
-const images = [
+const properties = [
 	{
-		alt: "Building",
-		src: BuildingPic,
-		title: "Halligan Lofts",
 		name: "HalliganLofts",
-		desc: "This is my Building",
-
+		fileStart: "Halligan",
+		title: "Halligan Lofts",
+		src: HalliganPic,
+		desc: "Halligan Lofts, Newly Renovated, 2 Bedroom, River Views! w/d - Bike Room-Fitness Center- All Units Market Rate!",
+		rentinc: "Pets negotiable Tenant pays all electric One year lease No smoking building Parking included Trash removal included Water included",
+		amenities: "On-site manager Fitness center Bike room On-site engineer Lounge / club room",
 	},
 
 	{
-		alt: "Building 1",
-		src: BuildingPic,
-		title: "Title  1",
-		name: "Name 1",
-		desc: "This is my Building",
-
+		name: "Andresen",
+		fileStart: "Andresen",
+		title: "Andresen",
+		src: AndresenPic,
+		desc: "Andresen Flats,Top Floor, Pet Friendly-Historic & Now Restored, Ready for Move in, Central Air, Hardwood floors",
+		rentinc: "Pets negotiable Tenant pays all electric One year lease No smoking building Parking included Trash removal included Water included",
+		amenities: "On-site manager Fitness center Bike room On-site engineer Lounge / club room",
 	},
 
 	{
-		alt: "Building 2",
-		src: "/gallery/YandJ/Andresen/andresen_exterior1.JPG",
-		title: "Title 2",
-		name: "Name 2",
-		desc: "This is my Building",
+		name: "Bucktown",
+		fileStart: "bucktown",
+		title: "Bucktown",
+		src: BucktownPic,
+		desc: "Bucktown, Newly Renovated, 2 Bedroom, River Views! w/d - Bike Room-Fitness Center- All Units Market Rate!",
+		rentinc: "Pets negotiable Tenant pays all electric One year lease No smoking building Parking included Trash removal included Water included",
+		amenities: "On-site manager Fitness center Bike room On-site engineer Lounge / club room",
+	},
 
+	{
+		name: "Gordon",
+		fileStart: "gordon",
+		title: "Gordon Van-Tine Lofts",
+		src: GordonPic,
+		desc: "GVT Lofts, Newly Renovated, 2 Bedroom, River Views! w/d - Bike Room-Fitness Center- All Units Market Rate!",
+		rentinc: "Pets negotiable Tenant pays all electric One year lease No smoking building Parking included Trash removal included Water included",
+		amenities: "On-site manager Fitness center Bike room On-site engineer Lounge / club room",
+	},
+
+	{
+		name: "Livery",
+		fileStart: "Livery",
+		title: "Livery",
+		src: LiveryPic,
+		desc: "Livery Lofts Circa 1882- Restored Into Luxury Lofts- Located in the Heart of Downtown On Brady St",
+		rentinc: "Pets negotiable Tenant pays all electric One year lease No smoking building Parking included Trash removal included Water included",
+		amenities: "On-site manager Fitness center Bike room On-site engineer Lounge / club room",
+	},
+
+	{
+		name: "Peterson",
+		fileStart: "Peterson",
+		title: "Peterson Lofts",
+		src: PetersonPic,
+		desc: "Peterson Lofts, Newly Renovated, 2 Bedroom, River Views! w/d - Bike Room-Fitness Center- All Units Market Rate!",
+		rentinc: "Pets negotiable Tenant pays all electric One year lease No smoking building Parking included Trash removal included Water included",
+		amenities: "On-site manager Fitness center Bike room On-site engineer Lounge / club room",
 	},
 ];
 
