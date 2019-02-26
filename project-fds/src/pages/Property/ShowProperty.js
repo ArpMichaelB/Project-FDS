@@ -12,7 +12,7 @@ const ShowProperty = (props) => {
 
 			<Slideshow fileStart={props.property.fileStart}/>
 
-			<Collapse accordion>
+			<Collapse>
 				<Panel header="Description" key="1">
 					<p>{props.property.desc}</p>
 				</Panel>
