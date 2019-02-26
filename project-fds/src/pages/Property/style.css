@@ -1,35 +1,59 @@
-.ant-carousel .slick-slide {
-    text-align: center;
-    height: 160px;
-    line-height: 160px;
-    /* background: #364d79; */
-    overflow: hidden;
-  }
 
-  .slick-slide.slick-active.slick-current{
-      height: 100%;
-  }
+  .ant-pagination-item-active a {
+    color: var(--secondary-color)
+}
 
-  .slick-image{
-      width: 100%;
-  }
+.ant-pagination-item-active {
+  border-color: var(--secondary-color);
+}
 
-  .ant-carousel .slick-dots li.slick-active button{
-      background-color: var(--secondary-color);
-  }
+.ant-pagination-item-active:focus, .ant-pagination-item-active:hover{
+  border-color: var(--secondary-color);
+}
 
-  .ant-carousel .slick-dots li button {
-      background-color:black;
-      opacity: 0.6;
-  }
-  .ant-carousel .slick-slide h3 {
-    color: #fff;
-  }
+.ant-pagination-item-active:focus a, .ant-pagination-item-active:hover a{
+  color: var(--secondary-color);
+}
 
-  .picture_display {
+.ant-pagination-item:focus, .ant-pagination-item:hover{
+  border-color: var(--secondary-color);
+}
+
+.ant-pagination-item:focus a, .ant-pagination-item:hover a{
+  color: var(--secondary-color);
+}
+
+.ant-pagination-prev:hover a, .ant-pagination-next:hover a{
+  border-color: var(--secondary-color);
+}
+
+.ant-pagination-prev:focus .ant-pagination-item-link, .ant-pagination-prev:hover .ant-pagination-item-link{
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.ant-pagination-next:focus .ant-pagination-item-link, .ant-pagination-next:hover .ant-pagination-item-link{
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.ant-pagination-jump-next .ant-pagination-item-container .ant-pagination-item-link-icon{
+  color: var(--secondary-color);
+}
+
+.ant-pagination-jump-prev .ant-pagination-item-container .ant-pagination-item-link-icon{
+  color: var(--secondary-color);
+}
+
+.Property{
+  padding-bottom: 2rem;
+}
+
+.picture_display {
       display: flex;
       justify-content: center;
   }
+
   .ant-card-bordered-geo {
     border: none;
   }
@@ -39,7 +63,7 @@
   }
 
   .card_images{
-    display: inline;
+    display: inline-block;
     width: 15rem;
     height: 15rem;
     

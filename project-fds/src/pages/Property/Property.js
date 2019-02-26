@@ -18,7 +18,6 @@ const Property = (props) => {
 
 			<div className="specific_prop_container">
 				{
-
 					properties.map((property, index) => {
 						
 						--countdown;
@@ -44,10 +43,8 @@ const Property = (props) => {
 						}
 					})
 				}
-				
-
 				<ShowPNF pageShown={pageShown}/>
-
+				
 			</div>
 		</main>
 
