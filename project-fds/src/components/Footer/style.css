@@ -1,54 +1,20 @@
-.footer_convenience_link
-{
-    color: var(--secondary-color);
-}
-.footer_convenience_link:hover
-{
-    color: var(--tertiary-color);
-}
-
-#footer{
+.footer{
+    display: inline-flex;
+    justify-content: center;
+    flex-flow: wrap;
     margin-top: 20px;
-    height: 50px;
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
+    height: 35px;
     width: 100%;
 }
 
-@media only screen and (max-width: 1000px) {
-    #footer{
-        height: 75px;
-    }
-  }
-
-@media only screen and (max-width: 500px) {
-    #footer{
-        height: 100px;
-    }
-}
-@media only screen and (max-width: 300px) {
-    #footer{
-        font-size: .75rem;
-        height: 150px;
-    }
+.footer_link {
+    margin-left: 1rem;
 }
 
-.footer_no_link
-{
-    display:none;
-}
-.footer_has_link
-{
-    display:block;
-}
-@media (min-width:1025px)
-{
-    .footer_no_link
-    {
+@media (max-width: 415px) {
+    .footer {
         display: block;
-    }
-    .footer_has_link
-    {
-        display: none;
     }
 }
