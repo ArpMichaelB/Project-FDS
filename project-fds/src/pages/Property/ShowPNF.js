@@ -9,7 +9,7 @@ const ShowPNF = (props) => {
 			{(() => {
 				switch (pageShown) {
 				case false: return <h1 className="title">Property not found</h1>;
-				default: return <h1 className="title">Property not found</h1>;
+				default: return <div></div>;
 				}
 			})()}
 
