@@ -1,3 +1,11 @@
+.Contact
+{
+    position: relative;
+}
+.contact_info_form_wrapper .ant-form-item-label
+{
+    text-align:left;
+}
 .convenience_link
 {
     color: var(--secondary-color);
@@ -11,14 +19,11 @@
     padding-top:3rem;
     padding-bottom:3rem;
     margin-right:-5rem;
+    width:100%;
 }
 .contact_info_form .ant-form-item-control-wrapper
 {
-    width:80%;
-}
-.contact_info_form
-{
-    margin-left:20%;
+    width:100%;
 }
 .contact_info_information
 {
@@ -45,11 +50,15 @@
 {
     display:inline-flex;
 }
-@media (max-width:1199px)
+@media (min-width:900px)
 {
     .contact_info_form .ant-form-item-control-wrapper
     {
-        width:60%;
+        width:70%;
+    }
+    .contact_info_form
+    {
+        margin-left:20%;
     }
 }
 @media (min-width:1025px)

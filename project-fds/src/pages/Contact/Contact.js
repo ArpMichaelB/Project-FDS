@@ -10,11 +10,11 @@ const Contact = () => {
 	{
 		labelCol: 
 		{
-			sm: {span: 6},
-			md: {span: 4},
-			lg: {span: 3},
-			xl: {span: 3},
-			xxl: {span:2}
+			sm: {span: 7},
+			md: {span: 5},
+			lg: {span: 4},
+			xl: {span: 4},
+			xxl: {span:3}
 		},
 		wrapperCol:
 		{
@@ -25,11 +25,11 @@ const Contact = () => {
 	{
 		labelCol: 
 		{
-			sm: {span: 7},
-			md: {span: 5},
-			lg: {span: 4},
-			xl: {span: 3},
-			xxl: {span: 2}
+			sm: {span: 8},
+			md: {span: 6},
+			lg: {span: 5},
+			xl: {span: 4},
+			xxl: {span: 3}
 		},
 		wrapperCol:
 		{
