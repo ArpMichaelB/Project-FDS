@@ -13,8 +13,8 @@ class Footer extends Component {
 		return (
 
 			<div className="footer">
-				<span>Copyright <Icon type="copyright" /> Insight Management 2019-{(new Date().getFullYear())}</span>
-				<span className="footer_link"><p><a href="/contact">Contact</a></p></span>
+				<span>Copyright <Icon type="copyright" /> Insight Management {(new Date().getFullYear())}</span>
+				<span className="footer_link"><p><a href="/contact">Contact Us</a></p></span>
 			</div>
 
 		);
