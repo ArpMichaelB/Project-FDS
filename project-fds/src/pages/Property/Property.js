@@ -59,7 +59,7 @@ Property.propTypes = {
 
 const properties = [
 	{
-		name: "HalliganLofts",
+		name: "Halligan",
 		fileStart: "Halligan",
 		title: "Halligan Lofts",
 		desc: "Halligan Lofts, Newly Renovated, 2 Bedroom, River Views! w/d - Bike Room-Fitness Center- All Units Market Rate!",
