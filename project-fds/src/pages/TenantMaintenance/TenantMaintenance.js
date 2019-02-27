@@ -45,14 +45,14 @@ class TenantMaintenance extends Component {
 
 		const tailFormItemLayout = {
 			wrapperCol: {
-				xs: {
-					span: 24,
-					offset: 0,
-				},
-				sm: {
-					span: 8,
-					offset: 8,
-				},
+				xs: {pull: 3,
+					span:1},
+				sm: { push: 3,
+					span:1, },
+				md: { push: 13,
+					span:1},
+				ld: {push: 10,
+					span:1},
 			},
 		};
 

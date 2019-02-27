@@ -1,5 +1,6 @@
-.submit.ant-btn-primary{
+.submit{
     background-color: var(--secondary-color);
+    margin-top: 10%;
 }
 
 .ant-input:hover {
