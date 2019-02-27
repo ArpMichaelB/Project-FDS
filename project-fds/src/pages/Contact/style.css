@@ -42,6 +42,7 @@
     box-sizing: border-box;
     height: 100%;
     float: left;
+    padding: 5px;
 }
 .contact_info_title
 {
