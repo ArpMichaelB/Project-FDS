@@ -1,5 +1,5 @@
 import React from "react";
-import {Form, Input, Button, message} from "antd";
+import {Form, Input, Button, message, Icon} from "antd";
 import DocumentTitle from "react-document-title";
 
 import "./style.css";
@@ -52,29 +52,35 @@ const Contact = () => {
 			<DocumentTitle title="Contact Us" />
 			<div className="title"><h1>Contact Us</h1></div>
 			<div className="contact_info_information">
-				
-				<span className="contact_info_company_title">
-					Insight Management and Rentals
-				</span>
-				<span>
-					Address:
+				<div className="contact-column">
+					<Icon type="car" className="contact-icon" /><br />
+					Address:<br />
+					Insight Management and Rentals<br />
 					<a href="https://goo.gl/maps/2VoJjZrcHqG2" className="convenience_link">
 						230 West 3rd St., Suite 216
 						Davenport, IA, 52801
 					</a>
-				</span>
-				<span className="has_link">
-					Email: <a href="mailto:joeerenberger@gmail.com" className="convenience_link">joeerenberger@gmail.com</a>
-				</span>
-				<span className="has_link">
-					Phone: <a href="tel:1-309-292-2777" className="convenience_link">(309)-292-2777</a>
-				</span>
-				<span className="no_link">
-					Email: joeerenberger@gmail.com
-				</span>
-				<span className="no_link">
-					Phone: (309)-292-2777
-				</span>
+				</div>
+				<div className="has_link contact-column">
+					<Icon type="mail" className="contact-icon" /><br />
+					Email:<br />
+					<a href="mailto:joeerenberger@gmail.com" className="convenience_link">joeerenberger@gmail.com</a>
+				</div>
+				<div className="has_link contact-column">
+					<Icon type="phone" className="contact-icon" /><br />
+					Phone:<br />
+					<a href="tel:1-309-292-2777" className="convenience_link">(309)-292-2777</a>
+				</div>
+				<div className="no_link contact-column">
+					<Icon type="mail" className="contact-icon" /><br />
+					Email:<br />
+					joeerenberger@gmail.com
+				</div>
+				<div className="no_link contact-column">
+					<Icon type="phone" className="contact-icon" /><br />
+					Phone:<br />
+					(309)-292-2777
+				</div>
 			</div>
 			<div className="contact_info_form_wrapper">
 				<Form className="contact_info_form">

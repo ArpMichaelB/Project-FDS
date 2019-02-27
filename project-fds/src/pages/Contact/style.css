@@ -2,6 +2,9 @@
 {
     position: relative;
 }
+.contact-icon{
+    font-size: 4.5rem;
+}
 .contact_info_form_wrapper .ant-form-item-label
 {
     text-align:left;
@@ -29,10 +32,17 @@
 {
     clear:left;
     width:100%;
+    position: relative;
+    height: 150px;
 }
-.contact_info_information span
-{
-    padding-right:1rem;
+.contact-column{
+    width: 33%;
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
+    height: 100%;
+    float: left;
+    padding: 5px;
 }
 .contact_info_title
 {
@@ -48,7 +58,18 @@
 }
 .has_link
 {
-    display:inline-flex;
+    display:block;
+}
+@media (max-width:600px){
+    .contact-column{
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+        float: none;
+    }
+    .contact_info_information{
+        height: auto;
+    }
 }
 @media (min-width:900px)
 {
@@ -65,7 +86,7 @@
 {
     .no_link
     {
-        display: inline-flex;
+        display: block;
     }
     .has_link
     {
