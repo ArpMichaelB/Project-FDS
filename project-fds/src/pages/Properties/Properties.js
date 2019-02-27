@@ -44,7 +44,7 @@ const Properties = () => {
 
 const properties = [
 	{
-		name: "HalliganLofts",
+		name: "Halligan",
 		fileStart: "Halligan",
 		title: "Halligan Lofts",
 		src: HalliganPic,

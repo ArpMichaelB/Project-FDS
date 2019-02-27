@@ -37,7 +37,7 @@ const Home = () => {
 
 				<Card
 					title="Halligan"
-					extra={<a className="more_a" href="/property/HalliganLofts">More</a>}
+					extra={<a className="more_a" href="/property/Halligan">More</a>}
 					style={{ width: 303}}
 					className="home_card"
 				>
@@ -45,7 +45,7 @@ const Home = () => {
 				</Card>
 
 				<Card
-					title="Perterson"
+					title="Peterson"
 					extra={<a href="/property/Peterson">More</a>}
 					style={{ width: 303 }}
 					className="home_card"
