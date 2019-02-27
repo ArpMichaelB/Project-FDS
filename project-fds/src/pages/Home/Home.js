@@ -21,7 +21,7 @@ const Home = () => {
 			</div>
 			<div className="group">
 				<div className="title"><h1>Hot Properties</h1></div>
-				<Link to="/available-properties">
+				<Link to="/available-properties" id="avail-button-link">
 					<Button type="primary" className="avail-button">Available Properties</Button>
 				</Link>
 			</div>
