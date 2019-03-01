@@ -35,7 +35,7 @@ class TenantMaintenance extends Component {
 			labelCol: {
 				xs: { span: 1 },
 				sm: { span: 11 },
-				md: { span: 8 },
+				md: { span: 9 },
 			},
 			wrapperCol: {
 				xs: { span: 24 },
