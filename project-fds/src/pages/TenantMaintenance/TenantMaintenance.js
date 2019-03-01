@@ -36,6 +36,7 @@ class TenantMaintenance extends Component {
 				xs: { span: 1 },
 				sm: { span: 11 },
 				md: { span: 9 },
+				lg: { span: 8},
 			},
 			wrapperCol: {
 				xs: { span: 24 },
