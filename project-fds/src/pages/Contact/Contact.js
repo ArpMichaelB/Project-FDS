@@ -69,7 +69,8 @@ const Contact = () => {
 				<div className="has_link contact-column">
 					<Icon type="phone" className="contact-icon" /><br />
 					Phone:<br />
-					<a href="tel:1-309-292-2777" className="convenience_link">(309)-292-2777</a>
+					<a href="tel:1-309-292-2777" className="convenience_link">(309)-292-2777</a><br />
+					Rental Office: <a href="tel:1-563-424-1310" className="convenience_link">(563)-424-1310</a>
 				</div>
 				<div className="no_link contact-column">
 					<Icon type="mail" className="contact-icon" /><br />
@@ -79,7 +80,8 @@ const Contact = () => {
 				<div className="no_link contact-column">
 					<Icon type="phone" className="contact-icon" /><br />
 					Phone:<br />
-					(309)-292-2777
+					(309)-292-2777 <br />
+					Rental Office: (563)-424-1310
 				</div>
 			</div>
 			<div className="contact_info_form_wrapper">
