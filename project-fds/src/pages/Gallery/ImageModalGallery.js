@@ -19,7 +19,8 @@ class ImageModalGallery extends Component {
 
 	render(){
 		return(
-			<ImageGallery ref={i => this.imageGallery = i} items={this.props.gallery_images} lazyLoad={true} showBullets={false} showThumbnails={false} showPlayButton={false} />
+			<ImageGallery ref={i => this.imageGallery = i} items={this.props.gallery_images} defaultImage="/gallery/loading_image.gif"
+				lazyLoad={true} showBullets={false} showThumbnails={false} showPlayButton={false} />
 		);
 	}
 
