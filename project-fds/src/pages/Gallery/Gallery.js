@@ -54,7 +54,8 @@ class Gallery extends Component {
 		this.gallery_images = [];
 
 		this.images.forEach(image => {
-			this.gallery_images.push({original:"/gallery/YandJ/" + image, originalClass:"gallery_image"});
+			let location = image.substring(0, image.search("/"));
+			this.gallery_images.push({original:"/gallery/YandJ/" + image, originalClass:"gallery_image", description:location});
 		});
 
 		this.state.cards = cards;
