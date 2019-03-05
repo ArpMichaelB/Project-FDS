@@ -50,6 +50,11 @@ class NavBar extends Component {
 						<Link to="/home">
 							<img src={logo} alt="logo"  width="150rem" height="100rem"/>
 						</Link>
+						<div className="access_container">
+							<p><a href="/login">Login</a></p>
+							<p>&nbsp;or&nbsp;</p>
+							<p><a href="/register">Register</a></p> 
+						</div>
 					</div>
 					<nav className="main_nav">
 						<Menu
@@ -70,12 +75,9 @@ class NavBar extends Component {
 									<Menu.Item key="/properties"><Link to="/properties">All Properties</Link></Menu.Item>
 								</MenuItemGroup>
 							</SubMenu>
-							<SubMenu onTitleClick={() => this.goToLink("/tenant-maintenance")} title={<span className="submenu-title-wrapper">Maintenance</span>}>
-								<MenuItemGroup>
-									<Menu.Item key="/tenant-maintenance"><Link to="/tenant-maintenance">Tenant</Link></Menu.Item>
-									<Menu.Item key="/employee-maintenance"><Link to="/employee-maintenance">Employee</Link></Menu.Item>
-								</MenuItemGroup>
-							</SubMenu>
+							<Menu.Item key="/team">
+								<Link to="/team">Our Team</Link>
+							</Menu.Item>
 							<Menu.Item key="/contact">
 								<Link to="/contact">Contact</Link>
 							</Menu.Item>
