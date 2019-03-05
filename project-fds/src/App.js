@@ -13,7 +13,7 @@ import AvailableProperties from "../src/pages/AvailableProperties/AvailablePrope
 import Gallery from "../src/pages/Gallery/Gallery";
 import TMaintenance from "../src/pages/TenantMaintenance/TenantMaintenance";
 import EMaintenance from "../src/pages/EmployeeMaintenance/EmployeeMaintenance";
-
+import OurTeam from "../src/pages/OurTeam/OurTeam";
 import "../src/styles/global.css";
 
 class App extends Component {
@@ -29,6 +29,7 @@ class App extends Component {
 				<Route path="/gallery" component={Gallery} />
 				<Route path="/tenant-maintenance" component={TMaintenance} />
 				<Route path="/employee-maintenance" component={EMaintenance} />
+				<Route path="/team" component={OurTeam} />
 				<Route path="/" exact component={Home} />
 				<Redirect to="/" />
 			</Switch>
