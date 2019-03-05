@@ -38,7 +38,7 @@ class NavBar extends Component {
 			location = "/properties";
 		}
 
-		let locations = ["/home", "/partners", "/gallery", "/available-properties", "/properties", "/tenant-maintenance", "/employee-maintenance", "/contact"];
+		let locations = ["/home", "/partners", "/gallery", "/available-properties", "/properties", "/tenant-maintenance", "/employee-maintenance", "/contact", "/team"];
 		if(!locations.includes(location)){
 			location="/home";
 		}
@@ -50,6 +50,9 @@ class NavBar extends Component {
 						<Link to="/home">
 							<img src={logo} alt="logo"  width="150rem" height="100rem"/>
 						</Link>
+						<div className="access_container">
+							<p><a href="/login">Portal Login</a></p> 
+						</div>
 					</div>
 					<nav className="main_nav">
 						<Menu
@@ -70,15 +73,15 @@ class NavBar extends Component {
 									<Menu.Item key="/properties"><Link to="/properties">All Properties</Link></Menu.Item>
 								</MenuItemGroup>
 							</SubMenu>
+							<Menu.Item key="/team">
+								<Link to="/team">Our Team</Link>
+							</Menu.Item>
 							<Menu.Item key="/partners">
 								<Link to="/partners">Partners</Link>
 							</Menu.Item>
-							<SubMenu onTitleClick={() => this.goToLink("/tenant-maintenance")} title={<span className="submenu-title-wrapper">Maintenance</span>}>
-								<MenuItemGroup>
-									<Menu.Item key="/tenant-maintenance"><Link to="/tenant-maintenance">Tenant</Link></Menu.Item>
-									<Menu.Item key="/employee-maintenance"><Link to="/employee-maintenance">Employee</Link></Menu.Item>
-								</MenuItemGroup>
-							</SubMenu>
+							<Menu.Item key="/apply">
+								<Link to="/apply">Apply Now</Link>
+							</Menu.Item>
 							<Menu.Item key="/contact">
 								<Link to="/contact">Contact</Link>
 							</Menu.Item>

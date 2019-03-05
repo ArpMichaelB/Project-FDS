@@ -5,10 +5,6 @@
 .contact-icon{
     font-size: 4.5rem;
 }
-.contact_info_form_wrapper .ant-form-item-label
-{
-    text-align:left;
-}
 .convenience_link
 {
     color: var(--secondary-color);
@@ -17,26 +13,18 @@
 {
     color: var(--tertiary-color);
 }
-.contact_info_form_wrapper
-{
-    padding-top:3rem;
-    padding-bottom:3rem;
-    margin-right:-5rem;
-    width:100%;
-}
-.contact_info_form .ant-form-item-control-wrapper
-{
-    width:100%;
-}
 .contact_info_information
 {
     clear:left;
-    width:100%;
+    width:75%;
     position: relative;
     height: 150px;
+    margin: auto;
+    height: auto;
 }
 .contact-column{
-    width: 33%;
+    width: 50%;
+    margin-bottom: 20px;
     display: block;
     text-align: center;
     box-sizing: border-box;
@@ -47,10 +35,6 @@
 .contact_info_title
 {
     float:left;
-}
-.contact_info_form_button
-{
-    float:right;
 }
 .no_link
 {
@@ -69,17 +53,6 @@
     }
     .contact_info_information{
         height: auto;
-    }
-}
-@media (min-width:900px)
-{
-    .contact_info_form .ant-form-item-control-wrapper
-    {
-        width:70%;
-    }
-    .contact_info_form
-    {
-        margin-left:20%;
     }
 }
 @media (min-width:1025px)

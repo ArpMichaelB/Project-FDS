@@ -35,13 +35,13 @@ const partner_list = [
 		title: "Gordon Van-Tine Lofts: Commercial Building",
 		src: loadingImage,
 		desc:
-		<p style={{textAlign:"left"}}>
+		<span style={{textAlign:"left", display:"block"}}>
 			-Tenant: Isabel Bloom (production and retail center)<br />
 			-Legal Aid<br />
 			-Little Love Chiropractice<br />
 			-2 commercial vacancies<br />
 			-7 AirBB Sleep Room Accommodations - Listed on AIRBB website`
-		</p>,
+		</span>,
 		location: "736 Federal St. Ste 2303 Davenport, IA. 52803",
 	},
 	{
@@ -49,10 +49,10 @@ const partner_list = [
 		title: "429 E. 3rd St.",
 		src: loadingImage,
 		desc:
-		<p style={{textAlign:"left"}}>
+		<span style={{textAlign:"left", display:"block"}}>
 			-Ruby&#39;s Beer, Brats & Bikes.<br />
 			-LoPies Pizzeria
-		</p>,
+		</span>,
 		location: "",
 	},
 	{
@@ -81,12 +81,12 @@ const partner_list = [
 		title: "Standard Oil Building",
 		src: loadingImage,
 		desc: 
-		<p style={{textAlign:"left"}}>
+		<span style={{textAlign:"left", display:"block"}}>
 			- Trinity<br />
 			-Polish Hair Salon<br />
 			-Customer Contact Solution<br />
 			-Davenport School of Yoga
-		</p>,
+		</span>,
 		location: "735 Federal St. Davenport, IA. 52803",
 	}
 ];

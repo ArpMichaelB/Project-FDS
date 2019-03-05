@@ -3,9 +3,9 @@
     justify-content: flex-end;
     position: fixed;
     z-index: 1;
-    width: 25%;
+    width: 20%;
     line-height: 6.2rem;
-    margin-left:65%;
+    margin-left:70%;
 }
 
 
@@ -13,8 +13,8 @@
     display: inline-flex;
     justify-content: flex-start;
     position:fixed;
-    line-height: 6.2rem;
-    width: 65%;
+    line-height: 2.0rem;
+    width: 70%;
     z-index: 1;
     display:inline-flex;
     float: left;
@@ -133,16 +133,67 @@
   background: linear-gradient(to right, var(--secondary-color), var(--secondary-color));
 }
 
+.access_container {
+    padding-left: 1.5em;
+    margin-top: 2.5em;
+}
 
-@media (min-width: 768px) {
-    .logo {
-        width: 30%
-    }
-    .nav_bar.ant-menu {
-        width: 55%;
-        margin-left: 20%;
+
+
+@media (max-width: 320px) {
+    .access_container {
+        margin-top: 1.5em;
     }
 
 }
+
+@media (min-width: 600px) {
+    .logo {
+        width: 50%
+    }
+    .nav_bar.ant-menu {
+        width: 45%;
+        margin-left: 45%;
+    }
+    .access_container {
+        padding-left: 2.5rem;
+        display: inline-flex;
+        margin-top: 2rem;
+    }
+}
+
+@media (min-width: 766px) {
+    .logo {
+        width: 50%
+    }
+    .nav_bar.ant-menu {
+        width: 40%;
+        margin-left: 35%;
+    }
+    .access_container {
+        padding-left: 2.5rem;
+        display: inline-flex;
+        margin-top: 2rem;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .logo {
+        width: 50%
+    }
+    .nav_bar.ant-menu {
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    .access_container {
+        padding-left: 2.5rem;
+        display: inline-flex;
+        margin-top: 2rem;
+    }
+
+}
+
 
 

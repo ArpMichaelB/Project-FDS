@@ -15,6 +15,7 @@ import TMaintenance from "../src/pages/TenantMaintenance/TenantMaintenance";
 import EMaintenance from "../src/pages/EmployeeMaintenance/EmployeeMaintenance";
 import Partners from "./pages/Partners/Partners";
 
+import OurTeam from "../src/pages/OurTeam/OurTeam";
 import "../src/styles/global.css";
 
 class App extends Component {
@@ -31,6 +32,7 @@ class App extends Component {
 				<Route path="/partners" component={Partners} />
 				<Route path="/tenant-maintenance" component={TMaintenance} />
 				<Route path="/employee-maintenance" component={EMaintenance} />
+				<Route path="/team" component={OurTeam} />
 				<Route path="/" exact component={Home} />
 				<Redirect to="/" />
 			</Switch>
