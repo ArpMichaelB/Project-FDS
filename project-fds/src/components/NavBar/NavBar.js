@@ -38,7 +38,7 @@ class NavBar extends Component {
 			location = "/properties";
 		}
 
-		let locations = ["/home", "/gallery", "/available-properties", "/properties", "/tenant-maintenance", "/employee-maintenance", "/contact"];
+		let locations = ["/home", "/partners", "/gallery", "/available-properties", "/properties", "/tenant-maintenance", "/employee-maintenance", "/contact"];
 		if(!locations.includes(location)){
 			location="/home";
 		}
@@ -70,6 +70,9 @@ class NavBar extends Component {
 									<Menu.Item key="/properties"><Link to="/properties">All Properties</Link></Menu.Item>
 								</MenuItemGroup>
 							</SubMenu>
+							<Menu.Item key="/partners">
+								<Link to="/partners">Partners</Link>
+							</Menu.Item>
 							<SubMenu onTitleClick={() => this.goToLink("/tenant-maintenance")} title={<span className="submenu-title-wrapper">Maintenance</span>}>
 								<MenuItemGroup>
 									<Menu.Item key="/tenant-maintenance"><Link to="/tenant-maintenance">Tenant</Link></Menu.Item>
