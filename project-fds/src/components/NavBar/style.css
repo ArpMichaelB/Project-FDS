@@ -134,17 +134,15 @@
 }
 
 .access_container {
-    padding-left: 1em;
+    padding-left: 1.5em;
+    margin-top: 2.5em;
 }
 
 
-@media (min-width: 860px) {
-    .logo {
-        width: 35%
-    }
-    .nav_bar.ant-menu {
-        width: 40%;
-        margin-left: 35%;
+
+@media (max-width: 320px) {
+    .access_container {
+        margin-top: 1.5em;
     }
 
 }
@@ -165,5 +163,23 @@
     }
 
 }
+
+@media (min-width: 1200px) {
+    .logo {
+        width: 50%
+    }
+    .nav_bar.ant-menu {
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    .access_container {
+        padding-left: 2.5rem;
+        display: inline-flex;
+        margin-top: 2rem;
+    }
+
+}
+
 
 
