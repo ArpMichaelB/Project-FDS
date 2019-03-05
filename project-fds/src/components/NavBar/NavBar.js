@@ -51,9 +51,7 @@ class NavBar extends Component {
 							<img src={logo} alt="logo"  width="150rem" height="100rem"/>
 						</Link>
 						<div className="access_container">
-							<p><a href="/login">Login</a></p>
-							<p>&nbsp;or&nbsp;</p>
-							<p><a href="/register">Register</a></p> 
+							<p><a href="/login">Portal Login</a></p> 
 						</div>
 					</div>
 					<nav className="main_nav">
@@ -77,6 +75,12 @@ class NavBar extends Component {
 							</SubMenu>
 							<Menu.Item key="/team">
 								<Link to="/team">Our Team</Link>
+							</Menu.Item>
+							<Menu.Item key="/partners">
+								<Link to="/partners">Partners</Link>
+							</Menu.Item>
+							<Menu.Item key="/apply">
+								<Link to="/apply">Apply Now</Link>
 							</Menu.Item>
 							<Menu.Item key="/contact">
 								<Link to="/contact">Contact</Link>
