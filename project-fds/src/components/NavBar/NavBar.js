@@ -51,7 +51,7 @@ class NavBar extends Component {
 							<img src={logo} alt="logo"  width="150rem" height="100rem"/>
 						</Link>
 						<div className="access_container">
-							<p><a href="/register">Login</a></p>
+							<p><a href="/login">Login</a></p>
 							<p>&nbsp;or&nbsp;</p>
 							<p><a href="/register">Register</a></p> 
 						</div>
