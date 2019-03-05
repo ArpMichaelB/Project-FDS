@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 
+import DocumentTitle from "react-document-title";
 import { Card, Collapse } from "antd";
 const Panel = Collapse.Panel;
 const { Meta } = Card;
@@ -8,9 +9,10 @@ const { Meta } = Card;
 const OurTeam = () => {
 	return (
 		<div>
-			<h1 className="title">Ownership Team</h1>
+			<DocumentTitle title="Our Team" />
+			
 			<div className="OwnershipT">
-				
+				<h1 className="title">Ownership Team</h1>
 				<div className="teamCardsDiv">
                 
 					<Card className="ourTeamCards" 
@@ -139,9 +141,9 @@ const OurTeam = () => {
 				</div>
 			</div>
 
-			<h1 className="title">Office Team</h1>
+			
 			<div className="OfficeT">
-				
+				<h1 className="title">Office Team</h1>
 				<div className="teamCardsDiv">
                             
 					<Card className="ourTeamCards" 
@@ -158,9 +160,9 @@ const OurTeam = () => {
 				</div>
 			</div>
 
-			<h1 className="title">Maintenance Team</h1>
+			
 			<div className="MaintenanceT">
-				
+				<h1 className="title">Maintenance Team</h1>
 				<div className="teamCardsDiv">
                 
 					<Card className="ourTeamCards" 
