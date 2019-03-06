@@ -40,7 +40,7 @@ class Login extends React.Component {
 					<img src={logo} className="logo_width" />
 
 				</div>
-				<div className="login_container">
+				<div className="login_content">
 					<h1>Portal Login</h1>
 					<Form onSubmit={this.handleSubmit} className="login-form">
 						<Form.Item>

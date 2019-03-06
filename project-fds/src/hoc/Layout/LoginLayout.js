@@ -14,8 +14,8 @@ class LoginLayout extends Component {
 	render() {
 
 		return (
-			<div className="container">
-				<div className="wrapper">
+			<div className="login_container">
+				<div className="login_wrapper">
 					{this.props.children}
 					<Footer />
 				</div>

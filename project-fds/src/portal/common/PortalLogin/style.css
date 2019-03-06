@@ -1,21 +1,24 @@
-nav {
-    display: none
-}
 
-.wrapper {
+.login_wrapper {
     background-color: #ffffff;
-    box-shadow: none;
-}
-
-.container {
-    background-color: #ffffff;
-}
-
-.logo {
-    display: none
+    justify-content: center;
+    text-align: center;
+    width: 80%;
+    min-height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 50px;
+    padding-top: 6.2rem;
 }
 
 .login_container {
+    background-color: #ffffff;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.login_content {
     width: 100%;
     margin: 0 auto;
     background-color: var(--primary-color);
