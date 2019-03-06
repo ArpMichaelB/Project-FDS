@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import { Route, Switch, withRouter, Redirect } from "react-router-dom";
+import PropTypes from "prop-types";
+
 
 import "../node_modules/antd/dist/antd.css";
-
-import Sec from "../src/hoc/sec/Sec";
 import Layout from "../src/hoc/Layout/Layout";
 import Home from "../src/pages/Home/Home";
 import Contact from "../src/pages/Contact/Contact";
@@ -16,33 +16,36 @@ import EMaintenance from "../src/pages/EmployeeMaintenance/EmployeeMaintenance";
 
 import "../src/styles/global.css";
 
-class App extends Component {
-	
-	render() {
-		let routes = (
-			<Switch>
-				<Route path="/home" component={Home} title="hello" />
-				<Route path="/contact" component={Contact} />
-				<Route path="/properties" component={Properties} />
-				<Route path="/property/:name" component={Property} />
-				<Route path="/available-properties" component={AvailableProperties} />
-				<Route path="/gallery" component={Gallery} />
-				<Route path="/tenant-maintenance" component={TMaintenance} />
-				<Route path="/employee-maintenance" component={EMaintenance} />
-				<Route path="/" exact component={Home} />
-				<Redirect to="/" />
-			</Switch>
-		);
+const AppRoute = ({ component: Component, layout: Layout, ...rest }) => (
+	<Route {...rest} render={props => (
+		<Layout>
+			<Component {...props} />
+		</Layout>
+	)} />
+);
 
-		return (
-			<Sec>
-				<Layout>
-					{routes}
-				</Layout>
-			</Sec>
-		);
-	}
-}
+const App = () => (
+	<div>
+		<Switch>
+			<AppRoute path="/home" layout={Layout} component={Home} />
+			<AppRoute path="/contact" layout={Layout} component={Contact} />
+			<AppRoute path="/properties" layout={Layout} component={Properties} />
+			<AppRoute path="/property/:name" layout={Layout} component={Property} />
+			<AppRoute path="/available-properties" layout={Layout} component={AvailableProperties} />
+			<AppRoute path="/gallery" layout={Layout} component={Gallery} />
+			<AppRoute path="/tenant-maintenance"layout={Layout}  component={TMaintenance} />
+			<AppRoute path="/employee-maintenance" layout={Layout} component={EMaintenance} />
+			<AppRoute path="/" exact layout={Layout} component={Home} />
+			<Redirect to="/" />
+		</Switch>
+	</div>
+);
+
+AppRoute.propTypes = {
+	component:PropTypes.any,
+	layout:PropTypes.any,
+};
+
 
 export default withRouter((App));
 

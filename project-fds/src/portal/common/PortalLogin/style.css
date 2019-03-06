@@ -1,0 +1,56 @@
+/* nav {
+    display: none
+}
+
+.wrapper {
+    background-color: #ffffff;
+    box-shadow: none;
+}
+
+.container {
+    background-color: #ffffff;
+}
+
+.logo {
+    display: none
+} */
+
+.login_container {
+    width: 45%;
+    margin: 0 auto;
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: inherit;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 3rem;
+    margin-top: 5%;
+    margin-bottom: 10%
+}
+
+.forgot {
+    float: left;
+}
+
+.login_button {
+    width: 55%;
+}
+
+.check .ant-checkbox-checked .ant-checkbox-inner {
+    background-color:#000;
+    border-color:#000
+}
+
+
+.logo_width {
+    width: 15rem;
+}
+
+
+.ant-tree-checkbox-wrapper:hover .ant-tree-checkbox-inner,
+.ant-tree-checkbox:hover .ant-tree-checkbox-inner,
+.ant-tree-checkbox-input:focus + .ant-tree-checkbox-inner {
+  border-color: #000;
+}
