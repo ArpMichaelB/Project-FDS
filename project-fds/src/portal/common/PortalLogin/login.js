@@ -45,9 +45,9 @@ class Login extends React.Component {
 					<Form onSubmit={this.handleSubmit} className="login-form">
 						<Form.Item>
 							{getFieldDecorator("email", {
-								rules: [{ required: true, message: "Please input your email!" }],
+								rules: [{ required: true, message: "Please input your Email!" }],
 							})(
-								<Input prefix={<Icon type="user" style={{ color: "rgba(0,0,0,.25)" }} />} placeholder="Username" />
+								<Input prefix={<Icon type="user" style={{ color: "rgba(0,0,0,.25)" }} />} placeholder="email" />
 							)}
 						</Form.Item>
 						<Form.Item>
@@ -56,8 +56,8 @@ class Login extends React.Component {
 							})(
 								<Input prefix={<Icon type="lock" style={{ color: "rgba(0,0,0,.25)" }} />} type="password" placeholder="Password" />
 							)}
-							<a className="login-form-forgot forgot" href="">Forgot password</a>
 						</Form.Item>
+						<a className="login-form-forgot forgot" href="">Forgot password</a>
 						<Form.Item>
 							{getFieldDecorator("remember", {
 								valuePropName: "checked",
