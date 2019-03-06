@@ -38,7 +38,7 @@ class NavBar extends Component {
 			location = "/properties";
 		}
 
-		let locations = ["/home", "/gallery", "/available-properties", "/properties", "/tenant-maintenance", "/employee-maintenance", "/contact"];
+		let locations = ["/home", "/partners", "/gallery", "/available-properties", "/properties", "/tenant-maintenance", "/employee-maintenance", "/contact", "/team"];
 		if(!locations.includes(location)){
 			location="/home";
 		}
