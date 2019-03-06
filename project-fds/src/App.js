@@ -15,32 +15,52 @@ import TMaintenance from "../src/pages/TenantMaintenance/TenantMaintenance";
 import EMaintenance from "../src/pages/EmployeeMaintenance/EmployeeMaintenance";
 import Partners from "./pages/Partners/Partners";
 
+import UserPortalHome from "./portal/common/TenantPortal/pages/Home/UserPortalHome";
+
 import OurTeam from "../src/pages/OurTeam/OurTeam";
 import "../src/styles/global.css";
 
 class App extends Component {
+
+	constructor(props){
+		super(props);
+
+		this.state = {login_status:true};
+	}
 	
 	render() {
-		let routes = (
-			<Switch>
-				<Route path="/home" component={Home} title="hello" />
-				<Route path="/contact" component={Contact} />
-				<Route path="/properties" component={Properties} />
-				<Route path="/property/:name" component={Property} />
-				<Route path="/available-properties" component={AvailableProperties} />
-				<Route path="/gallery" component={Gallery} />
-				<Route path="/partners" component={Partners} />
-				<Route path="/tenant-maintenance" component={TMaintenance} />
-				<Route path="/employee-maintenance" component={EMaintenance} />
-				<Route path="/team" component={OurTeam} />
-				<Route path="/" exact component={Home} />
-				<Redirect to="/" />
-			</Switch>
-		);
+		let routes;
+		if(!this.state.login_status){
+			routes = (
+				<Switch>
+					<Route path="/home" component={Home} title="hello" />
+					<Route path="/contact" component={Contact} />
+					<Route path="/properties" component={Properties} />
+					<Route path="/property/:name" component={Property} />
+					<Route path="/available-properties" component={AvailableProperties} />
+					<Route path="/gallery" component={Gallery} />
+					<Route path="/partners" component={Partners} />
+					<Route path="/tenant-maintenance" component={TMaintenance} />
+					<Route path="/employee-maintenance" component={EMaintenance} />
+					<Route path="/team" component={OurTeam} />
+					<Route path="/" exact component={Home} />
+					<Redirect to="/" />
+				</Switch>
+			);
+		}
+		else{
+			routes = (
+				<Switch>
+					<Route path="/home" component={UserPortalHome}/>
+
+					<Route path="/" exact component={UserPortalHome}/>
+				</Switch>
+			);
+		}
 
 		return (
 			<Sec>
-				<Layout>
+				<Layout login_status={this.state.login_status}>
 					{routes}
 				</Layout>
 			</Sec>
