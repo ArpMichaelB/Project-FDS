@@ -13,7 +13,9 @@ import AvailableProperties from "../src/pages/AvailableProperties/AvailablePrope
 import Gallery from "../src/pages/Gallery/Gallery";
 import TMaintenance from "../src/pages/TenantMaintenance/TenantMaintenance";
 import EMaintenance from "../src/pages/EmployeeMaintenance/EmployeeMaintenance";
+import Partners from "./pages/Partners/Partners";
 
+import OurTeam from "../src/pages/OurTeam/OurTeam";
 import "../src/styles/global.css";
 
 const AppRoute = ({ component: Component, layout: Layout, ...rest }) => (
@@ -35,6 +37,8 @@ const App = () => (
 			<AppRoute path="/gallery" layout={Layout} component={Gallery} />
 			<AppRoute path="/tenant-maintenance"layout={Layout}  component={TMaintenance} />
 			<AppRoute path="/employee-maintenance" layout={Layout} component={EMaintenance} />
+			<AppRoute path="/team" layout={Layout} component={OurTeam} />
+			<AppRoute path="/partners" layout={Layout} component={Partners} />
 			<AppRoute path="/" exact layout={Layout} component={Home} />
 			<Redirect to="/" />
 		</Switch>
