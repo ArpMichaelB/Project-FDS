@@ -80,6 +80,10 @@
     color: var(--secondary-color);
 }
 
+.localInterestA, .localInterestA:hover{
+  color: transparent;
+}
+
 .ant-carousel .slick-dots {
     top:12em;
 }

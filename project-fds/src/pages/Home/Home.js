@@ -57,14 +57,14 @@ const Home = () => {
 			<div style={{marginBottom:"20px"}}>
 				<div className="title"><h1>Local Interests</h1></div>
 				<div className="interest_cards">
-					<a href="http://cityofdavenportiowa.com/" target="_blank" rel="noopener noreferrer">
+					<a href="http://cityofdavenportiowa.com/" className="localInterestA" target="_blank" rel="noopener noreferrer">
 						<Card
 							title="City of Davenport"
 							style={{ width: 200}}>
 							<p height="150px">Upcomming events, attractions, opportunities, and government services in the Davenport area!</p>
 						</Card>
 					</a>
-					<a href="http://www.visitquadcities.com/" target="_blank" rel="noopener noreferrer">
+					<a href="http://www.visitquadcities.com/" className="localInterestA" target="_blank" rel="noopener noreferrer">
 						<Card
 							title="Visit Quad Cities"
 							style={{ width: 200}}>
