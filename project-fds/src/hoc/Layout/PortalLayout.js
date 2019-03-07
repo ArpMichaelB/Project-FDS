@@ -14,7 +14,8 @@ class TenantPortalLayout extends Component {
 	static get propTypes() {
 		return {
 			children: PropTypes.any,
-			history: PropTypes.object
+			history: PropTypes.object,
+			location: PropTypes.object
 		};
 	}
 	
@@ -50,6 +51,17 @@ class TenantPortalLayout extends Component {
 	}
 
 	render() {
+
+		let location = this.props.location.pathname;
+		if(location.slice(-1) === "/"){
+			location = location.slice(0, location.length - 1);
+		}
+
+		let locations = [ "/tenant/profile", "/tenant/home"];
+		if(!locations.includes(location)){
+			location="/tenant/home";
+		}
+
 		return(
 			<AntLayout style={{ minHeight: "100vh" }}>
 				<AntLayout.Sider
@@ -65,20 +77,20 @@ class TenantPortalLayout extends Component {
 					<img src={logo} alt="logo" 
 						style={{margin:"auto", aspectRatio: 1, display:"block"}}  
 						width={this.state.width} height={undefined}/>
-					<Menu id="menu" theme="light" defaultSelectedKeys={["0"]} mode="inline">
-						<Menu.Item key="0" onClick={() => this.goToLink("/tenant/home")}>
+					<Menu id="menu" theme="light" selectedKeys={[location]} mode="inline">
+						<Menu.Item key="/tenant/home" onClick={() => this.goToLink("/tenant/home")}>
 							<Icon type="home" />
 							<span>Home</span>
 						</Menu.Item>
-						<Menu.Item key="1" onClick={() => this.goToLink("/tenant/profile")}>
+						<Menu.Item key="/tenant/profile" onClick={() => this.goToLink("/tenant/profile")}>
 							<Icon type="profile" />
 							<span>Profile</span>
 						</Menu.Item>
-						<Menu.Item key="2">
+						<Menu.Item key="/tenant/payments">
 							<Icon type="dollar" />
 							<span>Payment</span>
 						</Menu.Item>
-						<Menu.Item key="3">
+						<Menu.Item key="/tenant/maintenance">
 							<Icon type="tool" />
 							<span>Maintenance</span>
 						</Menu.Item>
