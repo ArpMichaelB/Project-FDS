@@ -17,7 +17,7 @@ import EMaintenance from "../src/pages/EmployeeMaintenance/EmployeeMaintenance";
 import Partners from "./pages/Partners/Partners";
 
 import TenantPortalLayout from "./hoc/Layout/TenantPortalLayout";
-import TenantPortalHome from "./portal/common/TenantPortal/pages/Home/UserPortalHome";
+import TenantPortalHome from "./portal/common/TenantPortal/pages/Home/TenantPortalHome";
 import TenantPortalProfile from "./portal/common/TenantPortal/pages/Profile/TenantPortalProfile";
 import TenantPortalMaintenance from "./portal/common/TenantPortal/pages/Maintenance/TenantPortalMaintenance";
 import TenantPortalPayments from "./portal/common/TenantPortal/pages/Payments/TenantPortalPayments";
