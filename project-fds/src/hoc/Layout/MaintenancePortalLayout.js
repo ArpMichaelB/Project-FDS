@@ -57,9 +57,14 @@ class MaintenancePortalLayout extends Component {
 			location = location.slice(0, location.length - 1);
 		}
 
-		let locations = [ "/maintenance/profile", "/maintenance/home"];
-		if(!locations.includes(location)){
-			location="/maintenance/home";
+		if(location.search("/maintenance/details/") === 0){
+			location = "";
+		}
+		else{
+			let locations = [ "/maintenance/home"];
+			if(!locations.includes(location)){
+				location="/maintenance/home";
+			}
 		}
 
 		return(

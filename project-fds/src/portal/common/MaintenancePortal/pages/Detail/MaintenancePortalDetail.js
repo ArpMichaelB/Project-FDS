@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { Card } from "antd";
+import { Card, Button } from "antd";
+import { withRouter } from "react-router-dom";
 
 import "./style.css";
 
@@ -8,7 +9,8 @@ class MaintenancePortalDetail extends Component {
 
 	static get propTypes() {
 		return {
-			match: PropTypes.any
+			match: PropTypes.any,
+			history: PropTypes.any
 		};
 	}
 
@@ -16,9 +18,10 @@ class MaintenancePortalDetail extends Component {
 		return(
 			<Card title="Maintenance Request Details" bordered={false} id="maintenance_data">
 				<h3>Details for {this.props.match.params.tenantName}</h3>
+				<Button onClick={() => this.props.history.push("/maintenance/home")} className="basic_button">Back</Button>
 			</Card>
 		);
 	}
 }
 
-export default MaintenancePortalDetail;
+export default withRouter(MaintenancePortalDetail);

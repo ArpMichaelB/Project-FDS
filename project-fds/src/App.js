@@ -57,7 +57,7 @@ const App = () => (
 			<AppRoute path="/tenant/payments" layout={TenantPortalLayout} component={TenantPortalPayments} />
 			<AppRoute path="/tenant" layout={TenantPortalLayout} component={TenantPortalHome} />
 			<AppRoute path="/maintenance/home" layout={MaintenancePortalLayout} component={MaintenancePortalHome} />
-			<AppRoute path="/maintenance/:tenantName" layout={MaintenancePortalLayout} component={MaintenancePortalDetail} />
+			<AppRoute path="/maintenance/details/:tenantName" layout={MaintenancePortalLayout} component={MaintenancePortalDetail} />
 			<AppRoute path="/maintenance" layout={MaintenancePortalLayout} component={MaintenancePortalHome} />
 			<AppRoute path="/login" layout={LoginLayout} component={Login} />
 			<AppRoute path="/" exact layout={Layout} component={Home} />
