@@ -1,0 +1,21 @@
+.ant-layout-sider-trigger{
+	background-color: white;
+	color:black;
+}
+
+#menu .ant-menu-item-selected{
+	background-color: white;
+	color:red;
+}
+
+.ant-menu-vertical .ant-menu-item::after, .ant-menu-vertical-left .ant-menu-item::after, .ant-menu-vertical-right .ant-menu-item::after, .ant-menu-inline .ant-menu-item::after{
+	border-right: 3px solid red;
+}
+
+.ant-menu-item:hover{
+	color: red;
+}
+
+#slider{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

@@ -37,7 +37,7 @@ class Login extends React.Component {
 
 			<Sec>
 				<div className="login_logo">
-					<img src={logo} className="logo_width" />
+					<img src={logo} className="logo_width" alt="Y&J Logo" />
 
 				</div>
 				<div className="login_content">
@@ -57,7 +57,7 @@ class Login extends React.Component {
 								<Input prefix={<Icon type="lock" style={{ color: "rgba(0,0,0,.25)" }} />} type="password" placeholder="Password" />
 							)}
 						</Form.Item>
-						<a className="login-form-forgot forgot" href="">Forgot password</a>
+						<a className="login-form-forgot forgot" href="/">Forgot password</a>
 						<Form.Item>
 							{getFieldDecorator("remember", {
 								valuePropName: "checked",

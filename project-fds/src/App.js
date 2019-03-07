@@ -15,6 +15,13 @@ import Gallery from "../src/pages/Gallery/Gallery";
 import TMaintenance from "../src/pages/TenantMaintenance/TenantMaintenance";
 import EMaintenance from "../src/pages/EmployeeMaintenance/EmployeeMaintenance";
 import Partners from "./pages/Partners/Partners";
+
+import TenantPortalLayout from "./hoc/Layout/PortalLayout";
+import UserPortalHome from "./portal/common/TenantPortal/pages/Home/UserPortalHome";
+import Profile from "./portal/common/TenantPortal/pages/Profile/Profile";
+import Maintenance from "./portal/common/TenantPortal/pages/Maintenance/Maintenance";
+import Payments from "./portal/common/TenantPortal/pages/Payments/Payments";
+
 import OurTeam from "../src/pages/OurTeam/OurTeam";
 import Login from "../src/portal/common/PortalLogin/login";
 import "../src/styles/global.css";
@@ -40,6 +47,11 @@ const App = () => (
 			<AppRoute path="/employee-maintenance" layout={Layout} component={EMaintenance} />
 			<AppRoute path="/team" layout={Layout} component={OurTeam} />
 			<AppRoute path="/partners" layout={Layout} component={Partners} />
+			<AppRoute path="/tenant/home" layout={TenantPortalLayout} component={UserPortalHome} />
+			<AppRoute path="/tenant/profile" layout={TenantPortalLayout} component={Profile} />
+			<AppRoute path="/tenant/maintenance" layout={TenantPortalLayout} component={Maintenance} />
+			<AppRoute path="/tenant/payments" layout={TenantPortalLayout} component={Payments} />
+			<AppRoute path="/tenant" layout={TenantPortalLayout} component={UserPortalHome} />
 			<AppRoute path="/login" layout={LoginLayout} component={Login} />
 			<AppRoute path="/" exact layout={Layout} component={Home} />
 			<Redirect to="/" />
