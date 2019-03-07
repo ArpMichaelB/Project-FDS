@@ -4,7 +4,7 @@ import { Card, Button } from "antd";
 import "./style.css";
 
 
-class UserPortalHome extends Component {
+class TenantPortalHome extends Component {
 	render(){
 		return(
 			<div id="user_portal_home_container">
@@ -33,4 +33,4 @@ class UserPortalHome extends Component {
 	}
 }
 
-export default UserPortalHome;
+export default TenantPortalHome;

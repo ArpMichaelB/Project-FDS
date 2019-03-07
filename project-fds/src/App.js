@@ -16,11 +16,15 @@ import TMaintenance from "../src/pages/TenantMaintenance/TenantMaintenance";
 import EMaintenance from "../src/pages/EmployeeMaintenance/EmployeeMaintenance";
 import Partners from "./pages/Partners/Partners";
 
-import TenantPortalLayout from "./hoc/Layout/PortalLayout";
-import UserPortalHome from "./portal/common/TenantPortal/pages/Home/UserPortalHome";
-import Profile from "./portal/common/TenantPortal/pages/Profile/Profile";
-import Maintenance from "./portal/common/TenantPortal/pages/Maintenance/Maintenance";
-import Payments from "./portal/common/TenantPortal/pages/Payments/Payments";
+import TenantPortalLayout from "./hoc/Layout/TenantPortalLayout";
+import TenantPortalHome from "./portal/common/TenantPortal/pages/Home/TenantPortalHome";
+import TenantPortalProfile from "./portal/common/TenantPortal/pages/Profile/TenantPortalProfile";
+import TenantPortalMaintenance from "./portal/common/TenantPortal/pages/Maintenance/TenantPortalMaintenance";
+import TenantPortalPayments from "./portal/common/TenantPortal/pages/Payments/TenantPortalPayments";
+
+import MaintenancePortalLayout from "./hoc/Layout/MaintenancePortalLayout";
+import MaintenancePortalHome from "./portal/common/MaintenancePortal/pages/Home/MaintenancePortalHome";
+import MaintenancePortalDetail from "./portal/common/MaintenancePortal/pages/Detail/MaintenancePortalDetail";
 
 import OurTeam from "../src/pages/OurTeam/OurTeam";
 import Login from "../src/portal/common/PortalLogin/login";
@@ -47,11 +51,14 @@ const App = () => (
 			<AppRoute path="/employee-maintenance" layout={Layout} component={EMaintenance} />
 			<AppRoute path="/team" layout={Layout} component={OurTeam} />
 			<AppRoute path="/partners" layout={Layout} component={Partners} />
-			<AppRoute path="/tenant/home" layout={TenantPortalLayout} component={UserPortalHome} />
-			<AppRoute path="/tenant/profile" layout={TenantPortalLayout} component={Profile} />
-			<AppRoute path="/tenant/maintenance" layout={TenantPortalLayout} component={Maintenance} />
-			<AppRoute path="/tenant/payments" layout={TenantPortalLayout} component={Payments} />
-			<AppRoute path="/tenant" layout={TenantPortalLayout} component={UserPortalHome} />
+			<AppRoute path="/tenant/home" layout={TenantPortalLayout} component={TenantPortalHome} />
+			<AppRoute path="/tenant/profile" layout={TenantPortalLayout} component={TenantPortalProfile} />
+			<AppRoute path="/tenant/maintenance" layout={TenantPortalLayout} component={TenantPortalMaintenance} />
+			<AppRoute path="/tenant/payments" layout={TenantPortalLayout} component={TenantPortalPayments} />
+			<AppRoute path="/tenant" layout={TenantPortalLayout} component={TenantPortalHome} />
+			<AppRoute path="/maintenance/home" layout={MaintenancePortalLayout} component={MaintenancePortalHome} />
+			<AppRoute path="/maintenance/details/:tenantName" layout={MaintenancePortalLayout} component={MaintenancePortalDetail} />
+			<AppRoute path="/maintenance" layout={MaintenancePortalLayout} component={MaintenancePortalHome} />
 			<AppRoute path="/login" layout={LoginLayout} component={Login} />
 			<AppRoute path="/" exact layout={Layout} component={Home} />
 			<Redirect to="/" />
