@@ -8,7 +8,7 @@ class TenantPortalProfile extends Component {
 	render(){
 		return(
 			<Card title="Profile" bordered={false} className="profile_card">
-				<h2>Payment Form</h2>
+				<h2>Profile</h2>
 			</Card>
 		);
 	}
