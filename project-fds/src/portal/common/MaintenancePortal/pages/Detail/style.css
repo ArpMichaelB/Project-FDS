@@ -10,4 +10,5 @@
 	border-color:var(--secondary-color);
 	margin: 4px;
 	max-width: 100%;
+	float: right;
 }
