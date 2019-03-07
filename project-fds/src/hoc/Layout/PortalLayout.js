@@ -57,7 +57,7 @@ class TenantPortalLayout extends Component {
 			location = location.slice(0, location.length - 1);
 		}
 
-		let locations = [ "/tenant/profile", "/tenant/home"];
+		let locations = [ "/tenant/profile", "/tenant/home", "/tenant/maintenance", "/tenant/payments"];
 		if(!locations.includes(location)){
 			location="/tenant/home";
 		}
@@ -86,11 +86,11 @@ class TenantPortalLayout extends Component {
 							<Icon type="profile" />
 							<span>Profile</span>
 						</Menu.Item>
-						<Menu.Item key="/tenant/payments">
+						<Menu.Item key="/tenant/payments" onClick={() => this.goToLink("/tenant/payments")}>
 							<Icon type="dollar" />
-							<span>Payment</span>
+							<span>Payments</span>
 						</Menu.Item>
-						<Menu.Item key="/tenant/maintenance">
+						<Menu.Item key="/tenant/maintenance" onClick={() => this.goToLink("/tenant/maintenance")}>
 							<Icon type="tool" />
 							<span>Maintenance</span>
 						</Menu.Item>
