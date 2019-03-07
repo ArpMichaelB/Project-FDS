@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class UserPortalPayments extends Component {
+class TenantPortalPayments extends Component {
 	render(){
 		return(
 			<div>
@@ -10,4 +10,4 @@ class UserPortalPayments extends Component {
 	}
 }
 
-export default UserPortalPayments;
+export default TenantPortalPayments;

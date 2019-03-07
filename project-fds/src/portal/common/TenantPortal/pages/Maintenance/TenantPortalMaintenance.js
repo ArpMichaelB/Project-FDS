@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class UserPortalMaintenance extends Component {
+class TenantPortalMaintenance extends Component {
 	render(){
 		return(
 			<div>
@@ -10,4 +10,4 @@ class UserPortalMaintenance extends Component {
 	}
 }
 
-export default UserPortalMaintenance;
+export default TenantPortalMaintenance;
