@@ -57,9 +57,9 @@ class TenantPortalLayout extends Component {
 			location = location.slice(0, location.length - 1);
 		}
 
-		let locations = [ "/tenant/profile", "/tenant/home", "/tenant/maintenance", "/tenant/payments"];
+		let locations = [ "/portal/tenant/profile", "/portal/tenant/home", "/portal/tenant/maintenance", "/portal/tenant/payments"];
 		if(!locations.includes(location)){
-			location="/tenant/home";
+			location="/portal/tenant/home";
 		}
 
 		return(
@@ -78,19 +78,19 @@ class TenantPortalLayout extends Component {
 						style={{margin:"auto", aspectRatio: 1, display:"block"}}  
 						width={this.state.width} height={undefined}/>
 					<Menu id="menu" theme="light" selectedKeys={[location]} mode="inline">
-						<Menu.Item key="/tenant/home" onClick={() => this.goToLink("/tenant/home")}>
+						<Menu.Item key="/portal/tenant/home" onClick={() => this.goToLink("/portal/tenant/home")}>
 							<Icon type="home" />
 							<span>Home</span>
 						</Menu.Item>
-						<Menu.Item key="/tenant/profile" onClick={() => this.goToLink("/tenant/profile")}>
+						<Menu.Item key="/portal/tenant/profile" onClick={() => this.goToLink("/portal/tenant/profile")}>
 							<Icon type="profile" />
 							<span>Profile</span>
 						</Menu.Item>
-						<Menu.Item key="/tenant/payments" onClick={() => this.goToLink("/tenant/payments")}>
+						<Menu.Item key="/portal/tenant/payments" onClick={() => this.goToLink("/portal/tenant/payments")}>
 							<Icon type="dollar" />
 							<span>Payments</span>
 						</Menu.Item>
-						<Menu.Item key="/tenant/maintenance" onClick={() => this.goToLink("/tenant/maintenance")}>
+						<Menu.Item key="/portal/tenant/maintenance" onClick={() => this.goToLink("/portal/tenant/maintenance")}>
 							<Icon type="tool" />
 							<span>Maintenance</span>
 						</Menu.Item>

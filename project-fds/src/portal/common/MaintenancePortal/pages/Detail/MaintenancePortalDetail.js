@@ -18,7 +18,7 @@ class MaintenancePortalDetail extends Component {
 		return(
 			<Card title="Maintenance Request Details" bordered={false} id="maintenance_data">
 				<h3>Details for {this.props.match.params.tenantName}</h3>
-				<Button onClick={() => this.props.history.push("/maintenance/home")} className="basic_button">Back</Button>
+				<Button onClick={() => this.props.history.push("/portal/maintenance/home")} className="basic_button">Back</Button>
 			</Card>
 		);
 	}

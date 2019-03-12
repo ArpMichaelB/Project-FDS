@@ -51,14 +51,14 @@ const App = () => (
 			<AppRoute path="/employee-maintenance" layout={Layout} component={EMaintenance} />
 			<AppRoute path="/team" layout={Layout} component={OurTeam} />
 			<AppRoute path="/partners" layout={Layout} component={Partners} />
-			<AppRoute path="/tenant/home" layout={TenantPortalLayout} component={TenantPortalHome} />
-			<AppRoute path="/tenant/profile" layout={TenantPortalLayout} component={TenantPortalProfile} />
-			<AppRoute path="/tenant/maintenance" layout={TenantPortalLayout} component={TenantPortalMaintenance} />
-			<AppRoute path="/tenant/payments" layout={TenantPortalLayout} component={TenantPortalPayments} />
-			<AppRoute path="/tenant" layout={TenantPortalLayout} component={TenantPortalHome} />
-			<AppRoute path="/maintenance/home" layout={MaintenancePortalLayout} component={MaintenancePortalHome} />
-			<AppRoute path="/maintenance/details/:tenantName" layout={MaintenancePortalLayout} component={MaintenancePortalDetail} />
-			<AppRoute path="/maintenance" layout={MaintenancePortalLayout} component={MaintenancePortalHome} />
+			<AppRoute path="/portal/tenant/home" layout={TenantPortalLayout} component={TenantPortalHome} />
+			<AppRoute path="/portal/tenant/profile" layout={TenantPortalLayout} component={TenantPortalProfile} />
+			<AppRoute path="/portal/tenant/maintenance" layout={TenantPortalLayout} component={TenantPortalMaintenance} />
+			<AppRoute path="/portal/tenant/payments" layout={TenantPortalLayout} component={TenantPortalPayments} />
+			<AppRoute path="/portal/tenant" layout={TenantPortalLayout} component={TenantPortalHome} />
+			<AppRoute path="/portal/maintenance/home" layout={MaintenancePortalLayout} component={MaintenancePortalHome} />
+			<AppRoute path="/portal/maintenance/details/:tenantName" layout={MaintenancePortalLayout} component={MaintenancePortalDetail} />
+			<AppRoute path="/portal/maintenance" layout={MaintenancePortalLayout} component={MaintenancePortalHome} />
 			<AppRoute path="/login" layout={LoginLayout} component={Login} />
 			<AppRoute path="/" exact layout={Layout} component={Home} />
 			<Redirect to="/" />

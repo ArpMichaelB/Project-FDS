@@ -68,7 +68,7 @@ class MaintenancePortalHome extends Component {
 				<Table dataSource={dataSource} columns={columns} 
 					onRow={(record) => {
 						return {
-							onClick: () => this.props.history.push("/maintenance/details/" + record.tenantName)
+							onClick: () => this.props.history.push("/portal/maintenance/details/" + record.tenantName)
 						};
 					}}
 				/>
