@@ -57,13 +57,13 @@ class MaintenancePortalLayout extends Component {
 			location = location.slice(0, location.length - 1);
 		}
 
-		if(location.search("/maintenance/details/") === 0){
+		if(location.search("/portal/maintenance/details/") === 0){
 			location = "";
 		}
 		else{
-			let locations = [ "/maintenance/home"];
+			let locations = [ "/portal/maintenance/home"];
 			if(!locations.includes(location)){
-				location="/maintenance/home";
+				location="/portal/maintenance/home";
 			}
 		}
 
@@ -83,7 +83,7 @@ class MaintenancePortalLayout extends Component {
 						style={{margin:"auto", aspectRatio: 1, display:"block"}}  
 						width={this.state.width} height={undefined}/>
 					<Menu id="menu" theme="light" selectedKeys={[location]} mode="inline">
-						<Menu.Item key="/maintenance/home" onClick={() => this.goToLink("/maintenance/home")}>
+						<Menu.Item key="/portal/maintenance/home" onClick={() => this.goToLink("/portal/maintenance/home")}>
 							<Icon type="home" />
 							<span>Home</span>
 						</Menu.Item>
