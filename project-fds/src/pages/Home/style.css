@@ -2,6 +2,16 @@
   height: 35px;
 }
 
+.show_mojo_listings-home{
+  height: 40vh;
+  border: 0;
+  width:90%;
+  display: block;
+  clear: both;
+  border: 1px solid #e8e8e8;
+  margin: auto;
+}
+
 .Home {
     min-height: 100vh;
     margin-left: 0;
