@@ -5,11 +5,13 @@ import DocumentTitle from "react-document-title";
 
 import "./style.css";
 
+
 const Home = () => {
 
 	return (
 
 		<div className="Home">
+			
 			<DocumentTitle title="Y&G Development Group" />
 			<div className="carousel">
 				<Carousel className="height" autoplay>

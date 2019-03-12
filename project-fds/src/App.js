@@ -17,6 +17,7 @@ import EMaintenance from "../src/pages/EmployeeMaintenance/EmployeeMaintenance";
 import Partners from "./pages/Partners/Partners";
 import OurTeam from "../src/pages/OurTeam/OurTeam";
 import Login from "../src/portal/common/PortalLogin/login";
+import DBConnect from "../src/pages/dbConnect";
 import "../src/styles/global.css";
 
 const AppRoute = ({ component: Component, layout: Layout, ...rest }) => (
@@ -41,6 +42,7 @@ const App = () => (
 			<AppRoute path="/team" layout={Layout} component={OurTeam} />
 			<AppRoute path="/partners" layout={Layout} component={Partners} />
 			<AppRoute path="/login" layout={LoginLayout} component={Login} />
+			<AppRoute path="/dbConnect" layout={Layout} component={DBConnect} />
 			<AppRoute path="/" exact layout={Layout} component={Home} />
 			<Redirect to="/" />
 		</Switch>
