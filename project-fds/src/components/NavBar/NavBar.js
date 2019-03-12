@@ -70,7 +70,12 @@ class NavBar extends Component {
 							<SubMenu onTitleClick={() => this.goToLink("/available-properties")} title={<span className="submenu-title-wrapper">Properties</span>}>
 								<MenuItemGroup>
 									<Menu.Item key="/available-properties"><Link to="/available-properties">Available Properties</Link></Menu.Item>
-									<Menu.Item key="/properties"><Link to="/properties">All Properties</Link></Menu.Item>
+									<SubMenu onTitleClick={() => this.goToLink("/properties")} title={<span className="submenu-title-wrapper">All Properties</span>}>
+										<MenuItemGroup>
+											<Menu.Item key="/burlington"><Link to="/burlington">Burlington</Link></Menu.Item>
+											<Menu.Item key="/commercial"><Link to="/commercial">Commercial Properties</Link></Menu.Item>
+										</MenuItemGroup>
+									</SubMenu>
 								</MenuItemGroup>
 							</SubMenu>
 							<SubMenu onTitleClick={() => this.goToLink("/team")} title={<span className="submenu-title-wrapper">Our Team</span>}>

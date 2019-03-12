@@ -141,7 +141,7 @@ class TenantMaintenance extends Component {
 							rules: [{
 								type: "email", message: "The input is not valid E-mail!",
 							}, {
-								required: true, message: "Please input your E-mail!",
+								required: false, message: "Please input your E-mail!",
 							}],
 						})(
 							<Input placeholder="E-mail" />
