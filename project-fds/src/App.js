@@ -14,6 +14,8 @@ import AvailableProperties from "../src/pages/AvailableProperties/AvailablePrope
 import Gallery from "../src/pages/Gallery/Gallery";
 import TMaintenance from "../src/pages/TenantMaintenance/TenantMaintenance";
 import Partners from "./pages/Partners/Partners";
+import Commercial from "./pages/Commercial/Commercial";
+import Burlington from "./pages/Burlington/Burlington";
 
 import TenantPortalLayout from "./hoc/Layout/TenantPortalLayout";
 import TenantPortalHome from "./portal/common/TenantPortal/pages/Home/TenantPortalHome";
@@ -49,6 +51,8 @@ const App = () => (
 			<AppRoute path="/team" layout={Layout} component={OurTeam} />
 			<AppRoute path="/maintenance" layout={Layout} component={TMaintenance} />
 			<AppRoute path="/partners" layout={Layout} component={Partners} />
+			<AppRoute path="/commercial" layout={Layout} component={Commercial} />
+			<AppRoute path="/burlington" layout={Layout} component={Burlington} />
 			<AppRoute path="/portal/tenant/home" layout={TenantPortalLayout} component={TenantPortalHome} />
 			<AppRoute path="/portal/tenant/profile" layout={TenantPortalLayout} component={TenantPortalProfile} />
 			<AppRoute path="/portal/tenant/maintenance" layout={TenantPortalLayout} component={TenantPortalMaintenance} />
