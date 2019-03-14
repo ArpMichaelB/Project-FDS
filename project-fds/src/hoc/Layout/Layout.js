@@ -16,7 +16,6 @@ class Layout extends Component {
 	}
 
 	render() {
-
 		return (
 			<div className="container">
 				<div className="wrapper">
@@ -25,14 +24,8 @@ class Layout extends Component {
 					<Footer />
 				</div>
 			</div>
-
 		);
 	}
 }
-
-
-
-
-
 
 export default Layout;

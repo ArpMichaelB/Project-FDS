@@ -22,40 +22,12 @@ const Home = () => {
 				</Carousel>
 			</div>
 			<div className="group">
-				<div className="title"><h1>Hot Properties</h1></div>
-				<Link to="/available-properties" id="avail-button-link">
-					<Button type="primary" className="avail-button">Available Properties</Button>
+				<div className="title"><h1>Available Properties</h1></div>
+				<Link to="/apply" id="avail-button-link">
+					<Button type="primary" className="avail-button">Apply Now!</Button>
 				</Link>
 			</div>
-			<div className="home_cards">
-				<Card
-					title="GordonVan-Tine"
-					extra={<a href="/property/Gordon">More</a>}
-					style={{ width: 303}}
-					className="home_card"
-				>
-					<img src="gallery/YandJ/GordonVan-Tine/gordon_exterior13.jpg" width="300" height="250" alt="gordon_exterior" />
-				</Card>
-
-				<Card
-					title="Halligan"
-					extra={<a className="more_a" href="/property/Halligan">More</a>}
-					style={{ width: 303}}
-					className="home_card"
-				>
-					<img src="gallery/YandJ/Halligan/halligan_exterior1.PNG" width="300" height="250" alt="halligan_exterior" />
-				</Card>
-
-				<Card
-					title="Peterson"
-					extra={<a href="/property/Peterson">More</a>}
-					style={{ width: 303 }}
-					className="home_card"
-				>
-					<img src="gallery/YandJ/Peterson/peterson_exterior1.JPG" width="300" height="250" alt="peterson_exterior" />
-					
-				</Card>
-			</div>
+			<iframe className="show_mojo_listings-home" title="show_mojo_listings" src="https://showmojo.com/5f60af008e/listings/mapsearch" ></iframe>
 			<div style={{marginBottom:"20px"}}>
 				<div className="title"><h1>Local Interests</h1></div>
 				<div className="interest_cards">

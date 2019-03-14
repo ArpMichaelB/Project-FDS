@@ -1,0 +1,14 @@
+#maintenance_data{
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+	width: 95%;
+	margin: 20px auto;
+}
+
+.basic_button, .basic_button:focus, .basic_button:hover {
+	color: #fff;
+	background-color: var(--secondary-color);
+	border-color:var(--secondary-color);
+	margin: 4px;
+	max-width: 100%;
+	float: right;
+}

@@ -38,7 +38,7 @@ class NavBar extends Component {
 			location = "/properties";
 		}
 
-		let locations = ["/home", "/partners", "/gallery", "/available-properties", "/properties", "/tenant-maintenance", "/employee-maintenance", "/contact", "/team"];
+		let locations = ["/home", "/partners", "/burlington", "/commercial", "/gallery", "/available-properties", "/properties", "/maintenance", "/contact", "/team"];
 		if(!locations.includes(location)){
 			location="/home";
 		}
@@ -70,14 +70,26 @@ class NavBar extends Component {
 							<SubMenu onTitleClick={() => this.goToLink("/available-properties")} title={<span className="submenu-title-wrapper">Properties</span>}>
 								<MenuItemGroup>
 									<Menu.Item key="/available-properties"><Link to="/available-properties">Available Properties</Link></Menu.Item>
-									<Menu.Item key="/properties"><Link to="/properties">All Properties</Link></Menu.Item>
+									<SubMenu onTitleClick={() => this.goToLink("/properties")} title={<span className="submenu-title-wrapper">All Properties</span>}>
+										<MenuItemGroup>
+											<Menu.Item key="/burlington"><Link to="/burlington">Burlington</Link></Menu.Item>
+											<Menu.Item key="/commercial"><Link to="/commercial">Commercial Properties</Link></Menu.Item>
+										</MenuItemGroup>
+									</SubMenu>
 								</MenuItemGroup>
 							</SubMenu>
-							<Menu.Item key="/team">
-								<Link to="/team">Our Team</Link>
-							</Menu.Item>
-							<Menu.Item key="/partners">
-								<Link to="/partners">Partners</Link>
+							<SubMenu onTitleClick={() => this.goToLink("/team")} title={<span className="submenu-title-wrapper">Our Team</span>}>
+								<MenuItemGroup>
+									<Menu.Item key="/team">
+										<Link to="/team">Our Team</Link>
+									</Menu.Item>
+									<Menu.Item key="/partners">
+										<Link to="/partners">Partners</Link>
+									</Menu.Item>
+								</MenuItemGroup>
+							</SubMenu>
+							<Menu.Item key="/maintenance">
+								<Link to="/maintenance">Maintenance</Link>
 							</Menu.Item>
 							<Menu.Item key="/apply">
 								<Link to="/apply">Apply Now</Link>

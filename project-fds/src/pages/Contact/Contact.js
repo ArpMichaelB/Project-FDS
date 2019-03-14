@@ -13,6 +13,7 @@ const Contact = () => {
 				<div className="contact-column">
 					<Icon type="home" className="contact-icon" /><br />
 					<h3>Address</h3>
+					(Will be moving to 736 Federal St. - First Floor in May 2019)
 					Insight Management and Rentals<br />
 					<a href="https://goo.gl/maps/2VoJjZrcHqG2" className="convenience_link">
 						814 E. River Dr.

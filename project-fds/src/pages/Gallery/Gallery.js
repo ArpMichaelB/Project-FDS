@@ -13,55 +13,62 @@ class Gallery extends Component {
 		super(props);
 
 		this.initialLoad = true;
+		this.imagesLoading = true;
+		this.lastLocation = "";
+		this.images = [];
 
-		this.state={visible:false, width:"", index:0, scoll_index:10, hasMore:true, h3_display:"inline"};
-
-		var rawFile = new XMLHttpRequest();
-		rawFile.open("GET", "/gallery/YandJ/images_info.txt", false);
-		rawFile.onreadystatechange = () =>
-		{
-			if(rawFile.readyState === 4)
-			{
-				if(rawFile.status === 200 || rawFile.status === 0)
-				{
-					var allText = rawFile.responseText;
-					this.images = allText.split("\n");
-				}
-			}
-		};
-		rawFile.send(null);
-
-		
-
-		let cards = [];
-		for(let i = this.state.scoll_index-10;i < this.state.scoll_index;i++){
-			cards.push(
-				<Card
-					hoverable
-					key={i}
-					bodyStyle={{padding: "0"}}
-					className="cards"
-					onClick={() => this.showModal(i)}
-					cover={
-						<LazyLoad placeholder={<img alt="placeholder" className="small_image" src="/gallery/loading_image.gif" />}>
-							<img alt="example" className="small_image" src={"/gallery/YandJ/" + this.images[i]} />
-						</LazyLoad>
-					}
-				/>
-			);
-		}
-
-		this.gallery_images = [];
-
-		this.images.forEach(image => {
-			let location = image.substring(0, image.search("/"));
-			this.gallery_images.push({original:"/gallery/YandJ/" + image, originalClass:"gallery_image", description:location});
-		});
-
-		this.state.cards = cards;
+		this.state={visible:false, width:"", index:0, scoll_index:10, hasMore:true, h3_display:"inline", cards:[]};
 
 		this.cancel=this.cancel.bind(this);
 		this.showModal=this.showModal.bind(this);
+
+		fetch("https://shr4ny5edi.execute-api.us-east-1.amazonaws.com/default/image?operation=readAll")
+			.then(response => response.json())
+			.then(data => {
+				this.images = JSON.parse(data.body);
+
+				let scoll_index = this.state.scoll_index + 10;
+				if(scoll_index >= this.images.length){
+					scoll_index = this.images.length;
+				}
+
+				let start = scoll_index-10;
+				if(start < 0){
+					start = 0;
+				}
+		
+				let cards = [];
+				for(let i = start;i < scoll_index;i++){
+					if(this.images[i].sitelocation.toLowerCase() !== this.lastLocation){
+						this.lastLocation = this.images[i].sitelocation.toLowerCase();
+						cards.push(<div className="title"><h2>{this.lastLocation.charAt(0).toUpperCase() + this.lastLocation.slice(1)}</h2></div>);
+					}
+					cards.push(
+						<Card
+							hoverable
+							key={i}
+							bodyStyle={{padding: "0"}}
+							className="cards"
+							onClick={() => this.showModal(i)}
+							cover={
+								<LazyLoad placeholder={<img alt="placeholder" className="small_image" src="/gallery/loading_image.gif" />}>
+									<img alt={this.images[i].alt} className="small_image" src={"https://s3.amazonaws.com/fdsimagebucket/" + this.images[i].link} />
+								</LazyLoad>
+							}
+						/>
+					);
+				}
+
+				this.gallery_images = [];
+
+				this.images.forEach(image => {
+					this.gallery_images.push({original:"https://s3.amazonaws.com/fdsimagebucket/" + image.link, 
+						originalClass:"gallery_image", description:image.caption});
+				});
+
+				this.imagesLoading = false;
+				this.setState({cards:cards});
+			});
 	}
 
 	render(){
@@ -86,26 +93,8 @@ class Gallery extends Component {
 		);
 	}
 
-	componentDidMount(){
-		if(this.initialLoad){
-			let rect = this.bottom_text.getBoundingClientRect();
-			let elemTop = rect.top;
-			let elemBottom = rect.bottom;
-		
-			let isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
-
-			if(isVisible){
-				this.loadFunc();
-			}
-			else{
-				this.initialLoad = false;
-				this.setState({h3_display:"none"});
-			}
-		}
-	}
-
 	componentDidUpdate(){
-		if(this.initialLoad){
+		if(this.initialLoad && !this.imagesLoading){
 			let rect = this.bottom_text.getBoundingClientRect();
 			let elemTop = rect.top;
 			let elemBottom = rect.bottom;
@@ -113,7 +102,13 @@ class Gallery extends Component {
 			let isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
 
 			if(isVisible){
-				this.loadFunc();
+				if(this.state.scoll_index >= this.images.length){
+					this.initialLoad = false;
+					this.setState({h3_display:"none"});
+				}
+				else{
+					this.loadFunc();
+				}
 			}
 			else{
 				this.initialLoad = false;
@@ -124,7 +119,7 @@ class Gallery extends Component {
 
 	loadFunc = () => {
 
-		if(this.state.scoll_index === this.images.length){
+		if(this.state.scoll_index >= this.images.length){
 			this.setState({hasMore:false});
 			return;
 		}
@@ -134,8 +129,17 @@ class Gallery extends Component {
 			scoll_index = this.images.length;
 		}
 
+		let start = scoll_index-10;
+		if(start < 0){
+			start = 0;
+		}
+
 		let cards = [];
-		for(let i = scoll_index-10;i < scoll_index;i++){
+		for(let i = start;i < scoll_index;i++){
+			if(this.images[i].sitelocation.toLowerCase() !== this.lastLocation){
+				this.lastLocation = this.images[i].sitelocation.toLowerCase();
+				cards.push(<div className="title"><h2>{this.lastLocation.charAt(0).toUpperCase() + this.lastLocation.slice(1)}</h2></div>);
+			}
 			cards.push(
 				<Card
 					hoverable
@@ -145,7 +149,7 @@ class Gallery extends Component {
 					onClick={() => this.showModal(i)}
 					cover={
 						<LazyLoad placeholder={<img alt="placeholder" className="small_image" src="/gallery/loading_image.gif" />}>
-							<img alt="example" className="small_image" src={"/gallery/YandJ/" + this.images[i]} />
+							<img alt={this.images[i].alt} className="small_image" src={"https://s3.amazonaws.com/fdsimagebucket/" + this.images[i].link} />
 						</LazyLoad>
 					}
 				/>
