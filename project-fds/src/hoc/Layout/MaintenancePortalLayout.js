@@ -63,7 +63,7 @@ class MaintenancePortalLayout extends Component {
 		else{
 			let locations = [ "/portal/maintenance/home"];
 			if(!locations.includes(location)){
-				location="/portal/maintenance/home";
+				this.goToLink("/portal/maintenance/home");
 			}
 		}
 
