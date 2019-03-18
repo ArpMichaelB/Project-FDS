@@ -74,7 +74,7 @@ export default class DBConnect extends React.Component {
 	  
 
 
-		const url = "https://shr4ny5edi.execute-api.us-east-1.amazonaws.com/default/tenant?operation=readAll";
+		const url = "https://shr4ny5edi.execute-api.us-east-1.amazonaws.com/default/admin?operation=readAll";
 		let config = {
 			headers: { 
 				"x-api-Key": "uQ7ipyNhNb7xNSNJr65Hy3JvplPPXmF49FwTNIRg" ,
