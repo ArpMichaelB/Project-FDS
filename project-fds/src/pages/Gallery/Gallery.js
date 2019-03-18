@@ -80,7 +80,7 @@ class Gallery extends Component {
 					dataLength={this.state.cards.length}
 					next={this.loadFunc}
 					hasMore={this.state.hasMore}
-					loader={<h4>Loading ...</h4>}
+					loader={<h1 style={{margin:"20px"}}>Loading ...</h1>}
 				>
 					{this.state.cards}
 				</InfiniteScroll>

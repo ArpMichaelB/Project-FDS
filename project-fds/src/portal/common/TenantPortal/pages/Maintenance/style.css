@@ -3,3 +3,60 @@
 	width: 95%;
 	margin: 20px auto;
 }
+
+.submit{
+    background-color: var(--secondary-color);
+    margin-top: 10%;
+}
+
+.ant-input:hover {
+    border-color: var(--secondary-color);
+}
+
+.ant-input:focus {
+    box-shadow: 0 0 0 2px var(--primary-color);
+    border-color: var(--secondary-color);
+}
+
+#tenant_maintenance_form {
+    width: auto;
+    margin: auto;
+}
+
+#tenant_maintenance_form .ant-form-item-control-wrapper{
+    width: auto;
+}
+
+@media (min-width: 350px) {
+    .tenant-maintenance-textarea{
+        width: 200px;
+    }
+}
+
+@media (min-width: 500px) {
+    #tenant_maintenance_form .ant-form-item-label{
+        text-align: left;
+    }
+
+    .tenant-maintenance-textarea{
+        width: 300px;
+    }
+}
+
+@media (min-width: 900px) {
+    .tenant-maintenance-textarea{
+        width: 400px;
+    }
+}
+
+@media (min-width: 1040px) {
+    .tenant-maintenance-textarea{
+        width: 500px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .tenant-maintenance-textarea{
+        width: 600px;
+    }
+}
