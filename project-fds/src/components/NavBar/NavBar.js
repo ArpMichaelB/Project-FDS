@@ -40,7 +40,7 @@ class NavBar extends Component {
 
 		let locations = ["/home", "/partners", "/burlington", "/commercial", "/gallery", "/available-properties", "/properties", "/maintenance", "/contact", "/team"];
 		if(!locations.includes(location)){
-			location="/home";
+			this.goToLink("/home");
 		}
 
 		return (
