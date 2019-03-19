@@ -64,7 +64,7 @@ const App = () => (
 			<AppRoute path="/portal/maintenance" layout={MaintenancePortalLayout} component={MaintenancePortalHome} />
 			<AppRoute path="/login" layout={LoginLayout} component={Login} />
 			<AppRoute path="/dbConnect" layout={Layout} component={DBConnect} />
-			<AppRoute path="/" exact layout={Layout} component={Home} />
+			<AppRoute path="/" layout={Layout} component={Home} />
 			<Redirect to="/" />
 		</Switch>
 	</div>
