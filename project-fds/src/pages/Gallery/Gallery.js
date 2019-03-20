@@ -17,7 +17,7 @@ class Gallery extends Component {
 		this.lastLocation = "";
 		this.images = [];
 
-		this.state={visible:false, width:"", index:0, scoll_index:10, hasMore:true, h3_display:"inline", cards:[]};
+		this.state={visible:false, width:"", index:0, scoll_index:0, hasMore:true, h3_display:"inline", cards:[]};
 
 		this.cancel=this.cancel.bind(this);
 		this.showModal=this.showModal.bind(this);
@@ -32,21 +32,18 @@ class Gallery extends Component {
 					scoll_index = this.images.length;
 				}
 
-				let start = scoll_index-10;
-				if(start < 0){
-					start = 0;
-				}
+				let start = this.state.scoll_index;
 		
 				let cards = [];
 				for(let i = start;i < scoll_index;i++){
 					if(this.images[i].sitelocation.toLowerCase() !== this.lastLocation){
 						this.lastLocation = this.images[i].sitelocation.toLowerCase();
-						cards.push(<div className="title"><h2>{this.lastLocation.charAt(0).toUpperCase() + this.lastLocation.slice(1)}</h2></div>);
+						cards.push(<div key={this.lastLocation} className="title"><h2>{this.lastLocation.charAt(0).toUpperCase() + this.lastLocation.slice(1)}</h2></div>);
 					}
 					cards.push(
 						<Card
 							hoverable
-							key={i}
+							key={this.images[i].id}
 							bodyStyle={{padding: "0"}}
 							className="cards"
 							onClick={() => this.showModal(i)}
@@ -67,7 +64,7 @@ class Gallery extends Component {
 				});
 
 				this.imagesLoading = false;
-				this.setState({cards:cards});
+				this.setState({cards:cards, scoll_index:scoll_index});
 			});
 	}
 
@@ -104,7 +101,7 @@ class Gallery extends Component {
 			if(isVisible){
 				if(this.state.scoll_index >= this.images.length){
 					this.initialLoad = false;
-					this.setState({h3_display:"none"});
+					this.setState({h3_display:"none", hasMore:false});
 				}
 				else{
 					this.loadFunc();
@@ -123,27 +120,28 @@ class Gallery extends Component {
 			this.setState({hasMore:false});
 			return;
 		}
+
+		if(this.imagesLoading){
+			return;
+		}
 		
 		let scoll_index = this.state.scoll_index + 10;
 		if(scoll_index >= this.images.length){
 			scoll_index = this.images.length;
 		}
 
-		let start = scoll_index-10;
-		if(start < 0){
-			start = 0;
-		}
+		let start = this.state.scoll_index;
 
 		let cards = [];
 		for(let i = start;i < scoll_index;i++){
 			if(this.images[i].sitelocation.toLowerCase() !== this.lastLocation){
 				this.lastLocation = this.images[i].sitelocation.toLowerCase();
-				cards.push(<div className="title"><h2>{this.lastLocation.charAt(0).toUpperCase() + this.lastLocation.slice(1)}</h2></div>);
+				cards.push(<div key={this.lastLocation} className="title"><h2>{this.lastLocation.charAt(0).toUpperCase() + this.lastLocation.slice(1)}</h2></div>);
 			}
 			cards.push(
 				<Card
 					hoverable
-					key={i}
+					key={this.images[i].id}
 					bodyStyle={{padding: "0"}}
 					className="cards"
 					onClick={() => this.showModal(i)}
