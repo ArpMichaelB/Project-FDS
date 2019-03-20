@@ -17,7 +17,7 @@ class Gallery extends Component {
 		this.lastLocation = "";
 		this.images = [];
 
-		this.state={visible:false, width:"", index:0, scoll_index:0, hasMore:true, h3_display:"inline", cards:[]};
+		this.state={visible:false, width:"", index:0, scoll_index:0, hasMore:true, h3_display:"Loading ...", cards:[]};
 
 		this.cancel=this.cancel.bind(this);
 		this.showModal=this.showModal.bind(this);
@@ -77,7 +77,6 @@ class Gallery extends Component {
 					dataLength={this.state.cards.length}
 					next={this.loadFunc}
 					hasMore={this.state.hasMore}
-					loader={<h1 style={{margin:"20px"}}>Loading ...</h1>}
 				>
 					{this.state.cards}
 				</InfiniteScroll>
@@ -85,7 +84,7 @@ class Gallery extends Component {
 					footer={null}>
 					<ImageModalGallery index={this.state.index} gallery_images={this.gallery_images} />
 				</Modal>
-				<h3 style={{display:this.state.h3_display}} ref={i => this.bottom_text = i}>End of Gallery</h3>
+				<h3 ref={i => this.bottom_text = i}>{this.state.h3_display}</h3>
 			</main>
 		);
 	}
@@ -101,7 +100,7 @@ class Gallery extends Component {
 			if(isVisible){
 				if(this.state.scoll_index >= this.images.length){
 					this.initialLoad = false;
-					this.setState({h3_display:"none", hasMore:false});
+					this.setState({h3_display:"End Of Gallery", hasMore:false});
 				}
 				else{
 					this.loadFunc();
@@ -109,7 +108,6 @@ class Gallery extends Component {
 			}
 			else{
 				this.initialLoad = false;
-				this.setState({h3_display:"none"});
 			}
 		}
 	}
@@ -117,7 +115,7 @@ class Gallery extends Component {
 	loadFunc = () => {
 
 		if(this.state.scoll_index >= this.images.length){
-			this.setState({hasMore:false});
+			this.setState({hasMore:false, h3_display:"End Of Gallery"});
 			return;
 		}
 
