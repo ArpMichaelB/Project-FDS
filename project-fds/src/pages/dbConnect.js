@@ -2,6 +2,8 @@ import React from "react";
 
 import axios from "axios";
 import PropTypes from "prop-types";
+import aws4 from "aws4";
+
 
 export default class DBConnect extends React.Component {
 
@@ -73,27 +75,46 @@ export default class DBConnect extends React.Component {
 		// 	});
 	  
 
+		let body = {
+			typeOfUser: "admin",
+			email: "admin@gmail.com",
+			pass: "admin"
 
-		const url = "https://shr4ny5edi.execute-api.us-east-1.amazonaws.com/default/admin?operation=readAll";
-		let config = {
-			headers: { 
-				"x-api-Key": "uQ7ipyNhNb7xNSNJr65Hy3JvplPPXmF49FwTNIRg" ,
-				"Content-Type": "application/json"
-			}
 		};
 
-		//axios.defaults.headers.common["Access-Control-Allow-Origin"] = "*";
-		axios.get(url, config)
-			.then(res => {
-				// eslint-disable-next-line no-console
-				let data = JSON.parse(res.data.body);
-				console.log(data);
-				//var newData = this.state.data.concat([data]);
-				this.setState( {data: data} );
-			});
+		const opts = {
+			method: "POST",
+			service: "execute-api",
+			region: "us-east-1",
+			path: "/default/login",
+			host: "shr4ny5edi.execute-api.us-east-1.amazonaws.com",
+			headers: {
+				"x-api-key": "uQ7ipyNhNb7xNSNJr65Hy3JvplPPXmF49FwTNIRg",
+				"Content-Type": "application/json"
+			},
+			url: "https://shr4ny5edi.execute-api.us-east-1.amazonaws.com/default/login",
+			body:JSON.stringify(body)
+		};
+
+		const request = aws4.sign(opts);
+		delete request.headers.Host;
+        delete request.headers["Content-Length"];
+
+		axios(request)
+				.then(response => console.log(response))
+					.catch(err => console.log(err.statusText));
+
+		// fetch(opts.url, {
+		// 	method:opts.method,
+		// 	headers: request.headers,
+		// 	body:opts.body
+		// })
+		// 	.then(response => console.log(response))
+		// 	.catch(err => console.log(err.statusText));
 
 	
 }
+
  
 
 	render() {

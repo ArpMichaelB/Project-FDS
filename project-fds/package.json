@@ -6,6 +6,7 @@
     "@ant-design/icons": "^1.1.16",
     "antd": "^3.13.2",
     "aws-api-gateway-client": "^0.2.16",
+    "aws4": "^1.8.0",
     "axios": "^0.18.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.1",

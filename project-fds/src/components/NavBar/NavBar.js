@@ -38,10 +38,10 @@ class NavBar extends Component {
 			location = "/properties";
 		}
 
-		let locations = ["/home", "/partners", "/burlington", "/commercial", "/gallery", "/available-properties", "/properties", "/maintenance", "/contact", "/team"];
-		if(!locations.includes(location)){
-			this.goToLink("/home");
-		}
+		// let locations = ["/home", "/partners", "/burlington", "/commercial", "/gallery", "/available-properties", "/properties", "/maintenance", "/contact", "/team"];
+		// if(!locations.includes(location)){
+		// 	this.goToLink("/home");
+		// }
 
 		return (
 			<Sec>
