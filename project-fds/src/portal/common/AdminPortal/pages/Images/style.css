@@ -4,6 +4,44 @@
 	margin: 20px auto;
 }
 
+.admin-image-edit-field{
+	width: 150px;
+	margin: 1px;
+}
+
+.admin-image-button-group{
+	margin: 2px;
+}
+
+.admin-image-delete{
+	background-color: red;
+	color: white;
+	margin-left: 3px;
+}
+.admin-image-delete:hover{
+	background-color: red;
+	color: white;
+}
+
+.admin-image-edit-cards{
+    width: 250px;
+    display: inline-block;
+}
+
+#admin-image-data-block{
+	padding: 10px;
+}
+
+#admin-images-end{
+	width: 100%;
+	text-align: center;
+}
+
+.admin-image-small_image{
+    width: 200px;
+    height: 200px;
+}
+
 .admin_upload_field{
 	margin: 5px;
 }
