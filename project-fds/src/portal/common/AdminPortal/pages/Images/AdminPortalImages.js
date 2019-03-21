@@ -96,32 +96,12 @@ class AdminPortalImages extends Component {
 		);
 	}
 
-	reload =() => {
-		this.lastLocation = "";
-		this.images = [];
-		this.imagesLoading = true;
-
-		this.setState({
-			files:[],
-			hideError:true,
-			caption:"",
-			location:"",
-			alt:"",
-			errMessage:"Please Fill Out All Fields",
-			color:"red",
-			cards:[],
-			scoll_index:0,
-			hasMore:true,
-			h3_display:"Loading ..."
+	remove =(i)=> {
+		this.setState(prevState => {
+			let cards = prevState.cards.slice();
+			cards.splice(i, 1);
+			return {cards:cards};
 		});
-
-		fetch("https://shr4ny5edi.execute-api.us-east-1.amazonaws.com/default/image?operation=readAll")
-			.then(response => response.json())
-			.then(data => {
-				this.images = JSON.parse(data.body);
-				this.imagesLoading = false;
-				this.createCards();
-			});
 	}
 
 	createCards = () => {
@@ -146,15 +126,16 @@ class AdminPortalImages extends Component {
 		for(let i = start;i < scoll_index;i++){
 			if(this.images[i].sitelocation.toLowerCase() !== this.lastLocation){
 				this.lastLocation = this.images[i].sitelocation.toLowerCase();
-				cards.push(<div key={this.lastLocation} className="title"><h2>{this.lastLocation.charAt(0).toUpperCase() + this.lastLocation.slice(1)}</h2></div>);
+				cards.push(<div key={cards.length + this.state.cards.length} className="title"><h2>{this.lastLocation.charAt(0).toUpperCase() + this.lastLocation.slice(1)}</h2></div>);
 			}
 			cards.push(
 				<CardCover
-					key={this.images[i].id}
+					key={cards.length + this.state.cards.length}
 					image={this.images[i]}
 					bodyStyle={{padding: "0"}}
 					classNameValue="admin-image-edit-cards"
-					reload={this.reload}
+					remove={this.remove}
+					index={cards.length + this.state.cards.length}
 					cover={
 						<LazyLoad placeholder={<img alt="placeholder" className="admin-image-small_image" src="/gallery/loading_image.gif" />}>
 							<img alt={this.images[i].alt} className="admin-image-small_image" src={"https://s3.amazonaws.com/fdsimagebucket/" + this.images[i].link} />
