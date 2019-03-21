@@ -12,7 +12,8 @@ class CardCover extends Component {
 		classNameValue:PropTypes.string,
 		cover:PropTypes.any,
 		image:PropTypes.object,
-		reload:PropTypes.func
+		remove:PropTypes.func,
+		index:PropTypes.number
 	}
 
 	state = {
@@ -98,7 +99,7 @@ class CardCover extends Component {
 
 		axios(request)
 			.then(() => {
-				this.props.reload();
+				this.props.remove(this.props.index);
 			})
 			.catch(err => {
 				this.setState({
