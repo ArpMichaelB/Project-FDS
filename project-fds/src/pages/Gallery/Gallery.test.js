@@ -7,8 +7,6 @@ import Adapter from "enzyme-adapter-react-16";
 import { shallow, mount, configure } from "enzyme";
 import toJson from "enzyme-to-json";
 
-import InfiniteScroll from "react-infinite-scroll-component";
-
 configure({adapter: new Adapter()});
 
 let dataString = "[";
