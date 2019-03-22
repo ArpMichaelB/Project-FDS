@@ -17,7 +17,7 @@ class Gallery extends Component {
 		this.lastLocation = "";
 		this.images = [];
 
-		this.state={visible:false, width:"", index:0, scoll_index:0, hasMore:true, h3_display:"Loading ...", cards:[]};
+		this.state={visible:false, index:0, scoll_index:0, hasMore:true, h3_display:"Loading ...", cards:[]};
 
 		this.cancel=this.cancel.bind(this);
 		this.showModal=this.showModal.bind(this);
@@ -27,34 +27,8 @@ class Gallery extends Component {
 			.then(data => {
 				this.images = JSON.parse(data.body);
 
-				let scoll_index = this.state.scoll_index + 10;
-				if(scoll_index >= this.images.length){
-					scoll_index = this.images.length;
-				}
-
-				let start = this.state.scoll_index;
-		
-				let cards = [];
-				for(let i = start;i < scoll_index;i++){
-					if(this.images[i].sitelocation.toLowerCase() !== this.lastLocation){
-						this.lastLocation = this.images[i].sitelocation.toLowerCase();
-						cards.push(<div key={this.lastLocation} className="title"><h2>{this.lastLocation.charAt(0).toUpperCase() + this.lastLocation.slice(1)}</h2></div>);
-					}
-					cards.push(
-						<Card
-							hoverable
-							key={this.images[i].id}
-							bodyStyle={{padding: "0"}}
-							className="cards"
-							onClick={() => this.showModal(i)}
-							cover={
-								<LazyLoad placeholder={<img alt="placeholder" className="small_image" src="/gallery/loading_image.gif" />}>
-									<img alt={this.images[i].alt} className="small_image" src={"https://s3.amazonaws.com/fdsimagebucket/" + this.images[i].link} />
-								</LazyLoad>
-							}
-						/>
-					);
-				}
+				this.imagesLoading = false;
+				this.loadFunc();
 
 				this.gallery_images = [];
 
@@ -62,9 +36,6 @@ class Gallery extends Component {
 					this.gallery_images.push({original:"https://s3.amazonaws.com/fdsimagebucket/" + image.link, 
 						originalClass:"gallery_image", description:image.caption});
 				});
-
-				this.imagesLoading = false;
-				this.setState({cards:cards, scoll_index:scoll_index});
 			});
 	}
 
