@@ -42,7 +42,7 @@ class AdminPortalImages extends Component {
 
 	render(){
 
-		let data = {
+		let properties = {
 			onRemove: (file) => {
 				this.setState((state) => {
 					const index = state.files.indexOf(file);
@@ -63,7 +63,8 @@ class AdminPortalImages extends Component {
 				});
 				return false;
 			},
-			fileList: this.state.files
+			fileList: this.state.files,
+			accept:"image/*,.HEIC"
 		};
 
 		return(
@@ -72,7 +73,7 @@ class AdminPortalImages extends Component {
 					<Input className="admin_upload_field" value={this.state.caption} onChange={this.saveCaption} placeholder="Caption" />
 					<Input className="admin_upload_field" value={this.state.location} onChange={this.saveLocation} placeholder="Location" />
 					<Input className="admin_upload_field" value={this.state.alt} onChange={this.saveAlt} placeholder="Alt" />
-					<Upload {...data}>
+					<Upload {...properties}>
 						<Button id="admin_upload_button">
 							<Icon type="upload" /> Select File
 						</Button>
