@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Popconfirm, Card, Button, Input } from "antd";
 import PropTypes from "prop-types";
-import { withRouter } from "react-router-dom";
 import aws4 from "aws4";
 import axios from "axios";
 
@@ -174,4 +173,4 @@ class CardCover extends Component {
 	}
 }
 
-export default withRouter(CardCover);
+export default CardCover;
