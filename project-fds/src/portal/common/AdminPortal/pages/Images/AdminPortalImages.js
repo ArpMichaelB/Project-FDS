@@ -178,7 +178,6 @@ class AdminPortalImages extends Component {
 		else{
 			let image = this.state.files[index];
 			const reader = new FileReader();
-			reader.readAsDataURL(image);
 			reader.onload = () => {
 				let result = reader.result;
 				let end = result.indexOf("base64,");
@@ -227,6 +226,7 @@ class AdminPortalImages extends Component {
 						});
 					});
 			};
+			reader.readAsDataURL(image);
 		}
 	}
 

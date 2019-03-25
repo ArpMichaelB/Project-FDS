@@ -1,0 +1,1664 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot test 1`] = `
+<div>
+  <Card
+    bordered={false}
+    className="admin_images_card"
+    title="Upload Images"
+  >
+    <Input
+      className="admin_upload_field"
+      disabled={false}
+      onChange={[Function]}
+      placeholder="Caption"
+      type="text"
+      value=""
+    />
+    <Input
+      className="admin_upload_field"
+      disabled={false}
+      onChange={[Function]}
+      placeholder="Location"
+      type="text"
+      value=""
+    />
+    <Input
+      className="admin_upload_field"
+      disabled={false}
+      onChange={[Function]}
+      placeholder="Alt"
+      type="text"
+      value=""
+    />
+    <Upload
+      accept="image/*,.HEIC"
+      action=""
+      beforeUpload={[Function]}
+      className=""
+      data={Object {}}
+      disabled={false}
+      fileList={Array []}
+      listType="text"
+      multiple={false}
+      onRemove={[Function]}
+      showUploadList={true}
+      supportServerRender={true}
+      type="select"
+    >
+      <Button
+        block={false}
+        ghost={false}
+        id="admin_upload_button"
+        loading={false}
+      >
+        <Icon
+          type="upload"
+        />
+         Select File
+      </Button>
+    </Upload>
+    <div
+      id="admin_upload_bottom"
+    >
+      <Button
+        block={false}
+        ghost={false}
+        loading={false}
+        onClick={[Function]}
+        style={
+          Object {
+            "float": "right",
+          }
+        }
+      >
+        Upload
+      </Button>
+      <div
+        hidden={true}
+        id="admin_upload_error"
+        style={
+          Object {
+            "color": "red",
+          }
+        }
+      >
+        Please Fill Out All Fields
+      </div>
+    </div>
+  </Card>
+  <Card
+    bordered={false}
+    className="admin_images_card"
+    title="Edit Images"
+  >
+    <InfiniteScroll
+      dataLength={11}
+      disableBrowserPullToRefresh={true}
+      hasMore={true}
+      next={[Function]}
+      pullDownToRefreshContent={
+        <h3>
+          Pull down to refresh
+        </h3>
+      }
+      pullDownToRefreshThreshold={100}
+      releaseToRefreshContent={
+        <h3>
+          Release to refresh
+        </h3>
+      }
+    >
+      <div
+        className="title"
+        key="0"
+      >
+        <h2>
+          Bucktown
+        </h2>
+      </div>
+      <CardCover
+        bodyStyle={
+          Object {
+            "padding": "0",
+          }
+        }
+        classNameValue="admin-image-edit-cards"
+        cover={
+          <LazyLoad
+            offset={0}
+            once={false}
+            overflow={false}
+            placeholder={
+              <img
+                alt="placeholder"
+                className="admin-image-small_image"
+                src="/gallery/loading_image.gif"
+              />
+            }
+            resize={false}
+            scroll={true}
+            unmountIfInvisible={false}
+          >
+            <img
+              alt="Bucktown"
+              className="admin-image-small_image"
+              src="https://s3.amazonaws.com/fdsimagebucket/"
+            />
+          </LazyLoad>
+        }
+        image={
+          Object {
+            "alt": "Bucktown",
+            "caption": "Bucktown",
+            "id": 0,
+            "link": "",
+            "sitelocation": "Bucktown",
+          }
+        }
+        index={1}
+        key="1"
+        remove={[Function]}
+      />
+      <CardCover
+        bodyStyle={
+          Object {
+            "padding": "0",
+          }
+        }
+        classNameValue="admin-image-edit-cards"
+        cover={
+          <LazyLoad
+            offset={0}
+            once={false}
+            overflow={false}
+            placeholder={
+              <img
+                alt="placeholder"
+                className="admin-image-small_image"
+                src="/gallery/loading_image.gif"
+              />
+            }
+            resize={false}
+            scroll={true}
+            unmountIfInvisible={false}
+          >
+            <img
+              alt="Bucktown"
+              className="admin-image-small_image"
+              src="https://s3.amazonaws.com/fdsimagebucket/"
+            />
+          </LazyLoad>
+        }
+        image={
+          Object {
+            "alt": "Bucktown",
+            "caption": "Bucktown",
+            "id": 1,
+            "link": "",
+            "sitelocation": "Bucktown",
+          }
+        }
+        index={2}
+        key="2"
+        remove={[Function]}
+      />
+      <CardCover
+        bodyStyle={
+          Object {
+            "padding": "0",
+          }
+        }
+        classNameValue="admin-image-edit-cards"
+        cover={
+          <LazyLoad
+            offset={0}
+            once={false}
+            overflow={false}
+            placeholder={
+              <img
+                alt="placeholder"
+                className="admin-image-small_image"
+                src="/gallery/loading_image.gif"
+              />
+            }
+            resize={false}
+            scroll={true}
+            unmountIfInvisible={false}
+          >
+            <img
+              alt="Bucktown"
+              className="admin-image-small_image"
+              src="https://s3.amazonaws.com/fdsimagebucket/"
+            />
+          </LazyLoad>
+        }
+        image={
+          Object {
+            "alt": "Bucktown",
+            "caption": "Bucktown",
+            "id": 2,
+            "link": "",
+            "sitelocation": "Bucktown",
+          }
+        }
+        index={3}
+        key="3"
+        remove={[Function]}
+      />
+      <CardCover
+        bodyStyle={
+          Object {
+            "padding": "0",
+          }
+        }
+        classNameValue="admin-image-edit-cards"
+        cover={
+          <LazyLoad
+            offset={0}
+            once={false}
+            overflow={false}
+            placeholder={
+              <img
+                alt="placeholder"
+                className="admin-image-small_image"
+                src="/gallery/loading_image.gif"
+              />
+            }
+            resize={false}
+            scroll={true}
+            unmountIfInvisible={false}
+          >
+            <img
+              alt="Bucktown"
+              className="admin-image-small_image"
+              src="https://s3.amazonaws.com/fdsimagebucket/"
+            />
+          </LazyLoad>
+        }
+        image={
+          Object {
+            "alt": "Bucktown",
+            "caption": "Bucktown",
+            "id": 3,
+            "link": "",
+            "sitelocation": "Bucktown",
+          }
+        }
+        index={4}
+        key="4"
+        remove={[Function]}
+      />
+      <CardCover
+        bodyStyle={
+          Object {
+            "padding": "0",
+          }
+        }
+        classNameValue="admin-image-edit-cards"
+        cover={
+          <LazyLoad
+            offset={0}
+            once={false}
+            overflow={false}
+            placeholder={
+              <img
+                alt="placeholder"
+                className="admin-image-small_image"
+                src="/gallery/loading_image.gif"
+              />
+            }
+            resize={false}
+            scroll={true}
+            unmountIfInvisible={false}
+          >
+            <img
+              alt="Bucktown"
+              className="admin-image-small_image"
+              src="https://s3.amazonaws.com/fdsimagebucket/"
+            />
+          </LazyLoad>
+        }
+        image={
+          Object {
+            "alt": "Bucktown",
+            "caption": "Bucktown",
+            "id": 4,
+            "link": "",
+            "sitelocation": "Bucktown",
+          }
+        }
+        index={5}
+        key="5"
+        remove={[Function]}
+      />
+      <CardCover
+        bodyStyle={
+          Object {
+            "padding": "0",
+          }
+        }
+        classNameValue="admin-image-edit-cards"
+        cover={
+          <LazyLoad
+            offset={0}
+            once={false}
+            overflow={false}
+            placeholder={
+              <img
+                alt="placeholder"
+                className="admin-image-small_image"
+                src="/gallery/loading_image.gif"
+              />
+            }
+            resize={false}
+            scroll={true}
+            unmountIfInvisible={false}
+          >
+            <img
+              alt="Bucktown"
+              className="admin-image-small_image"
+              src="https://s3.amazonaws.com/fdsimagebucket/"
+            />
+          </LazyLoad>
+        }
+        image={
+          Object {
+            "alt": "Bucktown",
+            "caption": "Bucktown",
+            "id": 5,
+            "link": "",
+            "sitelocation": "Bucktown",
+          }
+        }
+        index={6}
+        key="6"
+        remove={[Function]}
+      />
+      <CardCover
+        bodyStyle={
+          Object {
+            "padding": "0",
+          }
+        }
+        classNameValue="admin-image-edit-cards"
+        cover={
+          <LazyLoad
+            offset={0}
+            once={false}
+            overflow={false}
+            placeholder={
+              <img
+                alt="placeholder"
+                className="admin-image-small_image"
+                src="/gallery/loading_image.gif"
+              />
+            }
+            resize={false}
+            scroll={true}
+            unmountIfInvisible={false}
+          >
+            <img
+              alt="Bucktown"
+              className="admin-image-small_image"
+              src="https://s3.amazonaws.com/fdsimagebucket/"
+            />
+          </LazyLoad>
+        }
+        image={
+          Object {
+            "alt": "Bucktown",
+            "caption": "Bucktown",
+            "id": 6,
+            "link": "",
+            "sitelocation": "Bucktown",
+          }
+        }
+        index={7}
+        key="7"
+        remove={[Function]}
+      />
+      <CardCover
+        bodyStyle={
+          Object {
+            "padding": "0",
+          }
+        }
+        classNameValue="admin-image-edit-cards"
+        cover={
+          <LazyLoad
+            offset={0}
+            once={false}
+            overflow={false}
+            placeholder={
+              <img
+                alt="placeholder"
+                className="admin-image-small_image"
+                src="/gallery/loading_image.gif"
+              />
+            }
+            resize={false}
+            scroll={true}
+            unmountIfInvisible={false}
+          >
+            <img
+              alt="Bucktown"
+              className="admin-image-small_image"
+              src="https://s3.amazonaws.com/fdsimagebucket/"
+            />
+          </LazyLoad>
+        }
+        image={
+          Object {
+            "alt": "Bucktown",
+            "caption": "Bucktown",
+            "id": 7,
+            "link": "",
+            "sitelocation": "Bucktown",
+          }
+        }
+        index={8}
+        key="8"
+        remove={[Function]}
+      />
+      <CardCover
+        bodyStyle={
+          Object {
+            "padding": "0",
+          }
+        }
+        classNameValue="admin-image-edit-cards"
+        cover={
+          <LazyLoad
+            offset={0}
+            once={false}
+            overflow={false}
+            placeholder={
+              <img
+                alt="placeholder"
+                className="admin-image-small_image"
+                src="/gallery/loading_image.gif"
+              />
+            }
+            resize={false}
+            scroll={true}
+            unmountIfInvisible={false}
+          >
+            <img
+              alt="Bucktown"
+              className="admin-image-small_image"
+              src="https://s3.amazonaws.com/fdsimagebucket/"
+            />
+          </LazyLoad>
+        }
+        image={
+          Object {
+            "alt": "Bucktown",
+            "caption": "Bucktown",
+            "id": 8,
+            "link": "",
+            "sitelocation": "Bucktown",
+          }
+        }
+        index={9}
+        key="9"
+        remove={[Function]}
+      />
+      <CardCover
+        bodyStyle={
+          Object {
+            "padding": "0",
+          }
+        }
+        classNameValue="admin-image-edit-cards"
+        cover={
+          <LazyLoad
+            offset={0}
+            once={false}
+            overflow={false}
+            placeholder={
+              <img
+                alt="placeholder"
+                className="admin-image-small_image"
+                src="/gallery/loading_image.gif"
+              />
+            }
+            resize={false}
+            scroll={true}
+            unmountIfInvisible={false}
+          >
+            <img
+              alt="Bucktown"
+              className="admin-image-small_image"
+              src="https://s3.amazonaws.com/fdsimagebucket/"
+            />
+          </LazyLoad>
+        }
+        image={
+          Object {
+            "alt": "Bucktown",
+            "caption": "Bucktown",
+            "id": 9,
+            "link": "",
+            "sitelocation": "Bucktown",
+          }
+        }
+        index={10}
+        key="10"
+        remove={[Function]}
+      />
+    </InfiniteScroll>
+    <h3
+      id="admin-images-end"
+    >
+      Loading ...
+    </h3>
+  </Card>
+</div>
+`;
+
+exports[`snapshot test 2`] = `
+<div>
+  <Card
+    bordered={false}
+    className="admin_images_card"
+    title="Upload Images"
+  >
+    <Input
+      className="admin_upload_field"
+      disabled={false}
+      onChange={[Function]}
+      placeholder="Caption"
+      type="text"
+      value="test0"
+    />
+    <Input
+      className="admin_upload_field"
+      disabled={false}
+      onChange={[Function]}
+      placeholder="Location"
+      type="text"
+      value="test1"
+    />
+    <Input
+      className="admin_upload_field"
+      disabled={false}
+      onChange={[Function]}
+      placeholder="Alt"
+      type="text"
+      value="test2"
+    />
+    <Upload
+      accept="image/*,.HEIC"
+      action=""
+      beforeUpload={[Function]}
+      className=""
+      data={Object {}}
+      disabled={false}
+      fileList={Array []}
+      listType="text"
+      multiple={false}
+      onRemove={[Function]}
+      showUploadList={true}
+      supportServerRender={true}
+      type="select"
+    >
+      <Button
+        block={false}
+        ghost={false}
+        id="admin_upload_button"
+        loading={false}
+      >
+        <Icon
+          type="upload"
+        />
+         Select File
+      </Button>
+    </Upload>
+    <div
+      id="admin_upload_bottom"
+    >
+      <Button
+        block={false}
+        ghost={false}
+        loading={false}
+        onClick={[Function]}
+        style={
+          Object {
+            "float": "right",
+          }
+        }
+      >
+        Upload
+      </Button>
+      <div
+        hidden={true}
+        id="admin_upload_error"
+        style={
+          Object {
+            "color": "red",
+          }
+        }
+      >
+        Please Fill Out All Fields
+      </div>
+    </div>
+  </Card>
+  <Card
+    bordered={false}
+    className="admin_images_card"
+    title="Edit Images"
+  >
+    <InfiniteScroll
+      dataLength={11}
+      disableBrowserPullToRefresh={true}
+      hasMore={true}
+      next={[Function]}
+      pullDownToRefreshContent={
+        <h3>
+          Pull down to refresh
+        </h3>
+      }
+      pullDownToRefreshThreshold={100}
+      releaseToRefreshContent={
+        <h3>
+          Release to refresh
+        </h3>
+      }
+    >
+      <div
+        className="title"
+        key="0"
+      >
+        <h2>
+          Bucktown
+        </h2>
+      </div>
+      <CardCover
+        bodyStyle={
+          Object {
+            "padding": "0",
+          }
+        }
+        classNameValue="admin-image-edit-cards"
+        cover={
+          <LazyLoad
+            offset={0}
+            once={false}
+            overflow={false}
+            placeholder={
+              <img
+                alt="placeholder"
+                className="admin-image-small_image"
+                src="/gallery/loading_image.gif"
+              />
+            }
+            resize={false}
+            scroll={true}
+            unmountIfInvisible={false}
+          >
+            <img
+              alt="Bucktown"
+              className="admin-image-small_image"
+              src="https://s3.amazonaws.com/fdsimagebucket/"
+            />
+          </LazyLoad>
+        }
+        image={
+          Object {
+            "alt": "Bucktown",
+            "caption": "Bucktown",
+            "id": 0,
+            "link": "",
+            "sitelocation": "Bucktown",
+          }
+        }
+        index={1}
+        key="1"
+        remove={[Function]}
+      />
+      <CardCover
+        bodyStyle={
+          Object {
+            "padding": "0",
+          }
+        }
+        classNameValue="admin-image-edit-cards"
+        cover={
+          <LazyLoad
+            offset={0}
+            once={false}
+            overflow={false}
+            placeholder={
+              <img
+                alt="placeholder"
+                className="admin-image-small_image"
+                src="/gallery/loading_image.gif"
+              />
+            }
+            resize={false}
+            scroll={true}
+            unmountIfInvisible={false}
+          >
+            <img
+              alt="Bucktown"
+              className="admin-image-small_image"
+              src="https://s3.amazonaws.com/fdsimagebucket/"
+            />
+          </LazyLoad>
+        }
+        image={
+          Object {
+            "alt": "Bucktown",
+            "caption": "Bucktown",
+            "id": 1,
+            "link": "",
+            "sitelocation": "Bucktown",
+          }
+        }
+        index={2}
+        key="2"
+        remove={[Function]}
+      />
+      <CardCover
+        bodyStyle={
+          Object {
+            "padding": "0",
+          }
+        }
+        classNameValue="admin-image-edit-cards"
+        cover={
+          <LazyLoad
+            offset={0}
+            once={false}
+            overflow={false}
+            placeholder={
+              <img
+                alt="placeholder"
+                className="admin-image-small_image"
+                src="/gallery/loading_image.gif"
+              />
+            }
+            resize={false}
+            scroll={true}
+            unmountIfInvisible={false}
+          >
+            <img
+              alt="Bucktown"
+              className="admin-image-small_image"
+              src="https://s3.amazonaws.com/fdsimagebucket/"
+            />
+          </LazyLoad>
+        }
+        image={
+          Object {
+            "alt": "Bucktown",
+            "caption": "Bucktown",
+            "id": 2,
+            "link": "",
+            "sitelocation": "Bucktown",
+          }
+        }
+        index={3}
+        key="3"
+        remove={[Function]}
+      />
+      <CardCover
+        bodyStyle={
+          Object {
+            "padding": "0",
+          }
+        }
+        classNameValue="admin-image-edit-cards"
+        cover={
+          <LazyLoad
+            offset={0}
+            once={false}
+            overflow={false}
+            placeholder={
+              <img
+                alt="placeholder"
+                className="admin-image-small_image"
+                src="/gallery/loading_image.gif"
+              />
+            }
+            resize={false}
+            scroll={true}
+            unmountIfInvisible={false}
+          >
+            <img
+              alt="Bucktown"
+              className="admin-image-small_image"
+              src="https://s3.amazonaws.com/fdsimagebucket/"
+            />
+          </LazyLoad>
+        }
+        image={
+          Object {
+            "alt": "Bucktown",
+            "caption": "Bucktown",
+            "id": 3,
+            "link": "",
+            "sitelocation": "Bucktown",
+          }
+        }
+        index={4}
+        key="4"
+        remove={[Function]}
+      />
+      <CardCover
+        bodyStyle={
+          Object {
+            "padding": "0",
+          }
+        }
+        classNameValue="admin-image-edit-cards"
+        cover={
+          <LazyLoad
+            offset={0}
+            once={false}
+            overflow={false}
+            placeholder={
+              <img
+                alt="placeholder"
+                className="admin-image-small_image"
+                src="/gallery/loading_image.gif"
+              />
+            }
+            resize={false}
+            scroll={true}
+            unmountIfInvisible={false}
+          >
+            <img
+              alt="Bucktown"
+              className="admin-image-small_image"
+              src="https://s3.amazonaws.com/fdsimagebucket/"
+            />
+          </LazyLoad>
+        }
+        image={
+          Object {
+            "alt": "Bucktown",
+            "caption": "Bucktown",
+            "id": 4,
+            "link": "",
+            "sitelocation": "Bucktown",
+          }
+        }
+        index={5}
+        key="5"
+        remove={[Function]}
+      />
+      <CardCover
+        bodyStyle={
+          Object {
+            "padding": "0",
+          }
+        }
+        classNameValue="admin-image-edit-cards"
+        cover={
+          <LazyLoad
+            offset={0}
+            once={false}
+            overflow={false}
+            placeholder={
+              <img
+                alt="placeholder"
+                className="admin-image-small_image"
+                src="/gallery/loading_image.gif"
+              />
+            }
+            resize={false}
+            scroll={true}
+            unmountIfInvisible={false}
+          >
+            <img
+              alt="Bucktown"
+              className="admin-image-small_image"
+              src="https://s3.amazonaws.com/fdsimagebucket/"
+            />
+          </LazyLoad>
+        }
+        image={
+          Object {
+            "alt": "Bucktown",
+            "caption": "Bucktown",
+            "id": 5,
+            "link": "",
+            "sitelocation": "Bucktown",
+          }
+        }
+        index={6}
+        key="6"
+        remove={[Function]}
+      />
+      <CardCover
+        bodyStyle={
+          Object {
+            "padding": "0",
+          }
+        }
+        classNameValue="admin-image-edit-cards"
+        cover={
+          <LazyLoad
+            offset={0}
+            once={false}
+            overflow={false}
+            placeholder={
+              <img
+                alt="placeholder"
+                className="admin-image-small_image"
+                src="/gallery/loading_image.gif"
+              />
+            }
+            resize={false}
+            scroll={true}
+            unmountIfInvisible={false}
+          >
+            <img
+              alt="Bucktown"
+              className="admin-image-small_image"
+              src="https://s3.amazonaws.com/fdsimagebucket/"
+            />
+          </LazyLoad>
+        }
+        image={
+          Object {
+            "alt": "Bucktown",
+            "caption": "Bucktown",
+            "id": 6,
+            "link": "",
+            "sitelocation": "Bucktown",
+          }
+        }
+        index={7}
+        key="7"
+        remove={[Function]}
+      />
+      <CardCover
+        bodyStyle={
+          Object {
+            "padding": "0",
+          }
+        }
+        classNameValue="admin-image-edit-cards"
+        cover={
+          <LazyLoad
+            offset={0}
+            once={false}
+            overflow={false}
+            placeholder={
+              <img
+                alt="placeholder"
+                className="admin-image-small_image"
+                src="/gallery/loading_image.gif"
+              />
+            }
+            resize={false}
+            scroll={true}
+            unmountIfInvisible={false}
+          >
+            <img
+              alt="Bucktown"
+              className="admin-image-small_image"
+              src="https://s3.amazonaws.com/fdsimagebucket/"
+            />
+          </LazyLoad>
+        }
+        image={
+          Object {
+            "alt": "Bucktown",
+            "caption": "Bucktown",
+            "id": 7,
+            "link": "",
+            "sitelocation": "Bucktown",
+          }
+        }
+        index={8}
+        key="8"
+        remove={[Function]}
+      />
+      <CardCover
+        bodyStyle={
+          Object {
+            "padding": "0",
+          }
+        }
+        classNameValue="admin-image-edit-cards"
+        cover={
+          <LazyLoad
+            offset={0}
+            once={false}
+            overflow={false}
+            placeholder={
+              <img
+                alt="placeholder"
+                className="admin-image-small_image"
+                src="/gallery/loading_image.gif"
+              />
+            }
+            resize={false}
+            scroll={true}
+            unmountIfInvisible={false}
+          >
+            <img
+              alt="Bucktown"
+              className="admin-image-small_image"
+              src="https://s3.amazonaws.com/fdsimagebucket/"
+            />
+          </LazyLoad>
+        }
+        image={
+          Object {
+            "alt": "Bucktown",
+            "caption": "Bucktown",
+            "id": 8,
+            "link": "",
+            "sitelocation": "Bucktown",
+          }
+        }
+        index={9}
+        key="9"
+        remove={[Function]}
+      />
+      <CardCover
+        bodyStyle={
+          Object {
+            "padding": "0",
+          }
+        }
+        classNameValue="admin-image-edit-cards"
+        cover={
+          <LazyLoad
+            offset={0}
+            once={false}
+            overflow={false}
+            placeholder={
+              <img
+                alt="placeholder"
+                className="admin-image-small_image"
+                src="/gallery/loading_image.gif"
+              />
+            }
+            resize={false}
+            scroll={true}
+            unmountIfInvisible={false}
+          >
+            <img
+              alt="Bucktown"
+              className="admin-image-small_image"
+              src="https://s3.amazonaws.com/fdsimagebucket/"
+            />
+          </LazyLoad>
+        }
+        image={
+          Object {
+            "alt": "Bucktown",
+            "caption": "Bucktown",
+            "id": 9,
+            "link": "",
+            "sitelocation": "Bucktown",
+          }
+        }
+        index={10}
+        key="10"
+        remove={[Function]}
+      />
+    </InfiniteScroll>
+    <h3
+      id="admin-images-end"
+    >
+      Loading ...
+    </h3>
+  </Card>
+</div>
+`;
+
+exports[`snapshot test 3`] = `
+<div>
+  <Card
+    bordered={false}
+    className="admin_images_card"
+    title="Upload Images"
+  >
+    <Input
+      className="admin_upload_field"
+      disabled={false}
+      onChange={[Function]}
+      placeholder="Caption"
+      type="text"
+      value="test0"
+    />
+    <Input
+      className="admin_upload_field"
+      disabled={false}
+      onChange={[Function]}
+      placeholder="Location"
+      type="text"
+      value="test1"
+    />
+    <Input
+      className="admin_upload_field"
+      disabled={false}
+      onChange={[Function]}
+      placeholder="Alt"
+      type="text"
+      value="test2"
+    />
+    <Upload
+      accept="image/*,.HEIC"
+      action=""
+      beforeUpload={[Function]}
+      className=""
+      data={Object {}}
+      disabled={false}
+      fileList={Array []}
+      listType="text"
+      multiple={false}
+      onRemove={[Function]}
+      showUploadList={true}
+      supportServerRender={true}
+      type="select"
+    >
+      <Button
+        block={false}
+        ghost={false}
+        id="admin_upload_button"
+        loading={false}
+      >
+        <Icon
+          type="upload"
+        />
+         Select File
+      </Button>
+    </Upload>
+    <div
+      id="admin_upload_bottom"
+    >
+      <Button
+        block={false}
+        ghost={false}
+        loading={false}
+        onClick={[Function]}
+        style={
+          Object {
+            "float": "right",
+          }
+        }
+      >
+        Upload
+      </Button>
+      <div
+        hidden={true}
+        id="admin_upload_error"
+        style={
+          Object {
+            "color": "red",
+          }
+        }
+      >
+        Please Fill Out All Fields
+      </div>
+    </div>
+  </Card>
+  <Card
+    bordered={false}
+    className="admin_images_card"
+    title="Edit Images"
+  >
+    <InfiniteScroll
+      dataLength={10}
+      disableBrowserPullToRefresh={true}
+      hasMore={true}
+      next={[Function]}
+      pullDownToRefreshContent={
+        <h3>
+          Pull down to refresh
+        </h3>
+      }
+      pullDownToRefreshThreshold={100}
+      releaseToRefreshContent={
+        <h3>
+          Release to refresh
+        </h3>
+      }
+    >
+      <CardCover
+        bodyStyle={
+          Object {
+            "padding": "0",
+          }
+        }
+        classNameValue="admin-image-edit-cards"
+        cover={
+          <LazyLoad
+            offset={0}
+            once={false}
+            overflow={false}
+            placeholder={
+              <img
+                alt="placeholder"
+                className="admin-image-small_image"
+                src="/gallery/loading_image.gif"
+              />
+            }
+            resize={false}
+            scroll={true}
+            unmountIfInvisible={false}
+          >
+            <img
+              alt="Bucktown"
+              className="admin-image-small_image"
+              src="https://s3.amazonaws.com/fdsimagebucket/"
+            />
+          </LazyLoad>
+        }
+        image={
+          Object {
+            "alt": "Bucktown",
+            "caption": "Bucktown",
+            "id": 0,
+            "link": "",
+            "sitelocation": "Bucktown",
+          }
+        }
+        index={1}
+        key="1"
+        remove={[Function]}
+      />
+      <CardCover
+        bodyStyle={
+          Object {
+            "padding": "0",
+          }
+        }
+        classNameValue="admin-image-edit-cards"
+        cover={
+          <LazyLoad
+            offset={0}
+            once={false}
+            overflow={false}
+            placeholder={
+              <img
+                alt="placeholder"
+                className="admin-image-small_image"
+                src="/gallery/loading_image.gif"
+              />
+            }
+            resize={false}
+            scroll={true}
+            unmountIfInvisible={false}
+          >
+            <img
+              alt="Bucktown"
+              className="admin-image-small_image"
+              src="https://s3.amazonaws.com/fdsimagebucket/"
+            />
+          </LazyLoad>
+        }
+        image={
+          Object {
+            "alt": "Bucktown",
+            "caption": "Bucktown",
+            "id": 1,
+            "link": "",
+            "sitelocation": "Bucktown",
+          }
+        }
+        index={2}
+        key="2"
+        remove={[Function]}
+      />
+      <CardCover
+        bodyStyle={
+          Object {
+            "padding": "0",
+          }
+        }
+        classNameValue="admin-image-edit-cards"
+        cover={
+          <LazyLoad
+            offset={0}
+            once={false}
+            overflow={false}
+            placeholder={
+              <img
+                alt="placeholder"
+                className="admin-image-small_image"
+                src="/gallery/loading_image.gif"
+              />
+            }
+            resize={false}
+            scroll={true}
+            unmountIfInvisible={false}
+          >
+            <img
+              alt="Bucktown"
+              className="admin-image-small_image"
+              src="https://s3.amazonaws.com/fdsimagebucket/"
+            />
+          </LazyLoad>
+        }
+        image={
+          Object {
+            "alt": "Bucktown",
+            "caption": "Bucktown",
+            "id": 2,
+            "link": "",
+            "sitelocation": "Bucktown",
+          }
+        }
+        index={3}
+        key="3"
+        remove={[Function]}
+      />
+      <CardCover
+        bodyStyle={
+          Object {
+            "padding": "0",
+          }
+        }
+        classNameValue="admin-image-edit-cards"
+        cover={
+          <LazyLoad
+            offset={0}
+            once={false}
+            overflow={false}
+            placeholder={
+              <img
+                alt="placeholder"
+                className="admin-image-small_image"
+                src="/gallery/loading_image.gif"
+              />
+            }
+            resize={false}
+            scroll={true}
+            unmountIfInvisible={false}
+          >
+            <img
+              alt="Bucktown"
+              className="admin-image-small_image"
+              src="https://s3.amazonaws.com/fdsimagebucket/"
+            />
+          </LazyLoad>
+        }
+        image={
+          Object {
+            "alt": "Bucktown",
+            "caption": "Bucktown",
+            "id": 3,
+            "link": "",
+            "sitelocation": "Bucktown",
+          }
+        }
+        index={4}
+        key="4"
+        remove={[Function]}
+      />
+      <CardCover
+        bodyStyle={
+          Object {
+            "padding": "0",
+          }
+        }
+        classNameValue="admin-image-edit-cards"
+        cover={
+          <LazyLoad
+            offset={0}
+            once={false}
+            overflow={false}
+            placeholder={
+              <img
+                alt="placeholder"
+                className="admin-image-small_image"
+                src="/gallery/loading_image.gif"
+              />
+            }
+            resize={false}
+            scroll={true}
+            unmountIfInvisible={false}
+          >
+            <img
+              alt="Bucktown"
+              className="admin-image-small_image"
+              src="https://s3.amazonaws.com/fdsimagebucket/"
+            />
+          </LazyLoad>
+        }
+        image={
+          Object {
+            "alt": "Bucktown",
+            "caption": "Bucktown",
+            "id": 4,
+            "link": "",
+            "sitelocation": "Bucktown",
+          }
+        }
+        index={5}
+        key="5"
+        remove={[Function]}
+      />
+      <CardCover
+        bodyStyle={
+          Object {
+            "padding": "0",
+          }
+        }
+        classNameValue="admin-image-edit-cards"
+        cover={
+          <LazyLoad
+            offset={0}
+            once={false}
+            overflow={false}
+            placeholder={
+              <img
+                alt="placeholder"
+                className="admin-image-small_image"
+                src="/gallery/loading_image.gif"
+              />
+            }
+            resize={false}
+            scroll={true}
+            unmountIfInvisible={false}
+          >
+            <img
+              alt="Bucktown"
+              className="admin-image-small_image"
+              src="https://s3.amazonaws.com/fdsimagebucket/"
+            />
+          </LazyLoad>
+        }
+        image={
+          Object {
+            "alt": "Bucktown",
+            "caption": "Bucktown",
+            "id": 5,
+            "link": "",
+            "sitelocation": "Bucktown",
+          }
+        }
+        index={6}
+        key="6"
+        remove={[Function]}
+      />
+      <CardCover
+        bodyStyle={
+          Object {
+            "padding": "0",
+          }
+        }
+        classNameValue="admin-image-edit-cards"
+        cover={
+          <LazyLoad
+            offset={0}
+            once={false}
+            overflow={false}
+            placeholder={
+              <img
+                alt="placeholder"
+                className="admin-image-small_image"
+                src="/gallery/loading_image.gif"
+              />
+            }
+            resize={false}
+            scroll={true}
+            unmountIfInvisible={false}
+          >
+            <img
+              alt="Bucktown"
+              className="admin-image-small_image"
+              src="https://s3.amazonaws.com/fdsimagebucket/"
+            />
+          </LazyLoad>
+        }
+        image={
+          Object {
+            "alt": "Bucktown",
+            "caption": "Bucktown",
+            "id": 6,
+            "link": "",
+            "sitelocation": "Bucktown",
+          }
+        }
+        index={7}
+        key="7"
+        remove={[Function]}
+      />
+      <CardCover
+        bodyStyle={
+          Object {
+            "padding": "0",
+          }
+        }
+        classNameValue="admin-image-edit-cards"
+        cover={
+          <LazyLoad
+            offset={0}
+            once={false}
+            overflow={false}
+            placeholder={
+              <img
+                alt="placeholder"
+                className="admin-image-small_image"
+                src="/gallery/loading_image.gif"
+              />
+            }
+            resize={false}
+            scroll={true}
+            unmountIfInvisible={false}
+          >
+            <img
+              alt="Bucktown"
+              className="admin-image-small_image"
+              src="https://s3.amazonaws.com/fdsimagebucket/"
+            />
+          </LazyLoad>
+        }
+        image={
+          Object {
+            "alt": "Bucktown",
+            "caption": "Bucktown",
+            "id": 7,
+            "link": "",
+            "sitelocation": "Bucktown",
+          }
+        }
+        index={8}
+        key="8"
+        remove={[Function]}
+      />
+      <CardCover
+        bodyStyle={
+          Object {
+            "padding": "0",
+          }
+        }
+        classNameValue="admin-image-edit-cards"
+        cover={
+          <LazyLoad
+            offset={0}
+            once={false}
+            overflow={false}
+            placeholder={
+              <img
+                alt="placeholder"
+                className="admin-image-small_image"
+                src="/gallery/loading_image.gif"
+              />
+            }
+            resize={false}
+            scroll={true}
+            unmountIfInvisible={false}
+          >
+            <img
+              alt="Bucktown"
+              className="admin-image-small_image"
+              src="https://s3.amazonaws.com/fdsimagebucket/"
+            />
+          </LazyLoad>
+        }
+        image={
+          Object {
+            "alt": "Bucktown",
+            "caption": "Bucktown",
+            "id": 8,
+            "link": "",
+            "sitelocation": "Bucktown",
+          }
+        }
+        index={9}
+        key="9"
+        remove={[Function]}
+      />
+      <CardCover
+        bodyStyle={
+          Object {
+            "padding": "0",
+          }
+        }
+        classNameValue="admin-image-edit-cards"
+        cover={
+          <LazyLoad
+            offset={0}
+            once={false}
+            overflow={false}
+            placeholder={
+              <img
+                alt="placeholder"
+                className="admin-image-small_image"
+                src="/gallery/loading_image.gif"
+              />
+            }
+            resize={false}
+            scroll={true}
+            unmountIfInvisible={false}
+          >
+            <img
+              alt="Bucktown"
+              className="admin-image-small_image"
+              src="https://s3.amazonaws.com/fdsimagebucket/"
+            />
+          </LazyLoad>
+        }
+        image={
+          Object {
+            "alt": "Bucktown",
+            "caption": "Bucktown",
+            "id": 9,
+            "link": "",
+            "sitelocation": "Bucktown",
+          }
+        }
+        index={10}
+        key="10"
+        remove={[Function]}
+      />
+    </InfiniteScroll>
+    <h3
+      id="admin-images-end"
+    >
+      Loading ...
+    </h3>
+  </Card>
+</div>
+`;

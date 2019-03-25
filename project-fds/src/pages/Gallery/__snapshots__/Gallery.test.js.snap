@@ -1,0 +1,785 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot test 1`] = `
+<main
+  className="Gallery"
+>
+  <div
+    className="title"
+  >
+    <h1>
+      Gallery
+    </h1>
+  </div>
+  <div
+    style={Object {}}
+  >
+    <div
+      className="infinite-scroll-component "
+      style={
+        Object {
+          "WebkitOverflowScrolling": "touch",
+          "height": "auto",
+          "overflow": "auto",
+        }
+      }
+    >
+      <div
+        className="title"
+        key="bucktown"
+      >
+        <h2>
+          Bucktown
+        </h2>
+      </div>
+      <div
+        className="ant-card cards ant-card-bordered ant-card-hoverable"
+        onClick={[Function]}
+      >
+        <div
+          className="ant-card-cover"
+        >
+          <img
+            alt="placeholder"
+            className="small_image"
+            src="/gallery/loading_image.gif"
+          />
+        </div>
+        <div
+          className="ant-card-body"
+          style={
+            Object {
+              "padding": "0",
+            }
+          }
+        />
+      </div>
+      <div
+        className="ant-card cards ant-card-bordered ant-card-hoverable"
+        onClick={[Function]}
+      >
+        <div
+          className="ant-card-cover"
+        >
+          <img
+            alt="placeholder"
+            className="small_image"
+            src="/gallery/loading_image.gif"
+          />
+        </div>
+        <div
+          className="ant-card-body"
+          style={
+            Object {
+              "padding": "0",
+            }
+          }
+        />
+      </div>
+      <div
+        className="ant-card cards ant-card-bordered ant-card-hoverable"
+        onClick={[Function]}
+      >
+        <div
+          className="ant-card-cover"
+        >
+          <img
+            alt="placeholder"
+            className="small_image"
+            src="/gallery/loading_image.gif"
+          />
+        </div>
+        <div
+          className="ant-card-body"
+          style={
+            Object {
+              "padding": "0",
+            }
+          }
+        />
+      </div>
+      <div
+        className="ant-card cards ant-card-bordered ant-card-hoverable"
+        onClick={[Function]}
+      >
+        <div
+          className="ant-card-cover"
+        >
+          <img
+            alt="placeholder"
+            className="small_image"
+            src="/gallery/loading_image.gif"
+          />
+        </div>
+        <div
+          className="ant-card-body"
+          style={
+            Object {
+              "padding": "0",
+            }
+          }
+        />
+      </div>
+      <div
+        className="ant-card cards ant-card-bordered ant-card-hoverable"
+        onClick={[Function]}
+      >
+        <div
+          className="ant-card-cover"
+        >
+          <img
+            alt="placeholder"
+            className="small_image"
+            src="/gallery/loading_image.gif"
+          />
+        </div>
+        <div
+          className="ant-card-body"
+          style={
+            Object {
+              "padding": "0",
+            }
+          }
+        />
+      </div>
+      <div
+        className="ant-card cards ant-card-bordered ant-card-hoverable"
+        onClick={[Function]}
+      >
+        <div
+          className="ant-card-cover"
+        >
+          <img
+            alt="placeholder"
+            className="small_image"
+            src="/gallery/loading_image.gif"
+          />
+        </div>
+        <div
+          className="ant-card-body"
+          style={
+            Object {
+              "padding": "0",
+            }
+          }
+        />
+      </div>
+      <div
+        className="ant-card cards ant-card-bordered ant-card-hoverable"
+        onClick={[Function]}
+      >
+        <div
+          className="ant-card-cover"
+        >
+          <img
+            alt="placeholder"
+            className="small_image"
+            src="/gallery/loading_image.gif"
+          />
+        </div>
+        <div
+          className="ant-card-body"
+          style={
+            Object {
+              "padding": "0",
+            }
+          }
+        />
+      </div>
+      <div
+        className="ant-card cards ant-card-bordered ant-card-hoverable"
+        onClick={[Function]}
+      >
+        <div
+          className="ant-card-cover"
+        >
+          <img
+            alt="placeholder"
+            className="small_image"
+            src="/gallery/loading_image.gif"
+          />
+        </div>
+        <div
+          className="ant-card-body"
+          style={
+            Object {
+              "padding": "0",
+            }
+          }
+        />
+      </div>
+      <div
+        className="ant-card cards ant-card-bordered ant-card-hoverable"
+        onClick={[Function]}
+      >
+        <div
+          className="ant-card-cover"
+        >
+          <img
+            alt="placeholder"
+            className="small_image"
+            src="/gallery/loading_image.gif"
+          />
+        </div>
+        <div
+          className="ant-card-body"
+          style={
+            Object {
+              "padding": "0",
+            }
+          }
+        />
+      </div>
+      <div
+        className="ant-card cards ant-card-bordered ant-card-hoverable"
+        onClick={[Function]}
+      >
+        <div
+          className="ant-card-cover"
+        >
+          <img
+            alt="placeholder"
+            className="small_image"
+            src="/gallery/loading_image.gif"
+          />
+        </div>
+        <div
+          className="ant-card-body"
+          style={
+            Object {
+              "padding": "0",
+            }
+          }
+        />
+      </div>
+      <div
+        className="ant-card cards ant-card-bordered ant-card-hoverable"
+        onClick={[Function]}
+      >
+        <div
+          className="ant-card-cover"
+        >
+          <img
+            alt="placeholder"
+            className="small_image"
+            src="/gallery/loading_image.gif"
+          />
+        </div>
+        <div
+          className="ant-card-body"
+          style={
+            Object {
+              "padding": "0",
+            }
+          }
+        />
+      </div>
+      <div
+        className="ant-card cards ant-card-bordered ant-card-hoverable"
+        onClick={[Function]}
+      >
+        <div
+          className="ant-card-cover"
+        >
+          <img
+            alt="placeholder"
+            className="small_image"
+            src="/gallery/loading_image.gif"
+          />
+        </div>
+        <div
+          className="ant-card-body"
+          style={
+            Object {
+              "padding": "0",
+            }
+          }
+        />
+      </div>
+      <div
+        className="ant-card cards ant-card-bordered ant-card-hoverable"
+        onClick={[Function]}
+      >
+        <div
+          className="ant-card-cover"
+        >
+          <img
+            alt="placeholder"
+            className="small_image"
+            src="/gallery/loading_image.gif"
+          />
+        </div>
+        <div
+          className="ant-card-body"
+          style={
+            Object {
+              "padding": "0",
+            }
+          }
+        />
+      </div>
+      <div
+        className="ant-card cards ant-card-bordered ant-card-hoverable"
+        onClick={[Function]}
+      >
+        <div
+          className="ant-card-cover"
+        >
+          <img
+            alt="placeholder"
+            className="small_image"
+            src="/gallery/loading_image.gif"
+          />
+        </div>
+        <div
+          className="ant-card-body"
+          style={
+            Object {
+              "padding": "0",
+            }
+          }
+        />
+      </div>
+      <div
+        className="ant-card cards ant-card-bordered ant-card-hoverable"
+        onClick={[Function]}
+      >
+        <div
+          className="ant-card-cover"
+        >
+          <img
+            alt="placeholder"
+            className="small_image"
+            src="/gallery/loading_image.gif"
+          />
+        </div>
+        <div
+          className="ant-card-body"
+          style={
+            Object {
+              "padding": "0",
+            }
+          }
+        />
+      </div>
+      <div
+        className="ant-card cards ant-card-bordered ant-card-hoverable"
+        onClick={[Function]}
+      >
+        <div
+          className="ant-card-cover"
+        >
+          <img
+            alt="placeholder"
+            className="small_image"
+            src="/gallery/loading_image.gif"
+          />
+        </div>
+        <div
+          className="ant-card-body"
+          style={
+            Object {
+              "padding": "0",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+  <h3>
+    End Of Gallery
+  </h3>
+</main>
+`;
+
+exports[`snapshot test 2`] = `
+<main
+  className="Gallery"
+>
+  <div
+    className="title"
+  >
+    <h1>
+      Gallery
+    </h1>
+  </div>
+  <div
+    style={Object {}}
+  >
+    <div
+      className="infinite-scroll-component "
+      style={
+        Object {
+          "WebkitOverflowScrolling": "touch",
+          "height": "auto",
+          "overflow": "auto",
+        }
+      }
+    >
+      <div
+        className="title"
+        key="bucktown"
+      >
+        <h2>
+          Bucktown
+        </h2>
+      </div>
+      <div
+        className="ant-card cards ant-card-bordered ant-card-hoverable"
+        onClick={[Function]}
+      >
+        <div
+          className="ant-card-cover"
+        >
+          <img
+            alt="placeholder"
+            className="small_image"
+            src="/gallery/loading_image.gif"
+          />
+        </div>
+        <div
+          className="ant-card-body"
+          style={
+            Object {
+              "padding": "0",
+            }
+          }
+        />
+      </div>
+      <div
+        className="ant-card cards ant-card-bordered ant-card-hoverable"
+        onClick={[Function]}
+      >
+        <div
+          className="ant-card-cover"
+        >
+          <img
+            alt="placeholder"
+            className="small_image"
+            src="/gallery/loading_image.gif"
+          />
+        </div>
+        <div
+          className="ant-card-body"
+          style={
+            Object {
+              "padding": "0",
+            }
+          }
+        />
+      </div>
+      <div
+        className="ant-card cards ant-card-bordered ant-card-hoverable"
+        onClick={[Function]}
+      >
+        <div
+          className="ant-card-cover"
+        >
+          <img
+            alt="placeholder"
+            className="small_image"
+            src="/gallery/loading_image.gif"
+          />
+        </div>
+        <div
+          className="ant-card-body"
+          style={
+            Object {
+              "padding": "0",
+            }
+          }
+        />
+      </div>
+      <div
+        className="ant-card cards ant-card-bordered ant-card-hoverable"
+        onClick={[Function]}
+      >
+        <div
+          className="ant-card-cover"
+        >
+          <img
+            alt="placeholder"
+            className="small_image"
+            src="/gallery/loading_image.gif"
+          />
+        </div>
+        <div
+          className="ant-card-body"
+          style={
+            Object {
+              "padding": "0",
+            }
+          }
+        />
+      </div>
+      <div
+        className="ant-card cards ant-card-bordered ant-card-hoverable"
+        onClick={[Function]}
+      >
+        <div
+          className="ant-card-cover"
+        >
+          <img
+            alt="placeholder"
+            className="small_image"
+            src="/gallery/loading_image.gif"
+          />
+        </div>
+        <div
+          className="ant-card-body"
+          style={
+            Object {
+              "padding": "0",
+            }
+          }
+        />
+      </div>
+      <div
+        className="ant-card cards ant-card-bordered ant-card-hoverable"
+        onClick={[Function]}
+      >
+        <div
+          className="ant-card-cover"
+        >
+          <img
+            alt="placeholder"
+            className="small_image"
+            src="/gallery/loading_image.gif"
+          />
+        </div>
+        <div
+          className="ant-card-body"
+          style={
+            Object {
+              "padding": "0",
+            }
+          }
+        />
+      </div>
+      <div
+        className="ant-card cards ant-card-bordered ant-card-hoverable"
+        onClick={[Function]}
+      >
+        <div
+          className="ant-card-cover"
+        >
+          <img
+            alt="placeholder"
+            className="small_image"
+            src="/gallery/loading_image.gif"
+          />
+        </div>
+        <div
+          className="ant-card-body"
+          style={
+            Object {
+              "padding": "0",
+            }
+          }
+        />
+      </div>
+      <div
+        className="ant-card cards ant-card-bordered ant-card-hoverable"
+        onClick={[Function]}
+      >
+        <div
+          className="ant-card-cover"
+        >
+          <img
+            alt="placeholder"
+            className="small_image"
+            src="/gallery/loading_image.gif"
+          />
+        </div>
+        <div
+          className="ant-card-body"
+          style={
+            Object {
+              "padding": "0",
+            }
+          }
+        />
+      </div>
+      <div
+        className="ant-card cards ant-card-bordered ant-card-hoverable"
+        onClick={[Function]}
+      >
+        <div
+          className="ant-card-cover"
+        >
+          <img
+            alt="placeholder"
+            className="small_image"
+            src="/gallery/loading_image.gif"
+          />
+        </div>
+        <div
+          className="ant-card-body"
+          style={
+            Object {
+              "padding": "0",
+            }
+          }
+        />
+      </div>
+      <div
+        className="ant-card cards ant-card-bordered ant-card-hoverable"
+        onClick={[Function]}
+      >
+        <div
+          className="ant-card-cover"
+        >
+          <img
+            alt="placeholder"
+            className="small_image"
+            src="/gallery/loading_image.gif"
+          />
+        </div>
+        <div
+          className="ant-card-body"
+          style={
+            Object {
+              "padding": "0",
+            }
+          }
+        />
+      </div>
+      <div
+        className="ant-card cards ant-card-bordered ant-card-hoverable"
+        onClick={[Function]}
+      >
+        <div
+          className="ant-card-cover"
+        >
+          <img
+            alt="placeholder"
+            className="small_image"
+            src="/gallery/loading_image.gif"
+          />
+        </div>
+        <div
+          className="ant-card-body"
+          style={
+            Object {
+              "padding": "0",
+            }
+          }
+        />
+      </div>
+      <div
+        className="ant-card cards ant-card-bordered ant-card-hoverable"
+        onClick={[Function]}
+      >
+        <div
+          className="ant-card-cover"
+        >
+          <img
+            alt="placeholder"
+            className="small_image"
+            src="/gallery/loading_image.gif"
+          />
+        </div>
+        <div
+          className="ant-card-body"
+          style={
+            Object {
+              "padding": "0",
+            }
+          }
+        />
+      </div>
+      <div
+        className="ant-card cards ant-card-bordered ant-card-hoverable"
+        onClick={[Function]}
+      >
+        <div
+          className="ant-card-cover"
+        >
+          <img
+            alt="placeholder"
+            className="small_image"
+            src="/gallery/loading_image.gif"
+          />
+        </div>
+        <div
+          className="ant-card-body"
+          style={
+            Object {
+              "padding": "0",
+            }
+          }
+        />
+      </div>
+      <div
+        className="ant-card cards ant-card-bordered ant-card-hoverable"
+        onClick={[Function]}
+      >
+        <div
+          className="ant-card-cover"
+        >
+          <img
+            alt="placeholder"
+            className="small_image"
+            src="/gallery/loading_image.gif"
+          />
+        </div>
+        <div
+          className="ant-card-body"
+          style={
+            Object {
+              "padding": "0",
+            }
+          }
+        />
+      </div>
+      <div
+        className="ant-card cards ant-card-bordered ant-card-hoverable"
+        onClick={[Function]}
+      >
+        <div
+          className="ant-card-cover"
+        >
+          <img
+            alt="placeholder"
+            className="small_image"
+            src="/gallery/loading_image.gif"
+          />
+        </div>
+        <div
+          className="ant-card-body"
+          style={
+            Object {
+              "padding": "0",
+            }
+          }
+        />
+      </div>
+      <div
+        className="ant-card cards ant-card-bordered ant-card-hoverable"
+        onClick={[Function]}
+      >
+        <div
+          className="ant-card-cover"
+        >
+          <img
+            alt="placeholder"
+            className="small_image"
+            src="/gallery/loading_image.gif"
+          />
+        </div>
+        <div
+          className="ant-card-body"
+          style={
+            Object {
+              "padding": "0",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+  <h3>
+    End Of Gallery
+  </h3>
+</main>
+`;
