@@ -14,6 +14,8 @@ import AvailableProperties from "../src/pages/AvailableProperties/AvailablePrope
 import Gallery from "../src/pages/Gallery/Gallery";
 import TMaintenance from "../src/pages/TenantMaintenance/TenantMaintenance";
 import Partners from "./pages/Partners/Partners";
+import Commercial from "./pages/Commercial/Commercial";
+import Burlington from "./pages/Burlington/Burlington";
 
 import TenantPortalLayout from "./hoc/Layout/TenantPortalLayout";
 import TenantPortalHome from "./portal/common/TenantPortal/pages/Home/TenantPortalHome";
@@ -24,6 +26,10 @@ import TenantPortalPayments from "./portal/common/TenantPortal/pages/Payments/Te
 import MaintenancePortalLayout from "./hoc/Layout/MaintenancePortalLayout";
 import MaintenancePortalHome from "./portal/common/MaintenancePortal/pages/Home/MaintenancePortalHome";
 import MaintenancePortalDetail from "./portal/common/MaintenancePortal/pages/Detail/MaintenancePortalDetail";
+
+import AdminPortalLayout from "./hoc/Layout/AdminPortalLayout";
+import AdminPortalHome from "./portal/common/AdminPortal/pages/Home/AdminPortalHome";
+import AdminPortalImages from "./portal/common/AdminPortal/pages/Images/AdminPortalImages";
 
 import OurTeam from "../src/pages/OurTeam/OurTeam";
 import Login from "../src/portal/common/PortalLogin/login";
@@ -49,6 +55,8 @@ const App = () => (
 			<AppRoute path="/team" layout={Layout} component={OurTeam} />
 			<AppRoute path="/maintenance" layout={Layout} component={TMaintenance} />
 			<AppRoute path="/partners" layout={Layout} component={Partners} />
+			<AppRoute path="/commercial" layout={Layout} component={Commercial} />
+			<AppRoute path="/burlington" layout={Layout} component={Burlington} />
 			<AppRoute path="/portal/tenant/home" layout={TenantPortalLayout} component={TenantPortalHome} />
 			<AppRoute path="/portal/tenant/profile" layout={TenantPortalLayout} component={TenantPortalProfile} />
 			<AppRoute path="/portal/tenant/maintenance" layout={TenantPortalLayout} component={TenantPortalMaintenance} />
@@ -57,6 +65,9 @@ const App = () => (
 			<AppRoute path="/portal/maintenance/home" layout={MaintenancePortalLayout} component={MaintenancePortalHome} />
 			<AppRoute path="/portal/maintenance/details/:tenantName" layout={MaintenancePortalLayout} component={MaintenancePortalDetail} />
 			<AppRoute path="/portal/maintenance" layout={MaintenancePortalLayout} component={MaintenancePortalHome} />
+			<AppRoute path="/portal/admin/home" layout={AdminPortalLayout} component={AdminPortalHome} />
+			<AppRoute path="/portal/admin/images" layout={AdminPortalLayout} component={AdminPortalImages} />
+			<AppRoute path="/portal/admin" layout={AdminPortalLayout} component={AdminPortalHome} />
 			<AppRoute path="/login" layout={LoginLayout} component={Login} />
 			<AppRoute path="/" exact layout={Layout} component={Home} />
 			<Redirect to="/" />

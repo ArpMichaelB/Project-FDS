@@ -59,7 +59,7 @@ class TenantPortalLayout extends Component {
 
 		let locations = [ "/portal/tenant/profile", "/portal/tenant/home", "/portal/tenant/maintenance", "/portal/tenant/payments"];
 		if(!locations.includes(location)){
-			location="/portal/tenant/home";
+			this.goToLink("/portal/tenant/home");
 		}
 
 		return(

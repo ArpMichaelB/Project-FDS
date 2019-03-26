@@ -9,7 +9,7 @@ import "./PortalLayout.css";
 
 
 
-class MaintenancePortalLayout extends Component {
+class AdminPortalLayout extends Component {
 
 	static get propTypes() {
 		return {
@@ -57,14 +57,10 @@ class MaintenancePortalLayout extends Component {
 			location = location.slice(0, location.length - 1);
 		}
 
-		if(location.search("/portal/maintenance/details/") === 0){
-			location = "";
-		}
-		else{
-			let locations = [ "/portal/maintenance/home"];
-			if(!locations.includes(location)){
-				this.goToLink("/portal/maintenance/home");
-			}
+
+		let locations = [ "/portal/admin/home", "/portal/admin/images" ];
+		if(!locations.includes(location)){
+			this.goToLink("/portal/admin/home");
 		}
 
 		return(
@@ -83,9 +79,13 @@ class MaintenancePortalLayout extends Component {
 						style={{margin:"auto", aspectRatio: 1, display:"block"}}  
 						width={this.state.width} height={undefined}/>
 					<Menu id="menu" theme="light" selectedKeys={[location]} mode="inline">
-						<Menu.Item key="/portal/maintenance/home" onClick={() => this.goToLink("/portal/maintenance/home")}>
+						<Menu.Item key="/portal/admin/home" onClick={() => this.goToLink("/portal/admin/home")}>
 							<Icon type="home" />
 							<span>Home</span>
+						</Menu.Item>
+						<Menu.Item key="/portal/admin/images" onClick={() => this.goToLink("/portal/admin/images")}>
+							<Icon type="picture" />
+							<span>Images</span>
 						</Menu.Item>
 					</Menu>
 				</AntLayout.Sider>
@@ -99,4 +99,4 @@ class MaintenancePortalLayout extends Component {
 	}
 }
 
-export default withRouter(MaintenancePortalLayout);
+export default withRouter(AdminPortalLayout);
