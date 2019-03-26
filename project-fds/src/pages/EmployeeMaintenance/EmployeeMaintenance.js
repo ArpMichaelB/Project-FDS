@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import moment from "moment";
+// import moment from "moment";
 import aws4 from "aws4";
 import axios from "axios";
 import DocumentTitle from "react-document-title";

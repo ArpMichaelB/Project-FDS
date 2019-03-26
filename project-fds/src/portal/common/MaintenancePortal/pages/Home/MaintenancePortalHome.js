@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Table, Card } from "antd";
+import axios from "axios";
+import { Table, Card, Spin } from "antd";
 import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 
@@ -10,7 +11,7 @@ class MaintenancePortalHome extends Component {
 	constructor(props){
 		super(props);
 
-		this.state = { width: 0, height: 0 };
+		this.state = { width: 0, height: 0, dataSource:[], isLoading:true };
 		this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
 	}
 
@@ -23,6 +24,49 @@ class MaintenancePortalHome extends Component {
 	componentDidMount() {
 		this.updateWindowDimensions();
 		window.addEventListener("resize", this.updateWindowDimensions);
+
+		let config = {
+			headers: {
+				"x-api-Key": "uQ7ipyNhNb7xNSNJr65Hy3JvplPPXmF49FwTNIRg",
+				"Content-Type": "application/json"
+			}
+		};
+
+		let url= "https://shr4ny5edi.execute-api.us-east-1.amazonaws.com/default/maintenancerequest?operation=readAll";
+
+		axios.get(url, config)
+			.then(response => {
+				let data = response.data;
+				this.setState({dataSource:JSON.parse(data.body),isLoading:false});
+			});
+
+		// let body = {
+		// 	operation: "readAll",
+		// };
+
+		// const opts = {
+		// 	method: "GET",
+		// 	service: "execute-api",
+		// 	region: "us-east-1",
+		// 	path: "/default/maintenancerequest",
+		// 	host: "shr4ny5edi.execute-api.us-east-1.amazonaws.com",
+		// 	headers:{
+		// 		"x-api-Key": "uQ7ipyNhNb7xNSNJr65Hy3JvplPPXmF49FwTNIRg",
+		// 		"Content-Type": "application/json"
+		// 	},
+		// 	url: "https://shr4ny5edi.execute-api.us-east-1.amazonaws.com/default/maintenancerequest?operation=readAll",
+		// 	data: body,
+		// 	body: JSON.stringify(body)
+		// };
+
+		// const request = aws4.sign(opts);
+		// delete request.headers.Host;
+		// delete request.headers["Content-Length"];
+
+		// axios(request)
+		// 	.then((response)=> {
+		// 		console.log(response.data.body);
+		// 	});
 	}
 	
 	componentWillUnmount() {
@@ -38,55 +82,64 @@ class MaintenancePortalHome extends Component {
 		let columns;
 		if(this.state.width <= 700){
 			columns = [{
-				title: "Address",
-				dataIndex: "address",
-				key: "address",
-			}, {
-				title: "Request",
-				dataIndex: "issue",
-				key: "issue"
+				title: "Requester",
+				dataIndex: "requester_name",
+				key: "requester_name",
 			}];
 		}
 		else{
 			columns = [{
-				title: "Tenant Name",
-				dataIndex: "tenantName",
-				key: "tenantName",
+				title: "Requester",
+				dataIndex: "requester_name",
+				key: "requester_name",
+			}, {
+				title: "Date Requested",
+				dataIndex: "date_requested",
+				key: "date_requested",
 			}, {
 				title: "Address",
 				dataIndex: "address",
-				key: "address",
-			}, {
-				title: "Request",
-				dataIndex: "issue",
-				key: "issue"
+				key: "address"
+			},{
+				title: "Problem",
+				dataIndex: "request_body",
+				key: "request_body",
+			},{
+				title: "Assigned",
+				dataIndex: "employee_name",
+				key: "employee_name",
+			},{
+				title: "Date Started",
+				dataIndex: "date_started",
+				key: "date_started",
+			},{
+				title: "Date Finished",
+				dataIndex: "date_finished",
+				key: "date_finished",
+			},{
+				title: "Comments",
+				dataIndex: "employee_comments",
+				key: "employee_comments",
 			}];
 		}
 
 		return(
 			<Card title="Maintenance Requests" bordered={false} id="maintenance_home_data">
-				<Table dataSource={dataSource} columns={columns} 
-					onRow={(record) => {
-						return {
-							onClick: () => this.props.history.push("/portal/maintenance/details/" + record.tenantName)
-						};
-					}}
-				/>
+				{this.state.isLoading ? (
+					<Spin />
+				) : (
+					<Table dataSource={this.state.dataSource} columns={columns}
+						onRow={(record) => {
+							return {
+								onClick: () => this.props.history.push("/portal/maintenance/details/" + record)
+							};
+						}}
+					/>
+				)}
 			</Card>
 		);
 	}
 }
 
-const dataSource = [{
-	key: "1",
-	tenantName: "Mike",
-	address: "10 Downing Street",
-	issue: "broken sink"
-}, {
-	key: "2",
-	tenantName: "John",
-	address: "10 Downing Street",
-	issue: "broken fridge"
-}];
 
 export default withRouter(MaintenancePortalHome);
