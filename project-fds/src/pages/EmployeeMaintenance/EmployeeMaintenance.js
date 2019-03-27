@@ -1,20 +1,85 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+// import moment from "moment";
+import aws4 from "aws4";
+import axios from "axios";
 import DocumentTitle from "react-document-title";
 import {
-	Form, Input, DatePicker, Button, Radio, message,
+	Form, Input, DatePicker, Button, message,
 } from "antd";
 
 import "./style.css";
+
+// let config = {
+// 	headers:{
+// 		"x-api-Key": "uQ7ipyNhNb7xNSNJr65Hy3JvplPPXmF49FwTNIRg",
+// 		"Content-Type": "application/json"
+// 	}
+// };
 
 class EmployeeMaintenance extends Component {
 
 	handleSubmit = (e) => {
 		e.preventDefault();
-		this.props.form.validateFieldsAndScroll((err) => {
+		this.props.form.validateFieldsAndScroll((err,values) => {
 			if (!err) {
-				message.success("Your form has been submitted successfully");
-				this.props.form.resetFields();
+				let body = {
+					operation: "update",
+					date_requested: 1549157424,
+					date_started: values["date-start"].unix(),
+					date_finished: values["date-end"].unix(),
+					requester_name: "Lhito ya boi",
+					address: "new address",
+					request_body:"Caleb's water pipe is still dang broken",
+					employee_comments:values["Comments"],
+					employee: values["field_name"],
+					id:3
+				};
+
+				const opts = {
+					method: "PUT",
+					service: "execute-api",
+					region: "us-east-1",
+					path: "/default/maintenancerequest",
+					host: "shr4ny5edi.execute-api.us-east-1.amazonaws.com",
+					headers:{
+						"x-api-Key": "uQ7ipyNhNb7xNSNJr65Hy3JvplPPXmF49FwTNIRg",
+						"Content-Type": "application/json"
+					},
+					url: "https://shr4ny5edi.execute-api.us-east-1.amazonaws.com/default/maintenancerequest",
+					data: body,
+					body: JSON.stringify(body)
+				};
+
+				const request = aws4.sign(opts);
+				delete request.headers.Host;
+				delete request.headers["Content-Length"];
+
+				axios(request)
+					.then(()=> {
+						message.success("Your maintenance request has been submitted successfully");
+						this.props.form.resetFields();
+					})
+					.catch(err => {
+						console.log(err);
+					});
+
+				// let timeTaken = Math.round(moment.duration(values["date-end"].diff(values["date-start"])).as("days"));
+				// console.log(values);
+				// console.log(timeTaken + " days");
+				// console.log(values["date-start"].unix());
+				// message.success("Your form has been submitted successfully");
+				// const url = `https://shr4ny5edi.execute-api.us-east-1.amazonaws.com/default/maintenancerequest?operation=update&date_requested=1552920407&date_started=${values["date-start"].unix()}&date_finished=${values["date-end"].unix()}&requester_name=Geon&address=Yashtechnologieslane&request_body=Thisisalongurl&employee_comments=${values["Comments"]}&employee=${values["field_name"]}&id=${3}`;
+				// axios.put(url,config)
+				// 	.then(response => {
+				// 		let data = response.data;
+				// 		console.log(data);
+				// 	})
+				// 	.catch((error) => {
+				// 		console.log(error);
+				// 	});
+				// this.props.form.resetFields();
+				//sdfsdf
 			}
 		});
 	}
@@ -73,7 +138,7 @@ class EmployeeMaintenance extends Component {
 						)}
 					</Form.Item>
 
-					<Form.Item
+					{/* <Form.Item
 						{...formItemLayout}
 						label="Address Of Job"
 					>
@@ -85,9 +150,9 @@ class EmployeeMaintenance extends Component {
 						})(
 							<Input placeholder="Address" />
 						)}
-					</Form.Item>
+					</Form.Item> */}
 
-					<Form.Item
+					{/* <Form.Item
 						{...formItemLayout}
 						label="E-mail"
 					>
@@ -100,9 +165,9 @@ class EmployeeMaintenance extends Component {
 						})(
 							<Input placeholder="E-mail" />
 						)}
-					</Form.Item>
+					</Form.Item> */}
 
-					<Form.Item
+					{/* <Form.Item
 						{...formItemLayout}
 						label="Job Status"
 					>
@@ -118,9 +183,9 @@ class EmployeeMaintenance extends Component {
 								<Radio value="ordered">ORDERED</Radio>
 							</Radio.Group>
 						)}
-					</Form.Item>
+					</Form.Item> */}
 
-					<Form.Item
+					{/* <Form.Item
 						{...formItemLayout}
 						label="Customer Satisfaction"
 					>
@@ -137,7 +202,7 @@ class EmployeeMaintenance extends Component {
 								<Radio value="very_unsatisfied">Very Unsatisfied</Radio>
 							</Radio.Group>
 						)}
-					</Form.Item>
+					</Form.Item> */}
 
 					<Form.Item
 						{...formItemLayout}
@@ -166,7 +231,9 @@ class EmployeeMaintenance extends Component {
 						{...formItemLayout}
 						label="Date Job Completed"
 					>
-						{getFieldDecorator("date-end", config)(
+						{getFieldDecorator("date-end", {
+							rules: [{ type: "object", required: false}]
+						})(
 							<DatePicker />
 						)}
 					</Form.Item>
