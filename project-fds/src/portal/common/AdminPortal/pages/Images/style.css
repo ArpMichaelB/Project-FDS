@@ -1,0 +1,28 @@
+.admin_images_card{
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+	width: 95%;
+	margin: 20px auto;
+}
+
+.admin_upload_field{
+	margin: 5px;
+}
+
+#admin_upload_button{
+	margin-top: 20px;
+}
+
+#admin_upload_error{
+	margin: 10px;
+	color:red;
+	clear: both;
+}
+
+#admin_upload_bottom{
+	margin: 10px;
+	float: right;
+}
+
+#message{
+	margin: auto;
+}

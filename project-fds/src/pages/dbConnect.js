@@ -76,9 +76,9 @@ export default class DBConnect extends React.Component {
 	  
 
 		let body = {
-			typeOfUser: "admin",
-			email: "admin@gmail.com",
-			pass: "admin"
+			typeOfUser: "tenant",
+			email: "root1@gmail.com",
+			pass: "root1"
 
 		};
 
@@ -93,6 +93,7 @@ export default class DBConnect extends React.Component {
 				"Content-Type": "application/json"
 			},
 			url: "https://shr4ny5edi.execute-api.us-east-1.amazonaws.com/default/login",
+			data: body,
 			body:JSON.stringify(body)
 		};
 
@@ -101,8 +102,8 @@ export default class DBConnect extends React.Component {
         delete request.headers["Content-Length"];
 
 		axios(request)
-				.then(response => console.log(response))
-					.catch(err => console.log(err.statusText));
+			.then(response => console.log(response.data))
+			.catch(err => console.log(err));
 
 		// fetch(opts.url, {
 		// 	method:opts.method,

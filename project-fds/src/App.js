@@ -27,6 +27,10 @@ import MaintenancePortalLayout from "./hoc/Layout/MaintenancePortalLayout";
 import MaintenancePortalHome from "./portal/common/MaintenancePortal/pages/Home/MaintenancePortalHome";
 import MaintenancePortalDetail from "./portal/common/MaintenancePortal/pages/Detail/MaintenancePortalDetail";
 
+import AdminPortalLayout from "./hoc/Layout/AdminPortalLayout";
+import AdminPortalHome from "./portal/common/AdminPortal/pages/Home/AdminPortalHome";
+import AdminPortalImages from "./portal/common/AdminPortal/pages/Images/AdminPortalImages";
+
 import OurTeam from "../src/pages/OurTeam/OurTeam";
 import Login from "../src/portal/common/PortalLogin/login";
 import DBConnect from "../src/pages/dbConnect";
@@ -62,6 +66,9 @@ const App = () => (
 			<AppRoute path="/portal/maintenance/home" layout={MaintenancePortalLayout} component={MaintenancePortalHome} />
 			<AppRoute path="/portal/maintenance/details/:tenantName" layout={MaintenancePortalLayout} component={MaintenancePortalDetail} />
 			<AppRoute path="/portal/maintenance" layout={MaintenancePortalLayout} component={MaintenancePortalHome} />
+			<AppRoute path="/portal/admin/home" layout={AdminPortalLayout} component={AdminPortalHome} />
+			<AppRoute path="/portal/admin/images" layout={AdminPortalLayout} component={AdminPortalImages} />
+			<AppRoute path="/portal/admin" layout={AdminPortalLayout} component={AdminPortalHome} />
 			<AppRoute path="/login" layout={LoginLayout} component={Login} />
 			<AppRoute path="/dbConnect" layout={Layout} component={DBConnect} />
 			<AppRoute path="/" layout={Layout} component={Home} />

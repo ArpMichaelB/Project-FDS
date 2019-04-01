@@ -2,14 +2,28 @@
   height: 35px;
 }
 
+#home-bottom{
+  width: 100%;
+  clear: both;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 .show_mojo_listings-home{
   height: 40vh;
   border: 0;
-  width:90%;
-  display: block;
+  width: 50%;
   clear: both;
+  float: left;
+  height: 200vh;
+  display: block;
   border: 1px solid #e8e8e8;
-  margin: auto;
+}
+
+#home-right-column{
+  margin-bottom: 20px;
+  width: 50%;
+  float: right;
 }
 
 .Home {
@@ -63,9 +77,21 @@
   .group {
       display:inline-flex;
       flex-flow: wrap;
-      float: left;
-      margin-top: 5em;
+      width: 50%;
       align-items: center;
+      margin-bottom: 20px;
+      float: left;
+  }
+
+  #interests-title{
+    text-align: center;
+    margin: 3rem 0;
+    float: right;
+    width: 50%;
+  }
+
+  #top-titles{
+    width: 100%;
   }
 
   .avail_button, .ant-btn-primary:hover, .ant-btn-primary:focus {
@@ -98,8 +124,12 @@
     top:12em;
 }
 
+#interests-title-small{
+  display: none;
+}
+
 @media (max-width: 493px) {
-  .title{
+  .home-title{
     margin: 1.5rem;
   }
   #avail-button-link{
@@ -107,10 +137,38 @@
   }
 }
 
-@media (max-width: 1025px){
+@media (max-width: 848px){
+  .group {
+    width: 100%;
+    float: none;
+  }
+  #interests-title{
+    display: none;
+  }
+  .show_mojo_listings-home{
+    width: 100%;
+    float: none;
+  }
+  
+  #home-right-column{
+    width: 100%;
+    float: none;
+  }
+  #interests-title-small{
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1250px){
   .group{
     justify-content: center;
+  }
+  .home-title{
+    margin: 3rem 0;
     width: 100%;
+    text-align: center;
   }
 }
 
