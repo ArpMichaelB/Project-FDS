@@ -22,6 +22,9 @@ const ShowProperty = (props) => {
 				<Panel header="Amenities" key="3">
 					<p>{props.property.amenities}</p>
 				</Panel>
+				<Panel header="History" key="4">
+					<p>{props.property.history}</p>
+				</Panel>
 
 			</Collapse>
 		</div>

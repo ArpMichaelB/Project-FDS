@@ -1,14 +1,14 @@
-import React, { PureComponent }  from "react";
+import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import logo from "../../../assets/images/logo.jpg";
 import Sec from "../../../hoc/sec/Sec";
-import { Field, reduxForm } from 'redux-form';
-import * as actions from '../../../actions';
-import { connect } from 'react-redux';
+import { Field, reduxForm } from "redux-form";
+import * as actions from "../../../actions";
+import { connect } from "react-redux";
 
-import {
-	Form, Icon, Input, Button, Checkbox,
-} from "antd";
+// import {
+// 	Form, Icon, Input, Button, Checkbox,
+// } from "antd";
 
 import "./style.css";
 
@@ -16,24 +16,27 @@ class Login extends PureComponent {
 
 	static get propTypes() {
 		return {
-			form: PropTypes.any
+			form: PropTypes.any,
+			signinUser: PropTypes.any,
+			errorMessage: PropTypes.any,
+			handleSubmit: PropTypes.any
 		};
 
 	}
 
 	handleFormSubmit({ email, pass }) {
-        this.props.signinUser({ email, pass })
-    }
+		this.props.signinUser({ email, pass });
+	}
 
-    renderError() {
-        if (this.props.errorMessage) {
-            return (
-                <div className="alert alert-danger">
-                <h2>Oops! {this.props.errorMessage}</h2>
-                </div>
-            );
-        }
-    }
+	renderError() {
+		if (this.props.errorMessage) {
+			return (
+				<div className="alert alert-danger">
+					<h2>Oops! {this.props.errorMessage}</h2>
+				</div>
+			);
+		}
+	}
 
 	// handleSubmit = (e) => {
 	// 	e.preventDefault();
@@ -48,7 +51,7 @@ class Login extends PureComponent {
 
 	render() {
 
-		const { getFieldDecorator } = this.props.form;
+		//const { getFieldDecorator } = this.props.form;
 		const { handleSubmit } = this.props;
 
 
@@ -90,18 +93,18 @@ class Login extends PureComponent {
 						</Form.Item>
 					</Form> */}
 
-<form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
-                <fieldset className="form-group">
-                    <label>Email:</label>
-                    <Field className="form-control" name="email" component="input" type="text" />
-                </fieldset>
-                <fieldset className="form-group">
-                    <label>Password:</label>
-                    <Field className="form-control" name="pass" component="input" type="password" />
-                </fieldset>
-                {this.renderError()}
-                <button action="submit" className="btn btn-primary">Sign in</button>
-            </form>
+					<form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
+						<fieldset className="form-group">
+							<label>Email:</label>
+							<Field className="form-control" name="email" component="input" type="text" />
+						</fieldset>
+						<fieldset className="form-group">
+							<label>Password:</label>
+							<Field className="form-control" name="pass" component="input" type="password" />
+						</fieldset>
+						{this.renderError()}
+						<button action="submit" className="btn btn-primary">Sign in</button>
+					</form>
 				</div>
 			</Sec>
 		);
@@ -113,9 +116,9 @@ class Login extends PureComponent {
 // export default LoginForm;
 
 const mapStateToProps = (state) => {
-    return { errorMessage: state.auth.error }
+	return { errorMessage: state.auth.error };
 };
 
 export default reduxForm({
-    form: 'signin'
+	form: "login"
 })(connect(mapStateToProps, actions)(Login));

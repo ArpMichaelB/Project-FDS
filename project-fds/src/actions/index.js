@@ -5,6 +5,7 @@ import {
 	AUTH_USER,
 	UNAUTH_USER,
 	AUTH_ERROR,
+	FETCH_TENANT
 } from "./types";
 
 export const signinUser = ({ email, pass }) => {
@@ -39,10 +40,8 @@ export const signinUser = ({ email, pass }) => {
 		axios(request)
 			.then(response => {
 				dispatch({ type: AUTH_USER });
-				// eslint-disable-next-line no-console
-				console.log(response.data.body.awsUserInfo.SessionToken);
 				localStorage.setItem("token", response.data.body.awsUserInfo.SessionToken);
-
+				localStorage.setItem("id", response.data.body.dbUserInfo.id);
 				History.push("/portal/tenant/home");
 				window.location.reload();
 
@@ -63,4 +62,35 @@ export const authError = (error) => {
 export const signoutUser = () => {
 	localStorage.removeItem("token");
 	return { type: UNAUTH_USER };
-}; 
+};
+
+export const fetchTenant = ( ) => {
+
+
+	const opts = {
+		method: "GET",
+		service: "execute-api",
+		region: "us-east-1",
+		path: "/default/tenant?operation=read",
+		host: "shr4ny5edi.execute-api.us-east-1.amazonaws.com",
+		headers: {
+			authorization: localStorage.getItem("token"),
+			"x-api-key": "uQ7ipyNhNb7xNSNJr65Hy3JvplPPXmF49FwTNIRg",
+			"Content-Type": "application/json"
+		},
+		url: "https://shr4ny5edi.execute-api.us-east-1.amazonaws.com/default/tenant?operation=read&id="+localStorage.getItem("id")
+	};
+
+	const request = aws4.sign(opts);
+	delete request.headers.Host;
+	delete request.headers["Content-Length"];
+	return (dispatch) => {
+		axios(request)
+			.then(response => {
+				dispatch({
+					type: FETCH_TENANT,
+					payload: response.data.body,
+				});
+			});
+	};
+};

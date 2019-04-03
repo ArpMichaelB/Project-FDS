@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot test 1`] = `
+<Card
+  bodyStyle={Object {}}
+  className=""
+  cover=""
+>
+  <div
+    id="admin-image-data-block"
+  >
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            Caption:
+          </td>
+          <td>
+            <Input
+              className="admin-image-edit-field"
+              disabled={false}
+              onChange={[Function]}
+              type="text"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Alt:
+          </td>
+          <td>
+            <Input
+              className="admin-image-edit-field"
+              disabled={false}
+              onChange={[Function]}
+              type="text"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Location:
+          </td>
+          <td>
+            <Input
+              className="admin-image-edit-field"
+              disabled={false}
+              onChange={[Function]}
+              type="text"
+            />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div
+      className="admin-image-button-group"
+    >
+      <Popconfirm
+        cancelText="No"
+        icon={
+          <Icon
+            theme="filled"
+            type="exclamation-circle"
+          />
+        }
+        okText="Yes"
+        okType="primary"
+        onConfirm={[Function]}
+        placement="top"
+        title="Are you sure you want to edit this image?"
+        transitionName="zoom-big"
+        trigger="click"
+      >
+        <Button
+          block={false}
+          ghost={false}
+          loading={false}
+        >
+          Edit
+        </Button>
+      </Popconfirm>
+      <Popconfirm
+        cancelText="No"
+        icon={
+          <Icon
+            theme="filled"
+            type="exclamation-circle"
+          />
+        }
+        okText="Yes"
+        okType="primary"
+        onConfirm={[Function]}
+        placement="top"
+        title="Are you sure you want to delete this image?"
+        transitionName="zoom-big"
+        trigger="click"
+      >
+        <Button
+          block={false}
+          className="admin-image-delete"
+          ghost={false}
+          loading={false}
+        >
+          Delete
+        </Button>
+      </Popconfirm>
+      <div
+        hidden={true}
+        id="admin_upload_error"
+        style={
+          Object {
+            "color": "black",
+            "display": "inline",
+          }
+        }
+      />
+    </div>
+  </div>
+</Card>
+`;
