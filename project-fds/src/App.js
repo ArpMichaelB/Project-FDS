@@ -69,7 +69,7 @@ const App = () => (
 			<AppRoute path="/portal/admin/images" layout={AdminPortalLayout} component={AdminPortalImages} />
 			<AppRoute path="/portal/admin" layout={AdminPortalLayout} component={AdminPortalHome} />
 			<AppRoute path="/login" layout={LoginLayout} component={Login} />
-			<AppRoute path="/" exact layout={Layout} component={Home} />
+			<AppRoute path="/" layout={Layout} component={Home} />
 			<Redirect to="/" />
 		</Switch>
 	</div>

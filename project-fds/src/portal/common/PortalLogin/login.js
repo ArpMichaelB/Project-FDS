@@ -1,37 +1,59 @@
-import React from "react";
+import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import logo from "../../../assets/images/logo.jpg";
 import Sec from "../../../hoc/sec/Sec";
+import { Field, reduxForm } from "redux-form";
+import * as actions from "../../../actions";
+import { connect } from "react-redux";
 
-import {
-	Form, Icon, Input, Button, Checkbox,
-} from "antd";
+// import {
+// 	Form, Icon, Input, Button, Checkbox,
+// } from "antd";
 
 import "./style.css";
 
-class Login extends React.Component {
+class Login extends PureComponent {
 
 	static get propTypes() {
 		return {
-			form: PropTypes.any
+			form: PropTypes.any,
+			signinUser: PropTypes.any,
+			errorMessage: PropTypes.any,
+			handleSubmit: PropTypes.any
 		};
 
 	}
 
-	handleSubmit = (e) => {
-		e.preventDefault();
-		this.props.form.validateFields((err, values) => {
-			if (!err) {
-				// eslint-disable-next-line no-console
-				console.log("Received values of form: ", values);
-			}
-		});
+	handleFormSubmit({ email, pass }) {
+		this.props.signinUser({ email, pass });
 	}
+
+	renderError() {
+		if (this.props.errorMessage) {
+			return (
+				<div className="alert alert-danger">
+					<h2>Oops! {this.props.errorMessage}</h2>
+				</div>
+			);
+		}
+	}
+
+	// handleSubmit = (e) => {
+	// 	e.preventDefault();
+	// 	this.props.form.validateFields((err, values) => {
+	// 		if (!err) {
+	// 			// eslint-disable-next-line no-console
+	// 			console.log("Received values of form: ", values);
+	// 		}
+	// 	});
+	// }
 
 
 	render() {
 
-		const { getFieldDecorator } = this.props.form;
+		//const { getFieldDecorator } = this.props.form;
+		const { handleSubmit } = this.props;
+
 
 		return (
 
@@ -42,7 +64,7 @@ class Login extends React.Component {
 				</div>
 				<div className="login_content">
 					<h1>Portal Login</h1>
-					<Form onSubmit={this.handleSubmit} className="login-form">
+					{/* <Form onSubmit={this.handleSubmit} className="login-form">
 						<Form.Item>
 							{getFieldDecorator("email", {
 								rules: [{ required: true, message: "Please input your Email!" }],
@@ -69,13 +91,34 @@ class Login extends React.Component {
 								Log in
 							</Button>
 						</Form.Item>
-					</Form>
+					</Form> */}
+
+					<form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
+						<fieldset className="form-group">
+							<label>Email:</label>
+							<Field className="form-control" name="email" component="input" type="text" />
+						</fieldset>
+						<fieldset className="form-group">
+							<label>Password:</label>
+							<Field className="form-control" name="pass" component="input" type="password" />
+						</fieldset>
+						{this.renderError()}
+						<button action="submit" className="btn btn-primary">Sign in</button>
+					</form>
 				</div>
 			</Sec>
 		);
 	}
 }
 
-const LoginForm = Form.create({ name: "normal_login" })(Login);
+// const LoginForm = Form.create({ name: "normal_login" })(Login);
 
-export default LoginForm;
+// export default LoginForm;
+
+const mapStateToProps = (state) => {
+	return { errorMessage: state.auth.error };
+};
+
+export default reduxForm({
+	form: "login"
+})(connect(mapStateToProps, actions)(Login));

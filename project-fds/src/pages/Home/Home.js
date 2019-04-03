@@ -12,6 +12,7 @@ const Home = () => {
 	return (
 
 		<div className="Home">
+			
 			<DocumentTitle title="Y&G Development Group" />
 			<div className="carousel">
 				<Carousel className="height" autoplay>
