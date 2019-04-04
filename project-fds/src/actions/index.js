@@ -5,7 +5,8 @@ import {
 	AUTH_USER,
 	UNAUTH_USER,
 	AUTH_ERROR,
-	FETCH_TENANT
+	FETCH_TENANT,
+	UPDATE_USER
 } from "./types";
 
 export const signinUser = ({ email, pass }) => {
@@ -64,6 +65,13 @@ export const signoutUser = () => {
 	return { type: UNAUTH_USER };
 };
 
+export const editEmail = (email) =>{
+	return{
+		type:UPDATE_USER,
+		payload:email
+	};
+};
+
 export const fetchTenant = ( ) => {
 
 
@@ -87,9 +95,10 @@ export const fetchTenant = ( ) => {
 	return (dispatch) => {
 		axios(request)
 			.then(response => {
+				let body = JSON.parse(response.data.body);
 				dispatch({
 					type: FETCH_TENANT,
-					payload: response.data.body,
+					payload: body,
 				});
 			});
 	};

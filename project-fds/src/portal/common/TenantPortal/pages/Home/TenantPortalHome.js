@@ -9,18 +9,20 @@ import "./style.css";
 
 class TenantPortalHome extends PureComponent {
 
+	constructor(props){
+		super(props);
+
+		this.props.fetchTenant();
+	}
+
 	static propTypes = {
 		tenantInfo: PropTypes.any,
 		fetchTenant: PropTypes.any
 	}
 
-	componentWillMount() {
-		this.props.fetchTenant();
-	}
-
 
 	renderTenant() {
-		const tenantInfo = JSON.parse(this.props.tenantInfo);
+		const tenantInfo = this.props.tenantInfo;
 		return <div id="user_portal_home_container">
 			<h1 className="title" id="portal_home_title">Portal Homepage</h1>
 			<div id="user_portal_card_container">
