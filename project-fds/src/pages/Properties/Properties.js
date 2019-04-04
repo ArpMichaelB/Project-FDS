@@ -4,6 +4,7 @@ import DocumentTitle from "react-document-title";
 import "./style.css";
 import Card from "antd/lib/card";
 import {Link} from "react-router-dom";
+// import Property from "../Property/Property";
 import AndresenPic from "../../assets/images/andresen_exterior1.JPG";
 import BucktownPic from "../../assets/images/bucktown_exterior1.JPG";
 import GordonPic from "../../assets/images/gordon_exterior1.JPG";
@@ -24,7 +25,7 @@ const Properties = () => {
 				return (
 					<div key={property.name} className="property">
 						<Link to={"property/" + property.name}>
-
+							{/* <Property properties={properties} /> */}
 							<Card hoverable style={{ width: "100%", marginRight: "auto", marginLeft: "auto", marginBottom: "2rem" }} cover={<img alt={property.title} src={property.src} />}>
 								<Meta
 									title={property.title}
