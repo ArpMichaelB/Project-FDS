@@ -2,4 +2,13 @@
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 	width: 95%;
 	margin: 20px auto;
+	font-size: 1rem;
+}
+
+.profile_basic_button, .profile_basic_button:focus, .profile_basic_button:hover {
+	color: #fff;
+	background-color: var(--secondary-color);
+	border-color:var(--secondary-color);
+	margin-left: 30px;
+	max-width: 100%;
 }
