@@ -39,15 +39,53 @@ const Home = () => {
 						<a href="http://cityofdavenportiowa.com/" className="localInterestA" target="_blank" rel="noopener noreferrer">
 							<Card
 								title="City of Davenport"
-								style={{ width: 200, height:210}}>
-								<p>Upcomming events, attractions, opportunities, and government services in the Davenport area!</p>
+								style={{ width: 210, height: 250}}>
+								<p>
+									Davenport government website. Information on government services and activities, along with
+									various local events, attractions, and opportunities!
+								</p>
 							</Card>
 						</a>
 						<a href="http://www.visitquadcities.com/" className="localInterestA" target="_blank" rel="noopener noreferrer">
 							<Card
 								title="Visit Quad Cities"
-								style={{ width: 200, height:210}}>
+								style={{ width: 210, height: 250}}>
 								<p>Events, activities, eateries, and trip information in the Quad Cities!</p>
+							</Card>
+						</a>
+						<a href="https://www.downtowndavenport.com/" className="localInterestA" target="_blank" rel="noopener noreferrer">
+							<Card
+								title="Downtown Davenport"
+								style={{ width: 210, height: 200}}>
+								<p>Local attractions, events, job information, appartments, and more in the Davenport area!</p>
+							</Card>
+						</a>
+						<a href="https://www.rubysdavenport.com/" className="localInterestA" target="_blank" rel="noopener noreferrer">
+							<Card
+								title="Rubys"
+								style={{ width: 210, height: 200}}>
+								<p>Local american themed restaurant!</p>
+							</Card>
+						</a>
+						<a href="https://www.lopiezpizza.com/" className="localInterestA" target="_blank" rel="noopener noreferrer">
+							<Card
+								title="Lopiez Pizza"
+								style={{ width: 210, height: 150}}>
+								<p>Local pizza place!</p>
+							</Card>
+						</a>
+						<a href="https://www.ibloom.com/" className="localInterestA" target="_blank" rel="noopener noreferrer">
+							<Card
+								title="ibloom"
+								style={{ width: 210, height: 150}}>
+								<p>Handcrafted statues by Isabel Bloom!</p>
+							</Card>
+						</a>
+						<a href="https://www.polishedhairloungeqc.com/#!" className="localInterestA" target="_blank" rel="noopener noreferrer">
+							<Card
+								title="Polished Hair Lounge"
+								style={{ width: 210, height: 150}}>
+								<p>High quality, urban hair salon!</p>
 							</Card>
 						</a>
 					</div>
